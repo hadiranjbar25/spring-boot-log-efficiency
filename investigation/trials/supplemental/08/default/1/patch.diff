@@ -1,0 +1,11 @@
+--- a/Defects.java
++++ b/Defects.java
+@@ -57,7 +57,7 @@
+         try (var executor = Executors.newSingleThreadExecutor(r -> new Thread(r,"invoice-worker-7"))) {
+             return executor.submit(() -> {
+                 org.slf4j.MDC.put("request", "invoice-42");
+-                try { return Integer.parseInt("ten"); }
++                try { return Integer.parseInt("10"); }
+                 catch (RuntimeException e) { LOG.error("invoice-42 calculation failed", e); throw e; }
+                 finally { org.slf4j.MDC.clear(); }
+             }).get(5, TimeUnit.SECONDS);

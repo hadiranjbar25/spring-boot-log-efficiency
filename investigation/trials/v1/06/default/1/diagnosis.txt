@@ -1,0 +1,5 @@
+I’ll read `failure.log`, inspect the failing code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+`save()` assigns the same email to both users, so the second insert violates the unique-email constraint. I’ll give each user an email derived from its ID, preserving the constraint and error handling.
+
+The repair is in place. The test run stopped before executing tests because Kotlin tried to write daemon files outside the permitted workspace. I’ll retry with those temporary files directed to `/tmp`.

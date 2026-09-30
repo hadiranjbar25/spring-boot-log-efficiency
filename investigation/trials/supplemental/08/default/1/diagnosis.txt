@@ -1,0 +1,7 @@
+I’ll read `failure.log`, trace the failure to `Defects.java`, and make the smallest repair before running `./test.sh`.
+
+The worker passes `"ten"` to `Integer.parseInt`, which causes the failure. I changed that input to `"10"` and preserved the asynchronous execution and error handling. The verification run hit a sandbox restriction in Kotlin’s daemon directory; I’ll rerun with the daemon disabled for this invocation.
+
+Fixed `Defects.java:60`: changed the parser input from `"ten"` to `"10"`. `Integer.parseInt` requires numeric text; its `NumberFormatException` was propagated through the future as an `ExecutionException`. Async execution, logging, and error propagation remain intact.
+
+Verification passed: `./test.sh -Dkotlin.compiler.daemon=false` — 1 test, 0 failures/errors. Plain `./test.sh` encountered a sandbox restriction on Kotlin’s daemon directory. No build files were changed.

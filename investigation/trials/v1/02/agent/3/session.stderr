@@ -1,0 +1,4 @@
+Reading additional input from stdin...
+2026-09-30T17:30:46.921647Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-30T17:30:48.175634Z  WARN codex_core::session_startup_prewarm: startup websocket prewarm setup failed: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Oct 1st, 2026 12:04 AM.
+2026-09-30T17:30:49.259622Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("/Users/hadiranjbar/.codex/shell_snapshots/01a0f35e-6cfa-7300-b671-79b2e6d35215.1790789446907494000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }

@@ -1,0 +1,9 @@
+I’ll read `failure.log`, inspect the relevant code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+The worker passes `"ten"` to `Integer.parseInt`, which throws and causes the future to fail. I’ll correct the numeric input to `"10"`, preserving the asynchronous execution and error handling.
+
+The first run was blocked by the sandbox: Kotlin tried to write a daemon marker outside the workspace. I’ll rerun with the Kotlin daemon disabled for this invocation.
+
+Fixed `Defects.java:60`: changed the invalid numeric input `"ten"` to `"10"`. `Integer.parseInt` previously threw `NumberFormatException`, propagated through the future as `ExecutionException`. Async execution, logging, and error propagation remain intact.
+
+Verification: `./test.sh` hit a sandbox restriction on Kotlin’s daemon directory. Running `./test.sh -Dkotlin.compiler.daemon=false` passed: **1 test, 0 failures, 0 errors**. No build files were changed.

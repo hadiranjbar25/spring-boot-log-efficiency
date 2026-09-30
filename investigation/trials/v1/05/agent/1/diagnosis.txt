@@ -1,0 +1,7 @@
+I’ll read `failure.log`, trace the failure in `Defects.java`, and make the smallest repair before running `./test.sh`.
+
+`save()` assigns the same email to both users, so the second insert violates the unique constraint. I changed it to derive a distinct email from each user ID. The verification run hit a sandbox restriction in Kotlin’s compiler daemon; I’ll rerun with the daemon disabled.
+
+Fixed only `Defects.java`: `save()` reused the same email for both users, violating the unique constraint. Emails now incorporate each user’s ID.
+
+Verification passed: 1 test, 0 failures/errors using `./test.sh -Dkotlin.compiler.daemon=false`. Plain `./test.sh` was blocked by sandbox restrictions on Kotlin’s daemon directory. No build files were changed.

@@ -1,0 +1,7 @@
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.733 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.669 s <<< ERROR!
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: 
+Unique index or primary key violation: "PUBLIC.UQ_EMAIL INDEX PUBLIC.UQ_EMAIL_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'same@example.test' )"; SQL statement:
+INSERT INTO users VALUES (?, ?) [23505-240]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:58)
+

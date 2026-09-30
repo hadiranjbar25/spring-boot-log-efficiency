@@ -1,0 +1,6 @@
+I’ll read `failure.log`, trace the failure to `Defects.java`, and make the smallest repair before running `./test.sh`.
+`connect()` passes `"eighty"` to a numeric port parser, causing initialization to fail. I’ll correct the configured port to `"8080"` and preserve parsing and error handling.
+The verification run hit a sandbox restriction: Kotlin tried to write a daemon file outside the workspace. I’ll rerun with the compiler daemon disabled for this invocation.
+Fixed `Defects.java`: `connect()` passed `"eighty"` to `Integer.parseInt`, causing initialization to fail. Changed the port input to `"8080"`, preserving parsing and error handling.
+
+Verification passed: 1 test, 0 failures/errors using `./test.sh -Dkotlin.compiler.daemon=false`. Plain `./test.sh` was blocked by a sandbox restriction on Kotlin’s daemon files. No build files were changed.

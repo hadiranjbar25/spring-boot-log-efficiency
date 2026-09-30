@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.415 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.377 s <<< ERROR!
+java.util.concurrent.ExecutionException: java.lang.NumberFormatException: For input string: "ten"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:74)
+Caused by: java.lang.NumberFormatException: For input string: "ten"
+

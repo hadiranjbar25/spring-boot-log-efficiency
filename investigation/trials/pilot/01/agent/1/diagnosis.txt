@@ -1,0 +1,7 @@
+I’ll read the failure log, inspect the relevant code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+The total calculation adds price and quantity instead of multiplying them. I’ve corrected that one operator. The verification run hit a sandbox restriction when Kotlin tried to write its daemon marker outside the workspace; I’ll retry with the daemon disabled for this invocation.
+
+Fixed `Defects.java`: `total()` incorrectly added price and quantity, producing 13 instead of 30. Changed `+` to `*`.
+
+`./test.sh` encountered a sandbox restriction on Kotlin’s daemon directory. Retried with `./test.sh -Dkotlin.compiler.daemon=false`: **1 test passed, zero failures**. No build settings or tests were edited.

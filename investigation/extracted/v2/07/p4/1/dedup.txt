@@ -1,0 +1,5 @@
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.537 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.502 s <<< ERROR!
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "route not found: /wrong"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:71)
+

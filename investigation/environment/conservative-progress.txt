@@ -1,0 +1,42 @@
+01 safe 1 1 True
+02 safe 1 1 True
+03 safe 1 1 True
+04 safe 1 1 True
+05 safe 1 1 True
+06 safe 1 1 True
+07 safe 1 1 True
+08 safe 1 1 True
+01 safe 2 1 True
+02 safe 2 1 True
+03 safe 2 1 True
+04 safe 2 1 True
+05 safe 2 1 True
+06 safe 2 1 True
+07 safe 2 1 True
+08 safe 2 1 True
+01 safe 3 1 True
+02 safe 3 1 True
+03 safe 3 1 True
+04 safe 3 1 True
+Traceback (most recent call last):
+  File "/Users/hadiranjbar/Downloads/java/token.usage/investigation/scripts/run.py", line 43, in <module>
+    result=list(pool.map(lambda x:run(*x),jobs))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 608, in result_iterator
+    yield fs.pop().result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 445, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/hadiranjbar/Downloads/java/token.usage/investigation/scripts/run.py", line 43, in <lambda>
+    result=list(pool.map(lambda x:run(*x),jobs))
+  File "/Users/hadiranjbar/Downloads/java/token.usage/investigation/scripts/run.py", line 33, in run
+    meta={'case':case,'config':config,'run':repeat,'command':cmd,'command_shell':__import__('shlex').join(cmd),'exit':code,'seconds':time.monotonic()-start,'failure_identity':CASES[case]['identity'],'identity_verified':CASES[case]['identity'] in stdout,'profile_expected': ('agent' if config=='safe' else config) if config in ('agent','safe','p1','p2') else 'default','profile_verified': case=='01' or ('profiles=['+('agent' if config=='safe' else config if config in ('agent','p1','p2') else '')+']') in stdout,'java_home':JAVA,'normalized_environment':'DEBUG, SPRING_*, LOGGING_*, JAVA_TOOL_OPTIONS, JDK_JAVA_OPTIONS, MAVEN_OPTS cleared','environment_path':'investigation/environment/final.json','compiled_fixture_sha256':hashlib.sha256((ROOT/'target/test-classes/com/ai/token/experiment/Defects.class').read_bytes()).hexdigest(),'source_sha256':hashlib.sha256((ROOT/'investigation/src/test/java/com/ai/token/experiment/Defects.java').read_bytes()).hexdigest()}
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1249, in read_bytes
+    with self.open(mode='rb') as f:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1242, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1110, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hadiranjbar/Downloads/java/token.usage/target/test-classes/com/ai/token/experiment/Defects.class'

@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.474 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.442 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: both distinct users must be saved ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:228)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:59)
+

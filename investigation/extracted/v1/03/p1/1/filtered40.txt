@@ -1,0 +1,6 @@
+19:19:18.468 ERROR [main] com.ai.token.experiment.Defects: GET /orders?count=two status=400 resolved={}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'count': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "two"
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633) ~[jakarta.servlet-api-6.1.0.jar:6.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723) ~[jakarta.servlet-api-6.1.0.jar:6.1.0]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:46) ~[test-classes/:na]

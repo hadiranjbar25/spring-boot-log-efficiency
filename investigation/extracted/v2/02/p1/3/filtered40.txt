@@ -1,0 +1,5 @@
+19:27:17.308 ERROR [main] com.ai.token.experiment.Defects: client setup failed
+
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.Defects.connect(Defects.java:21) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41) ~[test-classes/:na]

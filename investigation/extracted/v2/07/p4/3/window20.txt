@@ -1,0 +1,20 @@
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.528 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.492 s <<< ERROR!
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "route not found: /wrong"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:71)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:71 » NotFound 404 Not Found: "route not found: /wrong"
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.762 s
+[INFO] Finished at: 2026-09-30T19:30:57+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-cli) on project token.usage: 

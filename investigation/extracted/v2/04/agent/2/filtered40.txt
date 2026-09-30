@@ -1,0 +1,8 @@
+19:26:21.091 ERROR [main] o.s.boot.SpringApplication: Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'port' defined in com.ai.token.experiment.Defects$BrokenStartup: Failed to instantiate [java.lang.String]: Factory method 'port' threw exception with message: For input string: "eighty"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:54) ~[test-classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.lang.String]: Factory method 'port' threw exception with message: For input string: "eighty"
+	... 99 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at com.ai.token.experiment.Defects$BrokenStartup.port(Defects.java:33) ~[test-classes/:na]

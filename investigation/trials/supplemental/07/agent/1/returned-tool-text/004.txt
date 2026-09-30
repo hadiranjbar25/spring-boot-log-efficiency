@@ -1,0 +1,4 @@
+#!/bin/sh
+export JAVA_HOME=/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home
+unset DEBUG SPRING_PROFILES_ACTIVE LOGGING_CONFIG
+exec mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation,agent-reports -Dtest=FailureCasesTest -Dexperiment.case=07 -Dspring.output.ansi.enabled=never -Dspring.profiles.active=agent -Dexperiment.deduplicate=true test "$@"

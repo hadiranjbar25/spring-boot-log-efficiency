@@ -1,0 +1,24 @@
+19:31:05.393 ERROR [invoice-worker-7] com.ai.token.experiment.Defects: invoice-42 calculation failed
+
+java.lang.NumberFormatException: For input string: "ten"
+	at com.ai.token.experiment.Defects.lambda$async$1(Defects.java:62) ~[test-classes/:na]
+
+CASE_END 08
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.404 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.370 s <<< ERROR!
+java.util.concurrent.ExecutionException: java.lang.NumberFormatException: For input string: "ten"
+	at com.ai.token.experiment.Defects.async(Defects.java:65)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:74)
+Caused by: java.lang.NumberFormatException: For input string: "ten"
+	at com.ai.token.experiment.Defects.lambda$async$1(Defects.java:62)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:74 » Execution java.lang.NumberFormatException: For input string: "ten"
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE

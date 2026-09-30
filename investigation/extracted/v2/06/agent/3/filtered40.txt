@@ -1,0 +1,34 @@
+19:30:49.084 ERROR [main] com.ai.token.experiment.Defects: save users failed request=db-6
+
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.UQ_EMAIL INDEX PUBLIC.UQ_EMAIL_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'same@example.test' )"; SQL statement:
+INSERT INTO users VALUES (?, ?) [23505-240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:535) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:223) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:520) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:77) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.command.Command.executeUpdate(Command.java:306) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.command.Command.executeUpdate(Command.java:250) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172) ~[h2-2.4.240.jar:2.4.240]
+	at com.ai.token.experiment.Defects.save(Defects.java:42) ~[test-classes/:na]
+	at com.ai.token.experiment.Defects.saveCaught(Defects.java:46) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:59) ~[test-classes/:na]
+19:30:49.087 ERROR [main] com.ai.token.experiment.Defects: request=db-6 failed; exception logged by save users
+CASE_END 06
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.451 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.420 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: both distinct users must be saved ==> expected: <true> but was: <false>
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:59)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 

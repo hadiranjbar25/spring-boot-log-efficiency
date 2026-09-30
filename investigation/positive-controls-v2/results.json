@@ -1,0 +1,130 @@
+[
+  {
+    "case": "01",
+    "exit": 0,
+    "seconds": 4.319661167,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=01",
+      "test"
+    ]
+  },
+  {
+    "case": "02",
+    "exit": 0,
+    "seconds": 4.211750667,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=02",
+      "test"
+    ]
+  },
+  {
+    "case": "03",
+    "exit": 0,
+    "seconds": 4.942488375,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=03",
+      "test"
+    ]
+  },
+  {
+    "case": "04",
+    "exit": 0,
+    "seconds": 4.010529667,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=04",
+      "test"
+    ]
+  },
+  {
+    "case": "05",
+    "exit": 0,
+    "seconds": 4.771253583,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=05",
+      "test"
+    ]
+  },
+  {
+    "case": "06",
+    "exit": 0,
+    "seconds": 4.169814375000001,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=06",
+      "test"
+    ]
+  },
+  {
+    "case": "07",
+    "exit": 0,
+    "seconds": 5.145789000000001,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=07",
+      "test"
+    ]
+  },
+  {
+    "case": "08",
+    "exit": 0,
+    "seconds": 4.228638082999996,
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dtest=FailureCasesTest",
+      "-Dexperiment.case=08",
+      "test"
+    ]
+  }
+]

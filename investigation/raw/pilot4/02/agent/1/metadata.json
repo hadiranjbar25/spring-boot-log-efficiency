@@ -1,0 +1,31 @@
+{
+  "case": "02",
+  "config": "agent",
+  "run": 1,
+  "command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation,agent-reports",
+    "-Dtest=FailureCasesTest",
+    "-Dexperiment.case=02",
+    "-Dexperiment.artifactDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot4/02/agent/1",
+    "-Dexperiment.reportDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot4/02/agent/1/reports",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dspring.profiles.active=agent",
+    "-Dexperiment.deduplicate=true",
+    "surefire:test"
+  ],
+  "command_shell": "mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation,agent-reports -Dtest=FailureCasesTest -Dexperiment.case=02 -Dexperiment.artifactDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot4/02/agent/1 -Dexperiment.reportDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot4/02/agent/1/reports -Dspring.output.ansi.enabled=never -Dspring.profiles.active=agent -Dexperiment.deduplicate=true surefire:test",
+  "exit": 1,
+  "seconds": 2.108508125,
+  "failure_identity": "cannot initialize client",
+  "identity_verified": true,
+  "profile_expected": "agent",
+  "profile_verified": true,
+  "java_home": "/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home",
+  "normalized_environment": "DEBUG, SPRING_*, LOGGING_*, JAVA_TOOL_OPTIONS, JDK_JAVA_OPTIONS, MAVEN_OPTS cleared",
+  "source_sha256": "f9e78edb348d14922f279ee73099485312f2ca57a650ff05a9137f549c6cb31e"
+}

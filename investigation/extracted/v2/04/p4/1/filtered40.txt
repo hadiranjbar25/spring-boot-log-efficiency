@@ -1,0 +1,4 @@
+2026-09-30T19:24:54.202+02:00 ERROR 39527 --- [token.usage] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'port' defined in com.ai.token.experiment.Defects$BrokenStartup: Failed to instantiate [java.lang.String]: Factory method 'port' threw exception with message: For input string: "eighty"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:54) ~[test-classes/:na]

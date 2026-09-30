@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.512 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.477 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: GET orders valid count ==> expected: <200> but was: <400>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:201)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:590)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:48)
+

@@ -1,0 +1,9 @@
+I’ll read the failure log, inspect the affected code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+`ordersUrl()` sends `count=two`, but the controller expects an integer, so Spring rejects the request with HTTP 400. I changed the URL to send `count=2`; the test is running.
+
+The build stopped before testing because Kotlin tried to write daemon files outside the permitted workspace. I’ll retry with those temporary files directed to `/tmp`.
+
+Fixed only `Defects.java`: `ordersUrl()` now sends `count=2` instead of `count=two`. The controller requires an integer; the spelled-out value caused HTTP 400.
+
+Verification passed: 1 test, 0 failures. Plain `./test.sh` hit sandbox restrictions on Kotlin’s daemon; `./test.sh -Dkotlin.compiler.daemon=false` succeeded without modifying build files.

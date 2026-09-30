@@ -1,0 +1,7 @@
+I’ll read `failure.log`, inspect `Defects.java`, and make the smallest behavioral fix, then run `./test.sh`.
+
+`call()` requests `/wrong`, which returns HTTP 404. The server exposes the price at `/price`; I’ve corrected that path and will verify it with `./test.sh`.
+
+Fixed `Defects.java`: `call()` requested `/wrong`, causing HTTP 404. Changed it to `/price`, preserving the HTTP request and response parsing.
+
+Ran `./test.sh`, but verification was blocked before tests ran: the sandbox denied Kotlin’s daemon marker write outside the workspace. No other source or configuration files were changed.

@@ -1,0 +1,49 @@
+{
+  "v2": {
+    "runs": 114,
+    "expected": 114,
+    "identities_and_profiles": true,
+    "reports": 114,
+    "one_failing_test_per_report": true
+  },
+  "conservative-v2": {
+    "runs": 24,
+    "expected": 24,
+    "identities_and_profiles": true,
+    "reports": 24,
+    "one_failing_test_per_report": true
+  },
+  "original_application_yaml_unchanged": true,
+  "normal_tests": [
+    {
+      "profile": "default",
+      "command": [
+        "mvn",
+        "-o",
+        "-B",
+        "-ntp",
+        "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+        "-Dkotlin.compiler.daemon=false",
+        "test"
+      ],
+      "exit": 0,
+      "seconds": 6.291074459
+    },
+    {
+      "profile": "agent",
+      "command": [
+        "mvn",
+        "-o",
+        "-B",
+        "-ntp",
+        "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+        "-Dkotlin.compiler.daemon=false",
+        "-Dspring.profiles.active=agent",
+        "test"
+      ],
+      "exit": 0,
+      "seconds": 5.7846667499999995
+    }
+  ],
+  "raw_hashes_match": true
+}

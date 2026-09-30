@@ -1,0 +1,47 @@
+{
+  "case": "03",
+  "config": "agent",
+  "run": 1,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "time_budget_seconds": 120,
+  "initial_exit": 1,
+  "session_exit": 0,
+  "elapsed_seconds": 53.85240733399999,
+  "verification_exit": 0,
+  "verification_seconds": 5.022497874999999,
+  "immutable_changes": [],
+  "patch_present": true,
+  "usage": [
+    {
+      "input_tokens": 169157,
+      "cached_input_tokens": 130688,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 868,
+      "reasoning_output_tokens": 188
+    }
+  ],
+  "tool_calls": 8,
+  "root_cause_correct": true,
+  "fix_valid": true,
+  "workspace": "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo",
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--json",
+    "-s",
+    "workspace-write",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-C",
+    "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo",
+    "Fix the failing behavior exercised by ./test.sh in this repository. Start by reading failure.log. You may inspect source and run tools normally. Modify only investigation/src/test/java/com/ai/token/experiment/Defects.java. Do not change tests, build settings, logging, test.sh, expectations, or disable functionality. Make the smallest real behavioral repair; do not hard-code test results or swallow errors. Run ./test.sh to verify. Explain the root cause and repair in your final answer. Full original logs are in failure.stdout and failure.stderr if needed. Do not read outside this workspace except the build dependency cache and installed tools. You have 120 seconds. Do not use subagents."
+  ],
+  "review": "Reviewed patch and diagnosis: targeted numeric/operator/request/unique-email repair; no expectation or functionality removal.",
+  "trial_status": "completed_with_patch"
+}

@@ -1,0 +1,141 @@
+64-          <description>A list of kotlin compiler plugins to be applied.</description>
+65-        </parameter>
+66-        <parameter>
+67:          <name>daemonShutdownDelayMs</name>
+68-          <type>java.lang.Long</type>
+69-          <required>false</required>
+70-          <editable>true</editable>
+--
+245-        <apiVersion implementation="java.lang.String">${kotlin.compiler.apiVersion}</apiVersion>
+246-        <classLoaderCacheTimeoutSeconds implementation="java.lang.Long">${kotlin.compiler.classloader.cache.timeoutSeconds}</classLoaderCacheTimeoutSeconds>
+247-        <classpath implementation="java.util.List" default-value="${project.compileClasspathElements}"/>
+248:        <daemonShutdownDelayMs implementation="java.lang.Long">${kotlin.compiler.daemon.shutdownDelayMs}</daemonShutdownDelayMs>
+249-        <experimentalCoroutines implementation="java.lang.String">${kotlin.compiler.experimental.coroutines}</experimentalCoroutines>
+250-        <generateCompilerRefIndex implementation="boolean" default-value="false">${kotlin.compiler.generateCompilerRefIndex}</generateCompilerRefIndex>
+251-        <incrementalCachesRoot implementation="java.lang.String" default-value="${project.build.directory}/kotlin-ic">${kotlin.compiler.incremental.cache.root}</incrementalCachesRoot>
+252-        <javaParameters implementation="boolean">${kotlin.compiler.javaParameters}</javaParameters>
+253-        <jdkHome implementation="java.lang.String">${kotlin.compiler.jdkHome}</jdkHome>
+254-        <jvmTarget implementation="java.lang.String">${kotlin.compiler.jvmTarget}</jvmTarget>
+255:        <kotlinDaemonJvmArgs implementation="java.util.List">${kotlin.compiler.daemon.jvmArgs}</kotlinDaemonJvmArgs>
+256-        <languageVersion implementation="java.lang.String">${kotlin.compiler.languageVersion}</languageVersion>
+257-        <moduleName implementation="java.lang.String" default-value="${project.artifactId}"/>
+258-        <myIncremental implementation="boolean" default-value="false">${kotlin.compiler.incremental}</myIncremental>
+--
+264-        <testClasspath implementation="java.util.List" default-value="${project.testClasspathElements}"/>
+265-        <testModuleName implementation="java.lang.String" default-value="${project.artifactId}-test"/>
+266-        <testOutput implementation="java.lang.String" default-value="${project.build.testOutputDirectory}"/>
+267:        <useDaemon implementation="boolean" default-value="true">${kotlin.compiler.daemon}</useDaemon>
+268-        <mojoExecution implementation="org.apache.maven.plugin.MojoExecution" default-value="${mojoExecution}"/>
+269-      </configuration>
+270-      <requirements>
+--
+365-          <description></description>
+366-        </parameter>
+367-        <parameter>
+368:          <name>daemonShutdownDelayMs</name>
+369-          <type>java.lang.Long</type>
+370-          <required>false</required>
+371-          <editable>true</editable>
+--
+567-        <apiVersion implementation="java.lang.String">${kotlin.compiler.apiVersion}</apiVersion>
+568-        <classLoaderCacheTimeoutSeconds implementation="java.lang.Long">${kotlin.compiler.classloader.cache.timeoutSeconds}</classLoaderCacheTimeoutSeconds>
+569-        <classpath implementation="java.util.List" default-value="${project.compileClasspathElements}"/>
+570:        <daemonShutdownDelayMs implementation="java.lang.Long">${kotlin.compiler.daemon.shutdownDelayMs}</daemonShutdownDelayMs>
+571-        <experimentalCoroutines implementation="java.lang.String">${kotlin.compiler.experimental.coroutines}</experimentalCoroutines>
+572-        <generateCompilerRefIndex implementation="boolean" default-value="false">${kotlin.compiler.generateCompilerRefIndex}</generateCompilerRefIndex>
+573-        <incrementalCachesRoot implementation="java.lang.String" default-value="${project.build.directory}/kotlin-ic">${kotlin.compiler.incremental.cache.root}</incrementalCachesRoot>
+574-        <javaParameters implementation="boolean">${kotlin.compiler.javaParameters}</javaParameters>
+575-        <jdkHome implementation="java.lang.String">${kotlin.compiler.jdkHome}</jdkHome>
+576-        <jvmTarget implementation="java.lang.String">${kotlin.compiler.jvmTarget}</jvmTarget>
+577:        <kotlinDaemonJvmArgs implementation="java.util.List">${kotlin.compiler.daemon.jvmArgs}</kotlinDaemonJvmArgs>
+578-        <languageVersion implementation="java.lang.String">${kotlin.compiler.languageVersion}</languageVersion>
+579-        <moduleName implementation="java.lang.String" default-value="${project.artifactId}"/>
+580-        <myIncremental implementation="boolean" default-value="false">${kotlin.compiler.incremental}</myIncremental>
+--
+586-        <testClasspath implementation="java.util.List" default-value="${project.testClasspathElements}"/>
+587-        <testModuleName implementation="java.lang.String" default-value="${project.artifactId}-test"/>
+588-        <testOutput implementation="java.lang.String" default-value="${project.build.testOutputDirectory}"/>
+589:        <useDaemon implementation="boolean" default-value="true">${kotlin.compiler.daemon}</useDaemon>
+590-        <mojoExecution implementation="org.apache.maven.plugin.MojoExecution" default-value="${mojoExecution}"/>
+591-      </configuration>
+592-      <requirements>
+--
+759-          <description>A list of kotlin compiler plugins to be applied.</description>
+760-        </parameter>
+761-        <parameter>
+762:          <name>daemonShutdownDelayMs</name>
+763-          <type>java.lang.Long</type>
+764-          <required>false</required>
+765-          <editable>true</editable>
+--
+961-        <apiVersion implementation="java.lang.String">${kotlin.compiler.apiVersion}</apiVersion>
+962-        <classLoaderCacheTimeoutSeconds implementation="java.lang.Long">${kotlin.compiler.classloader.cache.timeoutSeconds}</classLoaderCacheTimeoutSeconds>
+963-        <classpath implementation="java.util.List" default-value="${project.compileClasspathElements}"/>
+964:        <daemonShutdownDelayMs implementation="java.lang.Long">${kotlin.compiler.daemon.shutdownDelayMs}</daemonShutdownDelayMs>
+965-        <defaultSourceDir implementation="java.util.List" default-value="${project.testCompileSourceRoots}"/>
+966-        <defaultSourceDirs implementation="java.util.List" default-value="${project.testCompileSourceRoots}"/>
+967-        <experimentalCoroutines implementation="java.lang.String">${kotlin.compiler.experimental.coroutines}</experimentalCoroutines>
+--
+970-        <javaParameters implementation="boolean">${kotlin.compiler.javaParameters}</javaParameters>
+971-        <jdkHome implementation="java.lang.String">${kotlin.compiler.jdkHome}</jdkHome>
+972-        <jvmTarget implementation="java.lang.String">${kotlin.compiler.jvmTarget}</jvmTarget>
+973:        <kotlinDaemonJvmArgs implementation="java.util.List">${kotlin.compiler.daemon.jvmArgs}</kotlinDaemonJvmArgs>
+974-        <languageVersion implementation="java.lang.String">${kotlin.compiler.languageVersion}</languageVersion>
+975-        <moduleName implementation="java.lang.String" default-value="${project.artifactId}"/>
+976-        <myIncremental implementation="boolean" default-value="false">${kotlin.compiler.incremental}</myIncremental>
+--
+983-        <testClasspath implementation="java.util.List" default-value="${project.testClasspathElements}"/>
+984-        <testModuleName implementation="java.lang.String" default-value="${project.artifactId}-test"/>
+985-        <testOutput implementation="java.lang.String" default-value="${project.build.testOutputDirectory}"/>
+986:        <useDaemon implementation="boolean" default-value="true">${kotlin.compiler.daemon}</useDaemon>
+987-        <mojoExecution implementation="org.apache.maven.plugin.MojoExecution" default-value="${mojoExecution}"/>
+988-      </configuration>
+989-      <requirements>
+--
+1085-          <description></description>
+1086-        </parameter>
+1087-        <parameter>
+1088:          <name>daemonShutdownDelayMs</name>
+1089-          <type>java.lang.Long</type>
+1090-          <required>false</required>
+1091-          <editable>true</editable>
+--
+1308-        <apiVersion implementation="java.lang.String">${kotlin.compiler.apiVersion}</apiVersion>
+1309-        <classLoaderCacheTimeoutSeconds implementation="java.lang.Long">${kotlin.compiler.classloader.cache.timeoutSeconds}</classLoaderCacheTimeoutSeconds>
+1310-        <classpath implementation="java.util.List" default-value="${project.compileClasspathElements}"/>
+1311:        <daemonShutdownDelayMs implementation="java.lang.Long">${kotlin.compiler.daemon.shutdownDelayMs}</daemonShutdownDelayMs>
+1312-        <defaultSourceDir implementation="java.util.List" default-value="${project.testCompileSourceRoots}"/>
+1313-        <defaultSourceDirs implementation="java.util.List" default-value="${project.testCompileSourceRoots}"/>
+1314-        <experimentalCoroutines implementation="java.lang.String">${kotlin.compiler.experimental.coroutines}</experimentalCoroutines>
+--
+1317-        <javaParameters implementation="boolean">${kotlin.compiler.javaParameters}</javaParameters>
+1318-        <jdkHome implementation="java.lang.String">${kotlin.compiler.jdkHome}</jdkHome>
+1319-        <jvmTarget implementation="java.lang.String">${kotlin.compiler.jvmTarget}</jvmTarget>
+1320:        <kotlinDaemonJvmArgs implementation="java.util.List">${kotlin.compiler.daemon.jvmArgs}</kotlinDaemonJvmArgs>
+1321-        <languageVersion implementation="java.lang.String">${kotlin.compiler.languageVersion}</languageVersion>
+1322-        <moduleName implementation="java.lang.String" default-value="${project.artifactId}"/>
+1323-        <myIncremental implementation="boolean" default-value="false">${kotlin.compiler.incremental}</myIncremental>
+--
+1330-        <testClasspath implementation="java.util.List" default-value="${project.testClasspathElements}"/>
+1331-        <testModuleName implementation="java.lang.String" default-value="${project.artifactId}-test"/>
+1332-        <testOutput implementation="java.lang.String" default-value="${project.build.testOutputDirectory}"/>
+1333:        <useDaemon implementation="boolean" default-value="true">${kotlin.compiler.daemon}</useDaemon>
+1334-        <mojoExecution implementation="org.apache.maven.plugin.MojoExecution" default-value="${mojoExecution}"/>
+1335-      </configuration>
+1336-      <requirements>
+--
+1404-    </dependency>
+1405-    <dependency>
+1406-      <groupId>org.jetbrains.kotlin</groupId>
+1407:      <artifactId>kotlin-daemon-client</artifactId>
+1408-      <type>jar</type>
+1409-      <version>2.3.21</version>
+1410-    </dependency>
+--
+1428-    </dependency>
+1429-    <dependency>
+1430-      <groupId>org.jetbrains.kotlin</groupId>
+1431:      <artifactId>kotlin-daemon-embeddable</artifactId>
+1432-      <type>jar</type>
+1433-      <version>2.3.21</version>
+1434-    </dependency>

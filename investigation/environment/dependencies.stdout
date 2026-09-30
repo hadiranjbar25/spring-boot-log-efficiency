@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[WARNING] The POM for org.apache.maven.plugins:maven-dependency-plugin:jar:3.10.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-dependency-plugin:3.10.0: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.10.0 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-dependency-plugin:jar:3.10.0 has not been downloaded from it before.
+
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:3.5.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:3.5.0: Plugin org.apache.maven.plugins:maven-clean-plugin:3.5.0 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-clean-plugin:jar:3.5.0 has not been downloaded from it before.
+
+[WARNING] The POM for org.apache.maven.plugins:maven-jar-plugin:jar:3.5.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-jar-plugin:3.5.1: Plugin org.apache.maven.plugins:maven-jar-plugin:3.5.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-jar-plugin:jar:3.5.1 has not been downloaded from it before.
+
+[WARNING] The POM for org.apache.maven.plugins:maven-install-plugin:jar:3.1.4 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-install-plugin:3.1.4: Plugin org.apache.maven.plugins:maven-install-plugin:3.1.4 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-install-plugin:jar:3.1.4 has not been downloaded from it before.
+
+[WARNING] The POM for org.apache.maven.plugins:maven-deploy-plugin:jar:3.1.4 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-deploy-plugin:3.1.4: Plugin org.apache.maven.plugins:maven-deploy-plugin:3.1.4 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-deploy-plugin:jar:3.1.4 has not been downloaded from it before.
+
+[WARNING] The POM for org.apache.maven.plugins:maven-site-plugin:jar:3.12.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-site-plugin:3.12.1: Plugin org.apache.maven.plugins:maven-site-plugin:3.12.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-site-plugin:jar:3.12.1 has not been downloaded from it before.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.326 s
+[INFO] Finished at: 2026-09-30T19:20:22+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] No plugin found for prefix 'dependency' in the current project and in the plugin groups [org.springframework.boot, org.jetbrains.kotlin, org.cyclonedx, org.flywaydb, io.github.git-commit-id, org.jooq, org.liquibase, org.graalvm.buildtools, io.github.ascopes, org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2), central (https://repo.maven.apache.org/maven2)] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException

@@ -1,0 +1,5 @@
+I’ll read failure.log, inspect the failing code, and make the smallest repair in Defects.java, then run ./test.sh.
+The startup bean parses `"eighty"` as an integer, which prevents startup. I changed that input to `"8080"`, preserving the parsing behavior. Verification hit a sandbox restriction on Kotlin’s daemon directory; I’ll retry with the daemon’s temporary files directed into the workspace.
+Fixed Defects.java:32: the startup bean parsed `"eighty"`, causing a NumberFormatException and preventing Spring startup. Changed the port input to `"8080"`, retaining integer parsing.
+
+Verification passed: 1 test, 0 failures/errors using `./test.sh -Dkotlin.compiler.daemon=false`. Plain `./test.sh` was blocked by sandbox restrictions on Kotlin’s daemon. No build files or tests were changed.

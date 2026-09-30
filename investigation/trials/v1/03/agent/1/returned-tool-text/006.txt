@@ -1,0 +1,314 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] starting the daemon as: /Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home/bin/java -cp /Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx8192m -XX:ReservedCodeCacheSize=320m -ea -Dkotlin.daemon.custom.run.files.path.for.tests=/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home/.kotlin/daemon -XX:+UseCodeCacheFlushing -XX:+UseParallelGC -Dkotlin.daemon.initiator.marker.file=/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/kotlin-compiler-client-10002646393890583966-is-running --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-shutdownDelayMilliseconds=1800000 --daemon-compilerClasspath /Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar
+[INFO] [daemon] Picked up JAVA_TOOL_OPTIONS: -Duser.home=/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home
+[INFO] [daemon] Exception: Cannot find free port in 10 attempts
+[INFO] [daemon] java.lang.IllegalStateException: Cannot find free port in 10 attempts
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:116)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.getCompileServiceAndPort(KotlinCompileDaemon.kt:197)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl$lambda$1(KotlinCompileDaemon.kt:147)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.runSynchronized(KotlinCompileDaemon.kt:79)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl(KotlinCompileDaemon.kt:108)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.main(KotlinCompileDaemon.kt:187)
+[INFO] [daemon] Caused by: java.rmi.server.ExportException: Listen failed on port: 17599; nested exception is: 
+[INFO] [daemon] 	java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:311)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:223)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:405)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+[INFO] [daemon] 	at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:226)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:177)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:153)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:138)
+[INFO] [daemon] 	at java.rmi/java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:239)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:109)
+[INFO] [daemon] 	... 5 more
+[INFO] [daemon] Caused by: java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[INFO] [daemon] 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[INFO] [daemon] 	... 14 more
+[INFO] [daemon] Exception in thread "main" java.lang.IllegalStateException: Cannot find free port in 10 attempts
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:116)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.getCompileServiceAndPort(KotlinCompileDaemon.kt:197)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl$lambda$1(KotlinCompileDaemon.kt:147)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.runSynchronized(KotlinCompileDaemon.kt:79)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl(KotlinCompileDaemon.kt:108)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.main(KotlinCompileDaemon.kt:187)
+[INFO] [daemon] Caused by: java.rmi.server.ExportException: Listen failed on port: 17599; nested exception is: 
+[INFO] [daemon] 	java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:311)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:223)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:405)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+[INFO] [daemon] 	at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:226)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:177)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:153)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:138)
+[INFO] [daemon] 	at java.rmi/java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:239)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:109)
+[INFO] [daemon] 	... 5 more
+[INFO] [daemon] Caused by: java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[INFO] [daemon] 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[INFO] [daemon] 	... 14 more
+[ERROR] The daemon has terminated unexpectedly on startup attempt #1 with exit code: 1. The daemon process output:
+    ... (54 more lines)
+    55. 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+    56. 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+    57. 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+    58. 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+    59. 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+    60. 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+    61. 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+    62. 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+    63. 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+    64. 	... 14 more
+The daemon didn't produce the message "Kotlin compile daemon is ready" during startup.
+[INFO] #1 retrying connecting to the daemon 
+[INFO] starting the daemon as: /Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home/bin/java -cp /Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx8192m -XX:ReservedCodeCacheSize=320m -ea -Dkotlin.daemon.custom.run.files.path.for.tests=/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home/.kotlin/daemon -XX:+UseCodeCacheFlushing -XX:+UseParallelGC -Dkotlin.daemon.initiator.marker.file=/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/kotlin-compiler-client-10002646393890583966-is-running --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-shutdownDelayMilliseconds=1800000 --daemon-compilerClasspath /Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar
+[INFO] [daemon] Picked up JAVA_TOOL_OPTIONS: -Duser.home=/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home
+[INFO] [daemon] Exception: Cannot find free port in 10 attempts
+[INFO] [daemon] java.lang.IllegalStateException: Cannot find free port in 10 attempts
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:116)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.getCompileServiceAndPort(KotlinCompileDaemon.kt:197)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl$lambda$1(KotlinCompileDaemon.kt:147)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.runSynchronized(KotlinCompileDaemon.kt:79)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl(KotlinCompileDaemon.kt:108)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.main(KotlinCompileDaemon.kt:187)
+[INFO] [daemon] Caused by: java.rmi.server.ExportException: Listen failed on port: 17705; nested exception is: 
+[INFO] [daemon] 	java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:311)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:223)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:405)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+[INFO] [daemon] 	at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:226)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:177)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:153)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:138)
+[INFO] [daemon] 	at java.rmi/java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:239)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:109)
+[INFO] [daemon] 	... 5 more
+[INFO] [daemon] Caused by: java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[INFO] [daemon] 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[INFO] [daemon] 	... 14 more
+[INFO] [daemon] Exception in thread "main" java.lang.IllegalStateException: Cannot find free port in 10 attempts
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:116)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.getCompileServiceAndPort(KotlinCompileDaemon.kt:197)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl$lambda$1(KotlinCompileDaemon.kt:147)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.runSynchronized(KotlinCompileDaemon.kt:79)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl(KotlinCompileDaemon.kt:108)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.main(KotlinCompileDaemon.kt:187)
+[INFO] [daemon] Caused by: java.rmi.server.ExportException: Listen failed on port: 17705; nested exception is: 
+[INFO] [daemon] 	java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:311)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:223)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:405)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+[INFO] [daemon] 	at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:226)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:177)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:153)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:138)
+[INFO] [daemon] 	at java.rmi/java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:239)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:109)
+[INFO] [daemon] 	... 5 more
+[INFO] [daemon] Caused by: java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[INFO] [daemon] 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[INFO] [daemon] 	... 14 more
+[ERROR] The daemon has terminated unexpectedly on startup attempt #2 with exit code: 1. The daemon process output:
+    ... (54 more lines)
+    55. 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+    56. 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+    57. 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+    58. 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+    59. 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+    60. 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+    61. 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+    62. 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+    63. 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+    64. 	... 14 more
+Problems may have occurred during auto-selection of GC. The preferred GC is Parallel GC.
+If the problems persist, try adding the JVM option to the Kotlin daemon JVM arguments: -XX:-UseParallelGC.
+GC auto-selection logic is disabled temporary for the next daemon startup.
+The daemon didn't produce the message "Kotlin compile daemon is ready" during startup.
+[INFO] #2 retrying connecting to the daemon 
+[INFO] starting the daemon as: /Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home/bin/java -cp /Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx8192m -XX:ReservedCodeCacheSize=320m -ea -Dkotlin.daemon.custom.run.files.path.for.tests=/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home/.kotlin/daemon -XX:+UseCodeCacheFlushing -Dkotlin.daemon.initiator.marker.file=/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/kotlin-compiler-client-10002646393890583966-is-running --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-shutdownDelayMilliseconds=1800000 --daemon-compilerClasspath /Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar
+[INFO] [daemon] Picked up JAVA_TOOL_OPTIONS: -Duser.home=/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-gvrmuzvo/target/test-home
+[INFO] [daemon] Exception: Cannot find free port in 10 attempts
+[INFO] [daemon] java.lang.IllegalStateException: Cannot find free port in 10 attempts
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:116)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.getCompileServiceAndPort(KotlinCompileDaemon.kt:197)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl$lambda$1(KotlinCompileDaemon.kt:147)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.runSynchronized(KotlinCompileDaemon.kt:79)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl(KotlinCompileDaemon.kt:108)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.main(KotlinCompileDaemon.kt:187)
+[INFO] [daemon] Caused by: java.rmi.server.ExportException: Listen failed on port: 17993; nested exception is: 
+[INFO] [daemon] 	java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:311)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:223)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:405)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+[INFO] [daemon] 	at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:226)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:177)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:153)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:138)
+[INFO] [daemon] 	at java.rmi/java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:239)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:109)
+[INFO] [daemon] 	... 5 more
+[INFO] [daemon] Caused by: java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[INFO] [daemon] 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[INFO] [daemon] 	... 14 more
+[INFO] [daemon] Exception in thread "main" java.lang.IllegalStateException: Cannot find free port in 10 attempts
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:116)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.getCompileServiceAndPort(KotlinCompileDaemon.kt:197)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl$lambda$1(KotlinCompileDaemon.kt:147)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.runSynchronized(KotlinCompileDaemon.kt:79)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemonBase.mainImpl(KotlinCompileDaemon.kt:108)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.KotlinCompileDaemon.main(KotlinCompileDaemon.kt:187)
+[INFO] [daemon] Caused by: java.rmi.server.ExportException: Listen failed on port: 17993; nested exception is: 
+[INFO] [daemon] 	java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:311)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:223)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:405)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+[INFO] [daemon] 	at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:226)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:177)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:153)
+[INFO] [daemon] 	at java.rmi/sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:138)
+[INFO] [daemon] 	at java.rmi/java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:239)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.NetworkUtilsKt.findPortAndCreateRegistry(NetworkUtils.kt:109)
+[INFO] [daemon] 	... 5 more
+[INFO] [daemon] Caused by: java.net.SocketException: Operation not permitted
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[INFO] [daemon] 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[INFO] [daemon] 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[INFO] [daemon] 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[INFO] [daemon] 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[INFO] [daemon] 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[INFO] [daemon] 	... 14 more
+[ERROR] The daemon has terminated unexpectedly on startup attempt #3 with exit code: 1. The daemon process output:
+    ... (54 more lines)
+    55. 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+    56. 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+    57. 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+    58. 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+    59. 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+    60. 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+    61. 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+    62. 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+    63. 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+    64. 	... 14 more
+The daemon didn't produce the message "Kotlin compile daemon is ready" during startup.
+[INFO] #3 retrying connecting to the daemon 
+[ERROR] Failed connecting to the daemon in 4 retries
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.161 s
+[INFO] Finished at: 2026-09-30T19:22:29+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.jetbrains.kotlin:kotlin-maven-plugin:2.3.21:compile (compile) on project token.usage: Compilation failure: Compilation failure: 
+[ERROR] The daemon has terminated unexpectedly on startup attempt #1 with exit code: 1. The daemon process output:
+[ERROR]     ... (54 more lines)
+[ERROR]     55. 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[ERROR]     56. 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[ERROR]     57. 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[ERROR]     58. 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[ERROR]     59. 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[ERROR]     60. 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[ERROR]     61. 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[ERROR]     62. 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[ERROR]     63. 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[ERROR]     64. 	... 14 more
+[ERROR] The daemon didn't produce the message "Kotlin compile daemon is ready" during startup.
+[ERROR] The daemon has terminated unexpectedly on startup attempt #2 with exit code: 1. The daemon process output:
+[ERROR]     ... (54 more lines)
+[ERROR]     55. 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[ERROR]     56. 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[ERROR]     57. 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[ERROR]     58. 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[ERROR]     59. 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[ERROR]     60. 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[ERROR]     61. 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[ERROR]     62. 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[ERROR]     63. 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[ERROR]     64. 	... 14 more
+[ERROR] Problems may have occurred during auto-selection of GC. The preferred GC is Parallel GC.
+[ERROR] If the problems persist, try adding the JVM option to the Kotlin daemon JVM arguments: -XX:-UseParallelGC.
+[ERROR] GC auto-selection logic is disabled temporary for the next daemon startup.
+[ERROR] The daemon didn't produce the message "Kotlin compile daemon is ready" during startup.
+[ERROR] The daemon has terminated unexpectedly on startup attempt #3 with exit code: 1. The daemon process output:
+[ERROR]     ... (54 more lines)
+[ERROR]     55. 	at java.base/sun.nio.ch.Net.bind0(Native Method)
+[ERROR]     56. 	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+[ERROR]     57. 	at java.base/sun.nio.ch.Net.bind(Net.java:511)
+[ERROR]     58. 	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+[ERROR]     59. 	at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+[ERROR]     60. 	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+[ERROR]     61. 	at org.jetbrains.kotlin.daemon.common.LoopbackNetworkInterface$ServerLoopbackSocketFactory.createServerSocket(NetworkUtils.kt:69)
+[ERROR]     62. 	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:662)
+[ERROR]     63. 	at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:299)
+[ERROR]     64. 	... 14 more
+[ERROR] The daemon didn't produce the message "Kotlin compile daemon is ready" during startup.
+[ERROR] Failed connecting to the daemon in 4 retries
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

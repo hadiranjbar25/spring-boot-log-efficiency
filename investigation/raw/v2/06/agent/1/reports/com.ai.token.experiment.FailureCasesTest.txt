@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.496 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.464 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: both distinct users must be saved ==> expected: <true> but was: <false>
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:59)
+

@@ -1,0 +1,11 @@
+I’ll read `failure.log`, trace the failure to `Defects.java`, and make the smallest repair before running `./test.sh`.
+
+The startup bean parses `"eighty"` as an integer, causing Spring initialization to fail. I’ll correct that port value to `"8080"` and retain the parsing behavior.
+
+The repair is in place. Verification hit a sandbox restriction: Kotlin tried to write its daemon marker outside the workspace. I’ll rerun with the daemon’s runtime files directed to `/tmp`.
+
+The sandbox also blocks the daemon’s listening socket. I’ll run Kotlin compilation in the Maven process for verification; no repository build files need changing.
+
+Fixed only `Defects.java:32`: changed the startup port input from `"eighty"` to `"8080"`, retaining integer parsing. The invalid numeric input caused `NumberFormatException` and prevented Spring startup.
+
+Verification passed: 1 test, 0 failures/errors using `./test.sh -Dkotlin.compiler.daemon=false`. Plain `./test.sh` was blocked by sandbox restrictions on Kotlin’s daemon; no build files were changed.

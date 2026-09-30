@@ -1,0 +1,33 @@
+19:25:39.849 ERROR [invoice-worker-7] com.ai.token.experiment.Defects: invoice-42 calculation failed
+
+java.lang.NumberFormatException: For input string: "ten"
+	at com.ai.token.experiment.Defects.lambda$async$1(Defects.java:62) ~[test-classes/:na]
+
+CASE_END 08
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.374 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.340 s <<< ERROR!
+java.util.concurrent.ExecutionException: java.lang.NumberFormatException: For input string: "ten"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:74)
+Caused by: java.lang.NumberFormatException: For input string: "ten"
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:74 » Execution java.lang.NumberFormatException: For input string: "ten"
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.330 s
+[INFO] Finished at: 2026-09-30T19:25:39+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-cli) on project token.usage: 
+[ERROR] 
+[ERROR] See /Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/v2/08/agent/1/reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

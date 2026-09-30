@@ -1,0 +1,11 @@
+--- a/Defects.java
++++ b/Defects.java
+@@ -29,7 +29,7 @@
+     public String ordersUrl() { return "/orders?count=two"; }
+     @Configuration(proxyBeanMethods=false)
+     public static class BrokenStartup {
+-        @Bean String port() { return "port=" + Integer.parseInt("eighty"); }
++        @Bean String port() { return "port=" + Integer.parseInt("8080"); }
+     }
+     public Connection database(String url, String user, String password) throws SQLException {
+         var c = DriverManager.getConnection(url, user, password);

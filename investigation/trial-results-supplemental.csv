@@ -1,0 +1,5 @@
+case,config,run,model,session_exit,initial_exit,verification_exit,elapsed_seconds,verification_seconds,tool_calls,patch_present,root_cause_correct,fix_valid,immutable_changes,input_tokens,cached_input_tokens,output_tokens,reasoning_output_tokens,log_related_tool_calls,fuller_output_requests,log_related_o200k_tokens,pure_initial_read_o200k_tokens,truncated_tool_results,time_to_external_verification_seconds
+07,agent,1,gpt-6-astra,0,1,1,40.000093666,4.498743624999996,7,True,True,False,[],116879,104960,579,18,4,0,4169,3456,0,44.498837290999994
+07,default,1,gpt-6-astra,0,1,1,30.456315667000002,5.146924167000002,5,True,True,False,[],96397,84352,524,42,4,0,6317,3680,0,35.60323983400001
+08,agent,1,gpt-6-astra,0,1,0,40.991748875,4.00347462500001,6,True,True,True,[],90602,79232,616,40,5,0,5825,1856,0,44.99522350000001
+08,default,1,gpt-6-astra,0,1,0,34.12839725,4.32225587500001,6,True,True,True,[],91485,79744,574,16,5,0,5879,1993,0,38.45065312500001

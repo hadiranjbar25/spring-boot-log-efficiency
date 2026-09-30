@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.422 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.392 s <<< ERROR!
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41)
+Caused by: java.io.IOException: invalid upstream port
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41)
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41)
+

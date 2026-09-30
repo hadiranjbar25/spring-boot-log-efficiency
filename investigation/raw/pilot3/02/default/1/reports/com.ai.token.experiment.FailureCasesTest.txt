@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.372 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.339 s <<< ERROR!
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.Defects.connect(Defects.java:21)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:40)
+	Suppressed: java.io.IOException: cleanup socket failed
+		at com.ai.token.experiment.Defects.connect(Defects.java:22)
+		... 1 more
+Caused by: java.io.IOException: invalid upstream port
+	at com.ai.token.experiment.Defects.connect(Defects.java:20)
+	... 1 more
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at com.ai.token.experiment.Defects.parsePort(Defects.java:16)
+	at com.ai.token.experiment.Defects.connect(Defects.java:18)
+	... 1 more
+

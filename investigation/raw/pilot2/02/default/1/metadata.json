@@ -1,0 +1,29 @@
+{
+  "case": "02",
+  "config": "default",
+  "run": 1,
+  "command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dtest=FailureCasesTest",
+    "-Dexperiment.case=02",
+    "-Dexperiment.artifactDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot2/02/default/1",
+    "-Dexperiment.reportDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot2/02/default/1/reports",
+    "-Dspring.output.ansi.enabled=never",
+    "surefire:test"
+  ],
+  "command_shell": "mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation -Dtest=FailureCasesTest -Dexperiment.case=02 -Dexperiment.artifactDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot2/02/default/1 -Dexperiment.reportDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/pilot2/02/default/1/reports -Dspring.output.ansi.enabled=never surefire:test",
+  "exit": 1,
+  "seconds": 1.9415819579999996,
+  "failure_identity": "cannot initialize client",
+  "identity_verified": true,
+  "profile_expected": "default",
+  "profile_verified": true,
+  "java_home": "/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home",
+  "normalized_environment": "DEBUG, SPRING_*, LOGGING_*, JAVA_TOOL_OPTIONS, JDK_JAVA_OPTIONS, MAVEN_OPTS cleared",
+  "source_sha256": "f9e78edb348d14922f279ee73099485312f2ca57a650ff05a9137f549c6cb31e"
+}

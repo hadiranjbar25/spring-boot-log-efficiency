@@ -1,0 +1,7 @@
+I’ll read `failure.log`, inspect the relevant code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+The URL sends `count=two`, but the controller requires an integer. I changed it to `count=2`. Verification hit a sandbox restriction on Kotlin’s daemon directory; I’ll retry with that temporary directory redirected into the workspace.
+
+Changed only `Defects.java`: `ordersUrl()` now sends `count=2` instead of `count=two`. Spring requires an integer, so the original value caused HTTP 400 before the controller ran.
+
+Ran `./test.sh`; verification was blocked before tests by sandbox restrictions on Kotlin’s daemon filesystem access and socket binding. Test success remains unverified.

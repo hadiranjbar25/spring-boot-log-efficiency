@@ -1,0 +1,7 @@
+I’ll read `failure.log`, trace the failure in `Defects.java`, and make the smallest repair before running `./test.sh`.
+
+`save()` gives both users the same email, violating the table’s unique constraint. I changed it to derive each email from the user ID. Verification hit a sandbox restriction on Kotlin’s daemon directory; I’ll retry with that directory redirected to the workspace.
+
+Changed only `Defects.java`: `save()` now derives each email from the user ID. Previously, both inserts used `same@example.test`, so the second violated the unique email constraint.
+
+Ran `./test.sh`, but verification was blocked before tests ran by sandbox restrictions on Kotlin’s daemon directory and socket access. Test success remains unverified.

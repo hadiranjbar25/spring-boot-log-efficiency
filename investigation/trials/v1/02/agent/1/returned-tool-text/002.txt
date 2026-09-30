@@ -1,0 +1,165 @@
+package com.ai.token.experiment;
+
+import java.io.*;
+import java.net.URI;
+import java.net.http.*;
+import java.sql.*;
+import java.util.concurrent.*;
+import org.slf4j.*;
+import org.springframework.context.annotation.*;
+import org.springframework.web.bind.annotation.*;
+
+public class Defects {
+    private static final Logger LOG = LoggerFactory.getLogger(Defects.class);
+    public int total(int price, int quantity) { return price + quantity; }
+    public int parsePort(String port) { return Integer.parseInt(port); }
+    public int connect() {
+        try { return parsePort("eighty"); }
+        catch (NumberFormatException e) {
+            var cause = new IOException("invalid upstream port", e);
+            var failure = new IllegalStateException("cannot initialize client", cause);
+            failure.addSuppressed(new IOException("cleanup socket failed"));
+            throw failure;
+        }
+    }
+    @RestController
+    public static class Orders {
+        @GetMapping("/orders") public String orders(@RequestParam("count") int count) { return "count=" + count; }
+    }
+    public String ordersUrl() { return "/orders?count=two"; }
+    @Configuration(proxyBeanMethods=false)
+    public static class BrokenStartup {
+        @Bean String port() { return "port=" + Integer.parseInt("eighty"); }
+    }
+    public Connection database(String url, String user, String password) throws SQLException {
+        var c = DriverManager.getConnection(url, user, password);
+        try (var s = c.createStatement()) { s.execute("CREATE TABLE users(id INT PRIMARY KEY, email VARCHAR(100), CONSTRAINT uq_email UNIQUE(email))"); }
+        return c;
+    }
+    public void save(Connection c) throws SQLException {
+        try (var s = c.prepareStatement("INSERT INTO users VALUES (?, ?)")) {
+            for (int id=1; id<=2; id++) { s.setInt(1,id); s.setString(2,"same@example.test"); s.executeUpdate(); }
+        }
+    }
+    public boolean saveCaught(Connection c) {
+        try { save(c); return true; }
+        catch (SQLException e) {
+            LOG.error("save users failed request=db-6", e);
+            if (Boolean.getBoolean("experiment.deduplicate")) LOG.error("request=db-6 failed; exception logged by save users");
+            else LOG.error("request=db-6 failed at service boundary", e);
+            return false;
+        }
+    }
+    public int call(URI base) {
+        return org.springframework.web.client.RestClient.create().get().uri(base.resolve("/wrong")).retrieve().body(Integer.class);
+    }
+    public int async() throws Exception {
+        try (var executor = Executors.newSingleThreadExecutor(r -> new Thread(r,"invoice-worker-7"))) {
+            return executor.submit(() -> {
+                org.slf4j.MDC.put("request", "invoice-42");
+                try { return Integer.parseInt("ten"); }
+                catch (RuntimeException e) { LOG.error("invoice-42 calculation failed", e); throw e; }
+                finally { org.slf4j.MDC.clear(); }
+            }).get(5, TimeUnit.SECONDS);
+        }
+    }
+    public String readyPattern() { return ".*service ready.*\\n"; }
+}
+package com.ai.token.experiment;
+
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.slf4j.*;
+import org.springframework.boot.*;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.*;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import java.nio.file.*;
+import java.net.*;
+import java.time.Duration;
+import java.util.*;
+import com.sun.net.httpserver.HttpServer;
+import org.testcontainers.containers.GenericContainer;
+import org.testcontainers.postgresql.PostgreSQLContainer;
+import org.testcontainers.containers.wait.strategy.Wait;
+
+@Tag("investigation")
+class FailureCasesTest {
+    final Defects app = new Defects();
+    @Configuration(proxyBeanMethods=false) static class Empty {}
+    ConfigurableApplicationContext context;
+    @BeforeEach void start() throws Exception {
+        String id = System.getProperty("experiment.case", "01");
+        System.out.println("CASE_BEGIN " + id);
+        if (!id.equals("01")) {
+            var boot = new SpringApplication(Empty.class);
+            boot.setWebApplicationType(WebApplicationType.NONE);
+            context = boot.run();
+            var env = context.getEnvironment();
+            System.out.println("EFFECTIVE profiles=" + Arrays.toString(env.getActiveProfiles()) + " console=" + env.getProperty("logging.pattern.console") + " exception=" + env.getProperty("logging.exception-conversion-word"));
+        }
+    }
+    @AfterEach void stop() { if(context != null) context.close(); System.out.println("CASE_END " + System.getProperty("experiment.case", "01")); }
+    @Test void scenario() throws Exception {
+        switch(System.getProperty("experiment.case", "01")) {
+            case "01" -> assertEquals(30, app.total(10,3), "total price");
+            case "02" -> {
+                try { assertEquals(8080, app.connect()); }
+                catch(RuntimeException e) { LoggerFactory.getLogger(Defects.class).error("client setup failed", e); throw e; }
+            }
+            case "03" -> {
+                var mvc = MockMvcBuilders.standaloneSetup(new Defects.Orders()).build();
+                var result = mvc.perform(get(app.ordersUrl())).andReturn();
+                LoggerFactory.getLogger(Defects.class).error("GET {} status={} resolved={}", app.ordersUrl(), result.getResponse().getStatus(), result.getResolvedException());
+                assertEquals(200, result.getResponse().getStatus(), "GET orders valid count");
+                assertEquals("count=2", result.getResponse().getContentAsString());
+            }
+            case "04" -> {
+                var boot = new SpringApplication(Defects.BrokenStartup.class);
+                boot.setWebApplicationType(WebApplicationType.NONE);
+                try(var ignored = boot.run()) { assertEquals("port=8080",ignored.getBean("port")); }
+            }
+            case "05", "06" -> {
+                try(var c = app.database("jdbc:h2:mem:users", "sa", "")) {
+                    if(System.getProperty("experiment.case").equals("05")) app.save(c);
+                    else assertTrue(app.saveCaught(c), "both distinct users must be saved");
+                    try(var s = c.createStatement(); var r = s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) { r.next(); assertEquals(2,r.getInt(1)); }
+                }
+            }
+            case "07" -> {
+                var server = HttpServer.create(new InetSocketAddress("127.0.0.1",0),0);
+                server.createContext("/", x -> {
+                    byte[] body = (x.getRequestURI().getPath().equals("/price") ? "42" : "route not found: " + x.getRequestURI()).getBytes();
+                    x.sendResponseHeaders(x.getRequestURI().getPath().equals("/price") ? 200 : 404,body.length);
+                    try(var out=x.getResponseBody()) { out.write(body); }
+                });
+                server.start();
+                try { assertEquals(42,app.call(URI.create("http://127.0.0.1:"+server.getAddress().getPort()))); }
+                finally { server.stop(0); }
+            }
+            case "08" -> assertEquals(10,app.async());
+            case "09" -> {
+                try(var db = new PostgreSQLContainer("postgres:17.6-alpine")) {
+                    try { db.start(); try(var c=app.database(db.getJdbcUrl(),db.getUsername(),db.getPassword())) { app.save(c); try(var s=c.createStatement(); var r=s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) { r.next(); assertEquals(2,r.getInt(1)); } } }
+                    finally { containerLogs(db,"database"); }
+                }
+            }
+            case "10" -> {
+                try(var box = new GenericContainer<>("alpine:3.22.1").withCommand("sh","-c","echo 'worker ready'; sleep 45")
+                        .waitingFor(Wait.forLogMessage(app.readyPattern(),1)).withStartupTimeout(Duration.ofSeconds(8))) {
+                    try { box.start(); assertTrue(box.isRunning()); }
+                    finally { containerLogs(box,"readiness"); }
+                }
+            }
+            default -> fail("unknown case");
+        }
+    }
+    static void containerLogs(GenericContainer<?> box, String name) throws Exception {
+        if(box.getContainerId()!=null) Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container.log"),box.getLogs());
+    }
+}
+#!/bin/sh
+export JAVA_HOME=/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home
+unset DEBUG SPRING_PROFILES_ACTIVE LOGGING_CONFIG
+exec mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation,agent-reports -Dtest=FailureCasesTest -Dexperiment.case=02 -Dspring.output.ansi.enabled=never -Dspring.profiles.active=agent -Dexperiment.deduplicate=true test "$@"

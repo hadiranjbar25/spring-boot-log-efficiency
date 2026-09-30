@@ -1,0 +1,9 @@
+[
+  {"stage":"pilot","finding":"Concurrent Maven invocations shared Surefire temporary paths; one JVM failed before running tests.","action":"Use serial matrix execution; retain pilot captures and exclude them from primary results."},
+  {"stage":"pilot","finding":"Spring resolved the Logback default-value placeholder in the console property prematurely.","action":"Inline the exception formatter in the console pattern; preserve initial YAML."},
+  {"stage":"v1","finding":"logging.pattern.exception-conversion-word is not the Boot 4.1.1 property; P2-only treatment was ineffective.","action":"Use logging.exception-conversion-word; rerun complete matrix as v2. Combined profile already inlined P2."},
+  {"stage":"positive control","finding":"Correcting case 07 route exposes UnknownContentTypeException for the untyped response body converted directly to Integer.","action":"Retain original case in blinded trials; repaired control additionally parses a String response. The initial fact checklist diagnoses the first failure only."},
+  {"stage":"diagnostic review","finding":"P4 removes Defects.java frames in cases 05 and 07.","action":"Recommend conservative P1+P2 with fixture-specific P3 and no P4; measure this as safe. Existing blind trials retain their original P4 treatment."},
+  {"stage":"blind trials","finding":"Account usage limit interrupted case 06 default after a valid patch; subsequent scheduled sessions could not execute.","action":"Keep every attempt, exclude unexecuted sessions from performance denominators; add stop-on-quota guard and run 07/08 after reset."},
+  {"stage":"conservative batch","finding":"An overlapping ordinary-suite build removed experimental compiled classes.","action":"Preserve interrupted batch, rebuild, run conservative-v2 with no overlapping build; add preflight check."}
+]

@@ -1,0 +1,33 @@
+{
+  "case": "06",
+  "config": "safe",
+  "run": 1,
+  "command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dtest=FailureCasesTest",
+    "-Dexperiment.case=06",
+    "-Dexperiment.artifactDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/conservative/06/safe/1",
+    "-Dexperiment.reportDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/conservative/06/safe/1/reports",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dspring.profiles.active=agent",
+    "-Dexperiment.deduplicate=true",
+    "surefire:test"
+  ],
+  "command_shell": "mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation -Dtest=FailureCasesTest -Dexperiment.case=06 -Dexperiment.artifactDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/conservative/06/safe/1 -Dexperiment.reportDir=/Users/hadiranjbar/Downloads/java/token.usage/investigation/raw/conservative/06/safe/1/reports -Dspring.output.ansi.enabled=never -Dspring.profiles.active=agent -Dexperiment.deduplicate=true surefire:test",
+  "exit": 1,
+  "seconds": 2.2472308749999996,
+  "failure_identity": "both distinct users must be saved",
+  "identity_verified": true,
+  "profile_expected": "agent",
+  "profile_verified": true,
+  "java_home": "/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home",
+  "normalized_environment": "DEBUG, SPRING_*, LOGGING_*, JAVA_TOOL_OPTIONS, JDK_JAVA_OPTIONS, MAVEN_OPTS cleared",
+  "environment_path": "investigation/environment/final.json",
+  "compiled_fixture_sha256": "987c1db3cb061097a3933702d990626a40c1c25787d21d6697a2d2171920e220",
+  "source_sha256": "50d50a28896f0e2c56fe8a7409d7e5e79b44f1f2c9be6b0aa65a007d1b6e82d4"
+}

@@ -1,0 +1,5 @@
+I’ll read `failure.log`, inspect the relevant code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+Fixed `Defects.java:54`: `call()` requested `/wrong`, causing HTTP 404. Changed the endpoint to `/price`, preserving response parsing and error handling.
+
+Ran `./test.sh`, but verification was blocked before tests ran: the sandbox denied Kotlin’s daemon marker-file write outside the workspace. Only `Defects.java` was edited.

@@ -1,0 +1,8 @@
+02 default 1 1 True
+02 p1 1 1 True
+02 p2 1 1 True
+02 agent 1 1 True
+07 default 1 1 True
+07 p1 1 1 True
+07 p2 1 1 True
+07 agent 1 1 True

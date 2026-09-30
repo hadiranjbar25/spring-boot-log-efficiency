@@ -1,0 +1,11 @@
+--- a/Defects.java
++++ b/Defects.java
+@@ -51,7 +51,7 @@
+         }
+     }
+     public int call(URI base) {
+-        return org.springframework.web.client.RestClient.create().get().uri(base.resolve("/wrong")).retrieve().body(Integer.class);
++        return org.springframework.web.client.RestClient.create().get().uri(base.resolve("/price")).retrieve().body(Integer.class);
+     }
+     public int async() throws Exception {
+         try (var executor = Executors.newSingleThreadExecutor(r -> new Thread(r,"invoice-worker-7"))) {

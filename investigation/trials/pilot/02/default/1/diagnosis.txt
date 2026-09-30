@@ -1,0 +1,9 @@
+I’ll read `failure.log`, inspect the affected code, and make the smallest repair in `Defects.java`, then run `./test.sh`.
+
+`connect()` passes `"eighty"` to the integer port parser, causing initialization to fail. I’ll correct the port value to `"8080"` and preserve the parsing and error handling.
+
+The repair is in place. Verification hit a sandbox restriction: Kotlin tried to write daemon files outside the workspace. I’ll retry with those temporary files directed to `/tmp`.
+
+Changed only `Defects.java`: `connect()` now parses `"8080"` instead of `"eighty"`. The invalid numeric input caused `NumberFormatException`, wrapped as client initialization failure. Parsing and error handling remain intact.
+
+Ran `./test.sh`; verification was blocked before tests by sandbox restrictions on Kotlin daemon file writes and socket binding. A passing test run remains unverified.

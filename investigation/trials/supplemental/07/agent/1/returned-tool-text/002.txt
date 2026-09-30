@@ -1,0 +1,8 @@
+src/test/kotlin/com/ai/token/usage/ApplicationTests.kt
+test.sh
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java
+target/surefire-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml
+target/surefire-reports/com.ai.token.experiment.FailureCasesTest.txt
+target/test-classes/com/ai/token/experiment/FailureCasesTest.class
+target/test-classes/com/ai/token/experiment/FailureCasesTest$Empty.class
+target/test-classes/com/ai/token/usage/ApplicationTests.class

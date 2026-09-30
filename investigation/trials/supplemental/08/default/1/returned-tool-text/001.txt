@@ -1,0 +1,3 @@
+/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/logging-trial-lfqj1o51
+test.sh
+investigation/src/test/java/com/ai/token/experiment/Defects.java

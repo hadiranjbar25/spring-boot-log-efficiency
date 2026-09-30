@@ -1,0 +1,20 @@
+00:07:55.257 ERROR [main] com.ai.token.experiment.Defects: client setup failed
+
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.Defects.connect(Defects.java:21) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	Suppressed: java.io.IOException: cleanup socket failed
+		at com.ai.token.experiment.Defects.connect(Defects.java:22) ~[test-classes/:na]
+		... 82 common frames omitted
+Caused by: java.io.IOException: invalid upstream port
+	at com.ai.token.experiment.Defects.connect(Defects.java:20) ~[test-classes/:na]
+	... 82 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Integer.parseInt(Integer.java:565) ~[na:na]

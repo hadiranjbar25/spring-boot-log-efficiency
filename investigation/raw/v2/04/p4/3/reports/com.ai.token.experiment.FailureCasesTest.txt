@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.448 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.419 s <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'port' defined in com.ai.token.experiment.Defects$BrokenStartup: Failed to instantiate [java.lang.String]: Factory method 'port' threw exception with message: For input string: "eighty"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:54)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.lang.String]: Factory method 'port' threw exception with message: For input string: "eighty"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:54)
+

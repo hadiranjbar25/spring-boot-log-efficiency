@@ -1,0 +1,61 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.9.6",
+  "timezone": "Europe/Berlin",
+  "commands": {
+    "java": {
+      "command": [
+        "java",
+        "-version"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"25\" 2025-09-16\nOpenJDK Runtime Environment (build 25+36-3489)\nOpenJDK 64-Bit Server VM (build 25+36-3489, mixed mode, sharing)\n"
+    },
+    "maven": {
+      "command": [
+        "mvn",
+        "-version"
+      ],
+      "exit": 0,
+      "stdout": "Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)\nMaven home: /opt/homebrew/Cellar/maven/3.9.16/libexec\nJava version: 25, vendor: Oracle Corporation, runtime: /Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home\nDefault locale: en_DE, platform encoding: UTF-8\nOS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\"\n",
+      "stderr": ""
+    },
+    "docker": {
+      "command": [
+        "docker",
+        "version"
+      ],
+      "exit": 1,
+      "stdout": "Client:\n Version:           29.6.2\n API version:       1.55\n Go version:        go1.26.5\n Git commit:        dfc4efb\n Built:             Thu Jul 16 16:11:17 2026\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n",
+      "stderr": "permission denied while trying to connect to the docker API at unix:///Users/hadiranjbar/.docker/run/docker.sock\n"
+    },
+    "codex": {
+      "command": [
+        "codex",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "codex-cli 0.154.0-alpha.6.2\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\n"
+    }
+  },
+  "sources": {
+    "src/test/kotlin/com/ai/token/usage/ApplicationTests.kt": "d5b22a74d780f261c9da423227925999919405fa6474dd81f544e7c0e41db507",
+    "src/main/resources/application-agent.yml": "38069c796d7bd99fa3edea163bfa60ecef87dc3fe37df518306685d99156eca6",
+    "src/main/resources/application.yaml": "1786262e43d9ab1c459ba436f1d5f50743ec8dbea85daf9d1c04b07dfa62701a",
+    "src/main/kotlin/com/ai/token/usage/Application.kt": "5ce4edbf970c6e60b08c9fa4c94af88f72a7c566a58db61b77ea0fd52de74c1b",
+    "investigation/src/test/resources/application-p2.yml": "a834b4883becf0a3f840ee4e2fad40a8425cdcb4b63f5127efc33880a6f54e5f",
+    "investigation/src/test/resources/application-p1.yml": "dac21439d5d0ba60a5ffb66fc3c9870c95f632e393141995fe565c4ae720074a",
+    "investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java": "eb635a74cc2b205c4f6d66ef7f504e8c8df5c5f72f4791a1a83c19bda19585eb",
+    "investigation/src/test/java/com/ai/token/experiment/Defects.java": "50d50a28896f0e2c56fe8a7409d7e5e79b44f1f2c9be6b0aa65a007d1b6e82d4",
+    "investigation/scripts/run.py": "9ee01ef89a826642240fd22b6d0b7a112bfbbc9099e0bdfbc533c7938baf0bf2",
+    "investigation/scripts/trials.py": "4e1216d9bba5d24b06324169bf011e994a3c16c637d4bf87dc8ee34fa4c2d381",
+    "investigation/scripts/verify_known_repairs.py": "6cbc11a826b3a454c94e5eac170734077d0cb3f49a331ca9341ba9c12ccbc8e7",
+    "investigation/scripts/setup.py": "4772162a76ffd01d14a2e06a4de97157deeada3df032ac3101b53814a0c24dfc",
+    "investigation/scripts/environment.py": "a6215f6e878780e679b5677480c163f0f88b4f3ae17244f897f57d36ac7e656a",
+    "investigation/scripts/analyze_trials.py": "49a7a27b61d9c813642d4a275337cda9b411511b512642f9ad85d94011d088ab",
+    "investigation/scripts/report.py": "f05b2b5c14d44991f87b4c29973de90051cabbfae5ed48262564801c9a036a93",
+    "investigation/scripts/analyze.py": "1d86ca8f96c7d35478305b50ec2fd58adfd9f81fb28e8bc50a4a88a73854c151"
+  }
+}
