@@ -1,0 +1,17 @@
+            default -> fail("unknown case");
+        }
+    }
+    static synchronized void streamLog(org.testcontainers.containers.output.OutputFrame frame, String name) {
+        if(frame.getType()==org.testcontainers.containers.output.OutputFrame.OutputType.END) return;
+        try { Files.write(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container."+frame.getType()+".log"),frame.getBytes(),StandardOpenOption.CREATE,StandardOpenOption.APPEND); }
+        catch(java.io.IOException e) { throw new java.io.UncheckedIOException(e); }
+    }
+    static void containerLogs(GenericContainer<?> box, String name) throws Exception {
+        try { if(box.getContainerId()!=null) Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container.log"),box.getLogs()); }
+        catch(RuntimeException e) { Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"),name+".retrieval-error.log"),e.toString()); }
+    }
+}
+investigation/src/test/resources/application-p1.yml
+investigation/src/test/resources/application-p2.yml
+src/main/resources/application.yaml
+src/main/resources/application-agent.yml

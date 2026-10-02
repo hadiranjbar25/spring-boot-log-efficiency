@@ -1,0 +1,4 @@
+requested=agent
+active=agent
+appender=CONSOLE
+pattern=%d{HH:mm:ss.SSS} %level [%thread] %logger{36}: %msg%n%replace(%wEx){'(?m)^[ \t]+at (?:org\.junit\.|org\.apache\.maven\.surefire\.|java\.lang\.reflect\.|jdk\.internal\.reflect\.)[^\r\n]*[\r\n]+',''}%nopex

@@ -1,0 +1,13 @@
+{
+  "investigation/scripts/routine_analyze.py": "88a833d23408224976a61a194673aadaaf82749ff7b487c07596bf13272c95ce",
+  "investigation/scripts/routine_measurement.py": "b0196facc59d9878d4d70f8077131bb0c6fd169167ab1225f608316d42101007",
+  "investigation/scripts/routine_report.py": "b5942e6bb50578ef5c9831f7a9f2afd2dbe3bee0d7d44f2cc446e1854f0c0995",
+  "investigation/scripts/routine_trials.py": "1d6b3e4bc48255805d21ad219e0fa07dfe35bc8374d9bc52dd6f74aa2b388c8a",
+  "investigation/scripts/routine_verify.py": "966bfe918ee1b91d7d12cc7fa103a3f3ab04b90529200826957ce6d0134e8f35",
+  "investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java": "ddfd715ec02d95cc5456c7124af0410397599963c315bab757adcdbc8dddd1e7",
+  "investigation/src/test/java/com/ai/token/experiment/RoutineService.java": "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024",
+  "pom.xml": "71fa791651c3119f3f16db60067d0972f720cd69030bec999896351a9464ef62",
+  "src/main/resources/application-agent.yml": "38069c796d7bd99fa3edea163bfa60ecef87dc3fe37df518306685d99156eca6",
+  "investigation/routine-reading/PROTOCOL.md": "72021cc5842cc24effe10011163a24b3b974aac94158ef7f4480130853d49f4c",
+  "investigation/scripts/test_routine_measurement.py": "96df5e47933bba4d7b5379c6d36c2cc8304b6f1c03c5e4c2aa094a3f047b8cc0"
+}

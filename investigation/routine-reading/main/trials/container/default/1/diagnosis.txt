@@ -1,0 +1,10 @@
+I’ll inspect the change and previous test output, then run `./test.sh` to verify the behavior and check for warnings or unexpected results.
+The change succeeded in the recorded run: 1 test passed, with no failures or errors. The readiness pattern now matches the container’s `worker ready` output.
+
+Warnings and verification limits:
+
+- Container logs contain `WARN cache stale request=worker-7 age=61s threshold=60s`. Readiness still passes; this warning is absent from the Maven console output.
+- Kotlin emits a deprecation warning for `sun.misc.Unsafe::objectFieldOffset`.
+- My fresh `./test.sh` run was blocked by Docker socket access (`Operation not permitted`), producing 1 test error before readiness could be checked.
+
+No source files were changed.

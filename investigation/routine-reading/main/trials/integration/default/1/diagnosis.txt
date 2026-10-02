@@ -1,0 +1,12 @@
+I’ll inspect the change and previous test output, then run `./test.sh` to verify the behavior and check for warnings.
+Verification succeeded. The change correctly multiplies price by quantity: `total(10, 3) = 30`, and zero quantity returns `0`.
+
+- `./test.sh`: 1 integration test passed.
+- `./test.sh -Dexperiment.scenario=unit`: 2 tests passed.
+- No failures, errors, or skipped tests.
+
+Warnings match the previous output:
+- Stale inventory cache: age 61s exceeds the 60s threshold; database fallback is reported. This warning is emitted explicitly by the test.
+- Kotlin’s compiler uses deprecated `sun.misc.Unsafe::objectFieldOffset`, flagged for future removal.
+
+No unexpected behavior observed in these checks. No source files changed.

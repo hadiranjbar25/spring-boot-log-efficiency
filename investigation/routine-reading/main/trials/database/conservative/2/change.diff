@@ -1,0 +1,10 @@
+--- a/RoutineService.java
++++ b/RoutineService.java
+@@ -2,6 +2,6 @@
+ 
+ public class RoutineService {
+     public int total(int price, int quantity) { return price * quantity; }
+-    public String email(int id) { return "same@example.test"; }
++    public String email(int id) { return "user" + id + "@example.test"; }
+     public String readiness() { return ".*worker ready.*\\n"; }
+ }

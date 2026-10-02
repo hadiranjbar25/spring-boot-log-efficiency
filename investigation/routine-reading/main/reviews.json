@@ -1,0 +1,149 @@
+{
+  "mixed/default/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "Reviewed one-character addition-to-multiplication repair, explicit diagnosis, full 13-test passing rerun, and independent 13/13 verification. Recognized intentional stale-cache warning and Kotlin Unsafe warning. No immutable edits."
+  },
+  "unit/default/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No source changes; correctly recognized 2/2 passing unit checks and explicit quantity behavior, reported Kotlin Unsafe deprecation warning, and limited claims to this scenario. Independent original tests passed."
+  },
+  "mixed/conservative/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "Reviewed one-character addition-to-multiplication repair, explicit diagnosis, full 13-test passing rerun, and independent 13/13 verification. Recognized intentional stale-cache warning and Kotlin Unsafe warning. No immutable edits."
+  },
+  "unit/conservative/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No source changes; correctly recognized 2/2 passing unit checks and explicit quantity behavior, reported Kotlin Unsafe deprecation warning, and limited claims to this scenario. Independent original tests passed."
+  },
+  "integration/default/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No implementation edits. Correctly recognized passing integration scenario; explicitly identified stale inventory cache age/threshold/database fallback and Kotlin Unsafe deprecation. Default additionally ran unit checks. Independent original integration check passed."
+  },
+  "integration/conservative/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No implementation edits. Correctly recognized passing integration scenario; explicitly identified stale inventory cache age/threshold/database fallback and Kotlin Unsafe deprecation. Default additionally ran unit checks. Independent original integration check passed."
+  },
+  "http/conservative/1": {
+    "fix_valid": true,
+    "success_recognized": "previous pass; live HTTP blocked",
+    "warning_recognized": true,
+    "agent_rerun_success": false,
+    "review": "Preserved correct implementation. Accurately distinguished previous HTTP success from sandbox SocketException on live rerun; verified pricing via 2/2 unit tests without claiming HTTP runtime verification. Reported Kotlin Unsafe warning. Independent real HTTP check passed."
+  },
+  "http/default/1": {
+    "fix_valid": true,
+    "success_recognized": "previous pass; live HTTP blocked",
+    "warning_recognized": true,
+    "agent_rerun_success": false,
+    "review": "No source edits. Correctly reported previous successful HTTP response and fresh socket-permission blocker, and passed 2/2 pricing unit checks without claiming fresh HTTP success. Reported Kotlin Unsafe warning. Independent original HTTP test passed."
+  },
+  "database/default/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No source edits. Correctly reported one passing database test, both distinct records and retained uniqueness constraint. Reported Kotlin Unsafe warning and limited verification to database scenario. Independent original check passed."
+  },
+  "database/conservative/1": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No source changes; correctly recognized original database test pass and both distinct unique emails; reported Kotlin Unsafe warning. Independent test passed."
+  },
+  "mixed/default/2": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "Reviewed sole addition-to-multiplication patch, accurate diagnosis and full 13/13 passing rerun, confirmed independently with unchanged tests. Explicitly reported fixture stale-cache and Kotlin Unsafe warnings."
+  },
+  "container/default/1": {
+    "fix_valid": true,
+    "success_recognized": "previous pass; live Docker blocked",
+    "warning_recognized": true,
+    "agent_rerun_success": false,
+    "review": "No source changes. Correctly separated previous readiness success from Docker socket denial in fresh agent rerun. Reported nonfatal container cache warning and Kotlin Unsafe warning. Directly read combined container log and stderr, repeating the warning. Independent real-container test passed."
+  },
+  "mixed/conservative/2": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "Reviewed sole addition-to-multiplication patch, accurate diagnosis and full 13/13 passing rerun, confirmed independently with unchanged tests. Explicitly reported fixture stale-cache and Kotlin Unsafe warnings."
+  },
+  "container/conservative/1": {
+    "fix_valid": true,
+    "success_recognized": "previous pass; live Docker blocked",
+    "warning_recognized": true,
+    "agent_rerun_success": false,
+    "review": "No source changes. Correctly separated previous readiness success from Docker socket denial in fresh agent rerun. Reported nonfatal container cache warning and Kotlin Unsafe warning. Warning recognition came from fixture-source inspection; no recorded read of retained container stream files. Stated emission is supported by evaluator streams, but does not demonstrate log-reading discovery. Independent real-container test passed."
+  },
+  "unit/default/2": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No edits; accurately reported 2/2 passing quantity and zero checks, Kotlin Unsafe warning, and limited verification scope. Independently passed original unit tests."
+  },
+  "integration/default/2": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No edits; accurately reported passing integration test and both stale-cache and Kotlin Unsafe warnings. Explicitly recognized stale-cache message is fixture-authored, not proof of real fallback behavior. Independently passed original test."
+  },
+  "http/default/2": {
+    "fix_valid": true,
+    "success_recognized": "previous pass; live HTTP blocked",
+    "warning_recognized": true,
+    "agent_rerun_success": false,
+    "review": "No edits; correctly distinguished earlier HTTP pass from denied live socket bind. Verified pricing in original unit tests and reported JVM warning without claiming fresh HTTP success. Independent real HTTP verification passed."
+  },
+  "unit/conservative/2": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No edits; accurately reported 2/2 passing quantity and zero checks, Kotlin Unsafe warning, and limited verification scope. Independently passed original unit tests."
+  },
+  "integration/conservative/2": {
+    "fix_valid": true,
+    "success_recognized": true,
+    "warning_recognized": true,
+    "agent_rerun_success": true,
+    "review": "No edits; accurately reported passing integration test and both stale-cache and Kotlin Unsafe warnings. Explicitly recognized stale-cache message is fixture-authored, not proof of real fallback behavior. Independently passed original test."
+  },
+  "http/conservative/2": {
+    "fix_valid": true,
+    "success_recognized": "previous pass; live HTTP blocked",
+    "warning_recognized": true,
+    "agent_rerun_success": false,
+    "review": "No edits; correctly distinguished earlier HTTP pass from denied live socket bind. Verified pricing in original unit tests and reported JVM warning without claiming fresh HTTP success. Independent real HTTP verification passed."
+  },
+  "database/conservative/2": {
+    "fix_valid": true,
+    "success_recognized": null,
+    "warning_recognized": null,
+    "agent_rerun_success": null,
+    "review": "Quota interrupted after initial inspection, without diagnosis or final assessment. Correct pre-existing implementation remains unchanged and independently passes, but this is not a completed agent verification or recorded success/warning recognition."
+  }
+}

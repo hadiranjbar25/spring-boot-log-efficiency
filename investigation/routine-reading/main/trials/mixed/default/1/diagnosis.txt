@@ -1,0 +1,14 @@
+I’ll run `./test.sh`, investigate any failures, and keep any changes limited to `RoutineService.java`.
+
+The suite has one failure: `total(10, 3)` returns `13` because it adds price and quantity. I’ll change it to multiplication. The stale-cache warning is explicitly emitted by the test; the build also reports a Kotlin dependency’s deprecated `Unsafe` call.
+
+Fixed `RoutineService.total()` with a one-character change from `+` to `*`. The initial run returned `13` instead of `30`.
+
+Verified with `./test.sh`: **13 tests passed**, zero failures, errors, or skips.
+
+Warnings and observations:
+- The test intentionally logs a stale inventory cache warning with database fallback.
+- Kotlin emits a deprecation warning for `sun.misc.Unsafe::objectFieldOffset`.
+- Git diff/status checks were unavailable because the workspace is not a Git repository.
+
+Only `RoutineService.java` was edited.

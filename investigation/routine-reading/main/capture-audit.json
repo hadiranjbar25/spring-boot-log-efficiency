@@ -1,0 +1,39 @@
+{
+  "missing_prefix_examples": [
+    {
+      "scenario": "database",
+      "condition": "conservative",
+      "run": 1,
+      "command": "/bin/zsh -lc 'cat AGENTS.md; ./test.sh'",
+      "returned_text": "investigation/routine-reading/main/trials/database/conservative/1/returned-text/002.txt",
+      "observation": "Expected AGENTS.md prefix is absent from completed command body. Cause not established; earlier emitted chunks/model-visible protocol not recoverable from ephemeral JSONL."
+    },
+    {
+      "scenario": "database",
+      "condition": "default",
+      "run": 1,
+      "command": "/bin/zsh -lc 'cat AGENTS.md; ./test.sh'",
+      "returned_text": "investigation/routine-reading/main/trials/database/default/1/returned-text/002.txt",
+      "observation": "Expected AGENTS.md prefix is absent from completed command body. Cause not established; earlier emitted chunks/model-visible protocol not recoverable from ephemeral JSONL."
+    },
+    {
+      "scenario": "integration",
+      "condition": "conservative",
+      "run": 1,
+      "command": "/bin/zsh -lc 'cat AGENTS.md; ./test.sh'",
+      "returned_text": "investigation/routine-reading/main/trials/integration/conservative/1/returned-text/002.txt",
+      "observation": "Expected AGENTS.md prefix is absent from completed command body. Cause not established; earlier emitted chunks/model-visible protocol not recoverable from ephemeral JSONL."
+    },
+    {
+      "scenario": "integration",
+      "condition": "default",
+      "run": 2,
+      "command": "/bin/zsh -lc 'cat AGENTS.md; ./test.sh'",
+      "returned_text": "investigation/routine-reading/main/trials/integration/default/2/returned-text/002.txt",
+      "observation": "Expected AGENTS.md prefix is absent from completed command body. Cause not established; earlier emitted chunks/model-visible protocol not recoverable from ephemeral JSONL."
+    }
+  ],
+  "actual_model_tool_responses_complete": false,
+  "scope": "Counts describe retained completed-event bodies; finite bounds are attribution bounds within them, not a bound on unobserved chunks. Actual model-visible consumption may differ; these are not guaranteed consumption bounds, and no missing text is reconstructed.",
+  "documentation": "https://learn.chatgpt.com/docs/non-interactive-mode"
+}

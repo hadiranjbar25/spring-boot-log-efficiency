@@ -1,0 +1,4 @@
+test.sh
+AGENTS.md
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java

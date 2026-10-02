@@ -1,0 +1,8 @@
+{
+  "case": "mixed",
+  "scenario": "mixed",
+  "condition": "conservative",
+  "run": 3,
+  "status": "not_scheduled_quota",
+  "debugging_began": false
+}

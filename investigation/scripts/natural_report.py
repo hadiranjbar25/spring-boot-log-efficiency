@@ -3,6 +3,10 @@
 import collections,json,os,pathlib,statistics,textwrap
 from analyze import ROOT
 from natural_trials import PROMPT,GUARD
+if (ROOT/'investigation/routine-reading/main/verification.json').exists():
+ from routine_report import generate
+ generate()
+ raise SystemExit(0)
 # Keep historical tables/plots immutable once the container follow-up exists.
 if (ROOT/'investigation/natural-reading/containers/trial-results.json').exists():
  from container_report import generate

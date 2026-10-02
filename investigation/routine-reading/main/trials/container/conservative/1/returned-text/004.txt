@@ -1,0 +1,11 @@
+rg: investigation/src/main: No such file or directory (os error 2)
+investigation/src/test/java/com/ai/token/experiment/Defects.java:48:            if (Boolean.getBoolean("experiment.deduplicate")) LOG.error("request=db-6 failed; exception logged by save users");
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:80:                    .withCommand("sh","-c","echo 'worker ready'; echo 'WARN cache stale request=worker-7 age=61s threshold=60s' >&2; sleep 45")
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:81:                    .withLogConsumer(frame -> FailureCasesTest.streamLog(frame,"routine-worker"))
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:84:                    finally {FailureCasesTest.containerLogs(box,"routine-worker");}
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:75:                    db.withLogConsumer(frame -> streamLog(frame,"database"));
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:77:                    finally { containerLogs(db,"database"); }
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:82:                        .withLogConsumer(frame -> streamLog(frame,"readiness"))
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:85:                    finally { containerLogs(box,"readiness"); }
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:91:    static synchronized void streamLog(org.testcontainers.containers.output.OutputFrame frame, String name) {
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:96:    static void containerLogs(GenericContainer<?> box, String name) throws Exception {

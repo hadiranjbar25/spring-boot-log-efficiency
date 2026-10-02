@@ -1,0 +1,7 @@
+/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-agent-o3i325rv
+test.sh
+AGENTS.md
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java
+test-output.log
+change.diff

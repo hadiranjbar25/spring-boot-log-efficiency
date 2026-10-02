@@ -2,6 +2,17 @@
 
 Read [REPORT.md](REPORT.md) for the revised natural-reading study. The original forced-first-full-read investigation is preserved in [REPORT.full-read.md](REPORT.full-read.md); its raw artifacts and results are unchanged. New evidence is exclusively under `natural-reading/`.
 
+## Passing verification and mostly passing suites
+
+The current report additionally separates everyday verification from the earlier failure diagnosis results. Five passing fixtures and a live thirteen-test suite (twelve initially passing, one failing) are in `routine-reading/`. Passing agents verify an already-applied `change.diff`; mixed-suite agents receive no prepared log and must run the suite. Both use neutral tasks and full Surefire. The exact design and measures are in [the routine protocol](routine-reading/PROTOCOL.md).
+
+```sh
+python3 investigation/scripts/routine_trials.py --batch NEW_BATCH --mode collect
+python3 investigation/scripts/routine_trials.py --batch NEW_BATCH --mode trials
+```
+
+Three captures/trials per scenario/condition are planned; stop-on-quota prevents scheduling after resource failure. Data collection is not agent participation. `routine_analyze.py`, `routine_verify.py`, and `routine_report.py` explicitly select the recorded `main` routine batch. Per-trial manual reviews must precede claims about success/warning recognition. The prior complete failure-only report is preserved in [REPORT.failure-only.md](REPORT.failure-only.md). Historical natural-reading tables remain unchanged.
+
 ## Reproduce the new trials
 
 Prerequisites: Java 25, Maven 3.9.16, Python 3.9+, the investigation Maven dependencies, an authenticated Codex CLI accepting `gpt-6-astra`, and the local tokenizer environment. Initial dependency installation is described in [README.full-read.md](README.full-read.md). Network access may be needed for setup; Maven trial commands use the existing offline dependency cache.

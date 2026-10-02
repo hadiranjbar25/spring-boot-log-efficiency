@@ -1,0 +1,18 @@
+26:        String id = System.getProperty("experiment.case", "01");
+34:    @AfterEach void stop() { if(context != null) context.close(); System.out.println("CASE_END " + System.getProperty("experiment.case", "01")); }
+36:        switch(System.getProperty("experiment.case", "01")) {
+56:                    if(System.getProperty("experiment.case").equals("05")) app.save(c);
+75:                    db.withLogConsumer(frame -> streamLog(frame,"database"));
+77:                    finally { containerLogs(db,"database"); }
+82:                        .withLogConsumer(frame -> streamLog(frame,"readiness"))
+85:                    finally { containerLogs(box,"readiness"); }
+91:    static synchronized void streamLog(org.testcontainers.containers.output.OutputFrame frame, String name) {
+93:        try { Files.write(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container."+frame.getType()+".log"),frame.getBytes(),StandardOpenOption.CREATE,StandardOpenOption.APPEND); }
+96:    static void containerLogs(GenericContainer<?> box, String name) throws Exception {
+97:        try { if(box.getContainerId()!=null) Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container.log"),box.getLogs()); }
+98:        catch(RuntimeException e) { Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"),name+".retrieval-error.log"),e.toString()); }
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %level [%thread] %logger{36}: %msg%n%wEx"
+logging:
+  exception-conversion-word: "%replace(%wEx){'(?m)^[ \\t]+at (?:org\\.junit\\.|org\\.apache\\.maven\\.surefire\\.|java\\.lang\\.reflect\\.|jdk\\.internal\\.reflect\\.)[^\\r\\n]*[\\r\\n]+',''}%nopex"

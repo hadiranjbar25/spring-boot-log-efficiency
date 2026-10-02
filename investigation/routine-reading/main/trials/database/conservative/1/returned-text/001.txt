@@ -1,0 +1,112 @@
+src/test/kotlin/com/ai/token/usage/ApplicationTests.kt
+test.sh
+AGENTS.md
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java
+#!/bin/sh
+export JAVA_HOME=/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home
+unset DEBUG SPRING_PROFILES_ACTIVE LOGGING_CONFIG
+exec mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation -Dkotlin.compiler.daemon=false -DtrimStackTrace=false -Dspring.output.ansi.enabled=never -Dspring.profiles.active=agent -Dexperiment.deduplicate=true -Dexperiment.scenario=database -Dtest=RoutineCasesTest test "$@"
+package com.ai.token.experiment;
+
+public class RoutineService {
+    public int total(int price, int quantity) { return price * quantity; }
+    public String email(int id) { return "user" + id + "@example.test"; }
+    public String readiness() { return ".*worker ready.*\\n"; }
+}
+1:package com.ai.token.experiment;
+3:import org.junit.jupiter.api.*;
+4:import static org.junit.jupiter.api.Assertions.*;
+5:import org.slf4j.*;
+6:import org.springframework.boot.*;
+7:import org.springframework.context.annotation.*;
+8:import org.springframework.context.ConfigurableApplicationContext;
+9:import java.util.stream.Stream;
+10:import java.net.*;
+11:import java.net.http.*;
+12:import java.nio.charset.StandardCharsets;
+13:import java.sql.*;
+14:import java.time.Duration;
+15:import com.sun.net.httpserver.HttpServer;
+16:import org.testcontainers.containers.GenericContainer;
+17:import org.testcontainers.containers.wait.strategy.Wait;
+19:@Tag("investigation")
+20:class RoutineCasesTest {
+21:    final RoutineService app = new RoutineService();
+22:    static final Logger LOG = LoggerFactory.getLogger(RoutineService.class);
+23:    @Configuration(proxyBeanMethods=false) static class Config {
+24:        @Bean String serviceName() { return "orders"; }
+25:    }
+26:    ConfigurableApplicationContext context;
+27:    @BeforeEach void start() {
+28:        if (!System.getProperty("experiment.scenario", "unit").equals("unit")) {
+29:            var boot = new SpringApplication(Config.class);
+30:            boot.setWebApplicationType(WebApplicationType.NONE);
+31:            context = boot.run();
+32:        }
+33:    }
+34:    @AfterEach void stop() { if (context != null) context.close(); }
+35:    void routine() {
+36:        LOG.info("refresh completed request=refresh-7 records=12 status=ok");
+37:        LOG.warn("inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database");
+38:    }
+39:    @TestFactory Stream<DynamicTest> checks() {
+40:        return switch (System.getProperty("experiment.scenario", "unit")) {
+41:            case "unit" -> Stream.of(
+42:                DynamicTest.dynamicTest("quantity pricing", () -> assertEquals(30, app.total(10, 3))),
+43:                DynamicTest.dynamicTest("zero quantity", () -> assertEquals(0, app.total(8, 0))));
+44:            case "integration" -> Stream.of(DynamicTest.dynamicTest("context and refresh", () -> {
+45:                assertEquals("orders", context.getBean("serviceName"));
+46:                assertEquals(30, app.total(10,3)); routine();
+47:            }));
+48:            case "http" -> Stream.of(DynamicTest.dynamicTest("request price", () -> {
+49:                var server = HttpServer.create(new InetSocketAddress("127.0.0.1",0),0);
+50:                server.createContext("/price", exchange -> {
+51:                    byte[] body = Integer.toString(app.total(10,3)).getBytes(StandardCharsets.UTF_8);
+52:                    exchange.getResponseHeaders().set("Content-Type","text/plain");
+53:                    exchange.getResponseHeaders().set("X-Request-Id","http-7");
+54:                    exchange.sendResponseHeaders(200,body.length);
+55:                    try (var out=exchange.getResponseBody()) { out.write(body); }
+56:                    LOG.info("request=http-7 method=GET path=/price status=200 total=30");
+57:                });
+58:                server.start();
+59:                try {
+60:                    var req=HttpRequest.newBuilder(URI.create("http://127.0.0.1:"+server.getAddress().getPort()+"/price")).timeout(Duration.ofSeconds(5)).GET().build();
+61:                    try(var client=HttpClient.newHttpClient()) {
+62:                        var response=client.send(req,HttpResponse.BodyHandlers.ofString());
+63:                        assertEquals(200,response.statusCode());assertEquals("30",response.body());
+64:                        assertEquals("http-7",response.headers().firstValue("X-Request-Id").orElseThrow());
+65:                    }
+66:                } finally { server.stop(0); }
+67:            }));
+68:            case "database" -> Stream.of(DynamicTest.dynamicTest("save distinct users", () -> {
+69:                try(var c=DriverManager.getConnection("jdbc:h2:mem:routine", "sa", "")) {
+70:                    try(var s=c.createStatement()) { s.execute("CREATE TABLE users(id INT PRIMARY KEY, email VARCHAR(100) UNIQUE)"); }
+71:                    try(var s=c.prepareStatement("INSERT INTO users VALUES (?,?)")) {
+72:                        for(int id=1;id<=2;id++) { s.setInt(1,id);s.setString(2,app.email(id));assertEquals(1,s.executeUpdate()); }
+73:                    }
+74:                    try(var s=c.createStatement();var r=s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) {r.next();assertEquals(2,r.getInt(1));}
+75:                    LOG.info("request=db-7 operation=insert table=users rows=2 status=committed");
+76:                }
+77:            }));
+78:            case "container" -> Stream.of(DynamicTest.dynamicTest("worker readiness", () -> {
+79:                try(var box=new GenericContainer<>("alpine:3.22.1")
+80:                    .withCommand("sh","-c","echo 'worker ready'; echo 'WARN cache stale request=worker-7 age=61s threshold=60s' >&2; sleep 45")
+81:                    .withLogConsumer(frame -> FailureCasesTest.streamLog(frame,"routine-worker"))
+82:                    .waitingFor(Wait.forLogMessage(app.readiness(),1)).withStartupTimeout(Duration.ofSeconds(8))) {
+83:                    try {box.start();assertTrue(box.isRunning());LOG.info("request=worker-7 readiness=ok");}
+84:                    finally {FailureCasesTest.containerLogs(box,"routine-worker");}
+85:                }
+86:            }));
+87:            case "mixed" -> Stream.concat(
+88:                java.util.stream.IntStream.rangeClosed(1,12).mapToObj(id -> DynamicTest.dynamicTest("user record "+id, () -> {
+89:                    assertEquals("user"+id+"@example.test",app.email(id));
+90:                    LOG.info("request=user-{} validation=ok",id);
+91:                    if(id==6)routine();
+92:                })), Stream.of(DynamicTest.dynamicTest("quantity pricing", () -> assertEquals(30,app.total(10,3),"quantity price"))));
+93:            default -> throw new IllegalArgumentException("unknown scenario");
+94:        };
+95:    }
+96:}

@@ -1,0 +1,1 @@
+I’ll inspect the change and previous test output, then run `./test.sh` to verify the behavior and check for warnings or unexpected results.

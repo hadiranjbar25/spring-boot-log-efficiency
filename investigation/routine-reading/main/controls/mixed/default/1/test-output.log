@@ -1,0 +1,83 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-collect-ji6b3vbs/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-collect-ji6b3vbs/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.RoutineCasesTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-02T17:46:31.100+02:00  INFO 62291 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.6 using Java 25 with PID 62291 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-collect-ji6b3vbs)
+2026-10-02T17:46:31.102+02:00  INFO 62291 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2026-10-02T17:46:31.178+02:00  INFO 62291 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.266 seconds (process running for 0.681)
+2026-10-02T17:46:31.191+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-1 validation=ok
+2026-10-02T17:46:31.194+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-2 validation=ok
+2026-10-02T17:46:31.195+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-3 validation=ok
+2026-10-02T17:46:31.196+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-4 validation=ok
+2026-10-02T17:46:31.198+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-5 validation=ok
+2026-10-02T17:46:31.199+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-6 validation=ok
+2026-10-02T17:46:31.199+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : refresh completed request=refresh-7 records=12 status=ok
+2026-10-02T17:46:31.199+02:00  WARN 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database
+2026-10-02T17:46:31.200+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-7 validation=ok
+2026-10-02T17:46:31.200+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-8 validation=ok
+2026-10-02T17:46:31.201+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-9 validation=ok
+2026-10-02T17:46:31.202+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-10 validation=ok
+2026-10-02T17:46:31.203+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-11 validation=ok
+2026-10-02T17:46:31.204+02:00  INFO 62291 --- [token.usage] [           main] com.ai.token.experiment.RoutineService   : request=user-12 validation=ok
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.389 s -- in com.ai.token.experiment.RoutineCasesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.628 s
+[INFO] Finished at: 2026-10-02T17:46:31+02:00
+[INFO] ------------------------------------------------------------------------
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.jetbrains.kotlin.com.intellij.util.containers.Unsafe (file:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar)
+WARNING: Please consider reporting this to the maintainers of class org.jetbrains.kotlin.com.intellij.util.containers.Unsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release

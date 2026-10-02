@@ -1,0 +1,89 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-collect-7jx__49j/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-collect-7jx__49j/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.RoutineCasesTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+17:43:51.908 INFO [main] o.a.m.surefire.booter.ForkedBooter: Starting ForkedBooter v3.5.6 using Java 25 with PID 60955 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-collect-7jx__49j)
+17:43:51.909 INFO [main] o.a.m.surefire.booter.ForkedBooter: The following 1 profile is active: "agent"
+17:43:51.991 INFO [main] o.a.m.surefire.booter.ForkedBooter: Started ForkedBooter in 0.314 seconds (process running for 0.743)
+17:43:52.013 INFO [main] o.testcontainers.images.PullPolicy: Image pull policy will be performed by: DefaultPullPolicy()
+17:43:52.014 INFO [main] o.t.utility.ImageNameSubstitutor: Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+17:43:52.019 INFO [main] o.testcontainers.DockerClientFactory: Testcontainers version: 2.0.5
+17:43:52.153 INFO [main] o.t.d.DockerClientProviderStrategy: Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+17:43:54.150 INFO [main] o.t.d.DockerClientProviderStrategy: Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+17:43:54.151 INFO [main] o.testcontainers.DockerClientFactory: Docker host IP address is localhost
+17:43:54.168 INFO [main] o.testcontainers.DockerClientFactory: Connected to docker: 
+  Server Version: 29.8.1
+  API Version: 1.56
+  Operating System: Docker Desktop
+  Total Memory: 7934 MB
+  Labels: 
+    com.docker.desktop.address=unix:///Users/hadiranjbar/Library/Containers/com.docker.docker/Data/docker-cli.sock
+17:43:54.295 INFO [main] tc.testcontainers/ryuk:0.14.0: Creating container for image: testcontainers/ryuk:0.14.0
+17:43:54.537 INFO [main] o.t.utility.RegistryAuthLocator: Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+17:43:54.633 INFO [main] tc.testcontainers/ryuk:0.14.0: Container testcontainers/ryuk:0.14.0 is starting: f774cfeb8e1a72bf0b926b35458a3036eb2ff7fc8899120f12673261e3cb0110
+17:43:54.856 INFO [main] tc.testcontainers/ryuk:0.14.0: Container testcontainers/ryuk:0.14.0 started in PT0.561219S
+17:43:54.860 INFO [main] o.t.utility.RyukResourceReaper: Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+17:43:54.860 INFO [main] o.testcontainers.DockerClientFactory: Checking the system...
+17:43:54.860 INFO [main] o.testcontainers.DockerClientFactory: ✔︎ Docker server version should be at least 1.6.0
+17:43:54.860 INFO [main] tc.alpine:3.22.1: Creating container for image: alpine:3.22.1
+17:43:54.901 INFO [main] tc.alpine:3.22.1: Container alpine:3.22.1 is starting: 44dc7af4d80b9aac4350efdbdb18dd57daf65255bc01a3f90143d9a12721b91a
+17:43:55.023 INFO [main] tc.alpine:3.22.1: Container alpine:3.22.1 started in PT0.162317S
+17:43:55.028 INFO [main] c.ai.token.experiment.RoutineService: request=worker-7 readiness=ok
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.588 s -- in com.ai.token.experiment.RoutineCasesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.223 s
+[INFO] Finished at: 2026-10-02T17:43:55+02:00
+[INFO] ------------------------------------------------------------------------

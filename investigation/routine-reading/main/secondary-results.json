@@ -1,0 +1,962 @@
+[
+  {
+    "scenario": "container",
+    "condition": "conservative",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 9.117056750000003,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/container/conservative/1",
+    "bytes": 6476,
+    "lines": 93,
+    "tokens": 1937,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=worker-7 readiness=ok": true
+    },
+    "container_streams": [
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/1/initial-container-logs/routine-worker.container.STDERR.log",
+        "bytes": 56,
+        "lines": 1,
+        "tokens": 17,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/1/initial-container-logs/routine-worker.container.STDOUT.log",
+        "bytes": 13,
+        "lines": 1,
+        "tokens": 3,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/1/initial-container-logs/routine-worker.container.log",
+        "bytes": 69,
+        "lines": 2,
+        "tokens": 20,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      }
+    ]
+  },
+  {
+    "scenario": "container",
+    "condition": "conservative",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.935169790999993,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/container/conservative/2",
+    "bytes": 6476,
+    "lines": 93,
+    "tokens": 1933,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=worker-7 readiness=ok": true
+    },
+    "container_streams": [
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/2/initial-container-logs/routine-worker.container.STDERR.log",
+        "bytes": 56,
+        "lines": 1,
+        "tokens": 17,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/2/initial-container-logs/routine-worker.container.STDOUT.log",
+        "bytes": 13,
+        "lines": 1,
+        "tokens": 3,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/2/initial-container-logs/routine-worker.container.log",
+        "bytes": 69,
+        "lines": 2,
+        "tokens": 20,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      }
+    ]
+  },
+  {
+    "scenario": "container",
+    "condition": "conservative",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.97611091600001,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/container/conservative/3",
+    "bytes": 6475,
+    "lines": 93,
+    "tokens": 1943,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=worker-7 readiness=ok": true
+    },
+    "container_streams": [
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/3/initial-container-logs/routine-worker.container.STDERR.log",
+        "bytes": 56,
+        "lines": 1,
+        "tokens": 17,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/3/initial-container-logs/routine-worker.container.STDOUT.log",
+        "bytes": 13,
+        "lines": 1,
+        "tokens": 3,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/conservative/3/initial-container-logs/routine-worker.container.log",
+        "bytes": 69,
+        "lines": 2,
+        "tokens": 20,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      }
+    ]
+  },
+  {
+    "scenario": "container",
+    "condition": "default",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 8.986850666999999,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/container/default/1",
+    "bytes": 7827,
+    "lines": 93,
+    "tokens": 2425,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=worker-7 readiness=ok": true
+    },
+    "container_streams": [
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/1/initial-container-logs/routine-worker.container.STDERR.log",
+        "bytes": 56,
+        "lines": 1,
+        "tokens": 17,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/1/initial-container-logs/routine-worker.container.STDOUT.log",
+        "bytes": 13,
+        "lines": 1,
+        "tokens": 3,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/1/initial-container-logs/routine-worker.container.log",
+        "bytes": 69,
+        "lines": 2,
+        "tokens": 20,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      }
+    ]
+  },
+  {
+    "scenario": "container",
+    "condition": "default",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 7.0481087500000115,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/container/default/2",
+    "bytes": 7827,
+    "lines": 93,
+    "tokens": 2433,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=worker-7 readiness=ok": true
+    },
+    "container_streams": [
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/2/initial-container-logs/routine-worker.container.STDERR.log",
+        "bytes": 56,
+        "lines": 1,
+        "tokens": 17,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/2/initial-container-logs/routine-worker.container.STDOUT.log",
+        "bytes": 13,
+        "lines": 1,
+        "tokens": 3,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/2/initial-container-logs/routine-worker.container.log",
+        "bytes": 69,
+        "lines": 2,
+        "tokens": 20,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      }
+    ]
+  },
+  {
+    "scenario": "container",
+    "condition": "default",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.992122125000009,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/container/default/3",
+    "bytes": 7827,
+    "lines": 93,
+    "tokens": 2429,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=worker-7 readiness=ok": true
+    },
+    "container_streams": [
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/3/initial-container-logs/routine-worker.container.STDERR.log",
+        "bytes": 56,
+        "lines": 1,
+        "tokens": 17,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/3/initial-container-logs/routine-worker.container.STDOUT.log",
+        "bytes": 13,
+        "lines": 1,
+        "tokens": 3,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      },
+      {
+        "path": "investigation/routine-reading/main/initial/container/default/3/initial-container-logs/routine-worker.container.log",
+        "bytes": 69,
+        "lines": 2,
+        "tokens": 20,
+        "tokenizer": "tiktoken 0.14.0 o200k_base"
+      }
+    ]
+  },
+  {
+    "scenario": "database",
+    "condition": "conservative",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.976821957999995,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/database/conservative/1",
+    "bytes": 4104,
+    "lines": 70,
+    "tokens": 1192,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=db-7 operation=insert table=users rows=2 status=committed": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "database",
+    "condition": "conservative",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.107306125000008,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/database/conservative/2",
+    "bytes": 4105,
+    "lines": 70,
+    "tokens": 1192,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=db-7 operation=insert table=users rows=2 status=committed": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "database",
+    "condition": "conservative",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.018508957999984,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/database/conservative/3",
+    "bytes": 4104,
+    "lines": 70,
+    "tokens": 1195,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=db-7 operation=insert table=users rows=2 status=committed": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "database",
+    "condition": "default",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.028346915999997,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/database/default/1",
+    "bytes": 4368,
+    "lines": 70,
+    "tokens": 1286,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=db-7 operation=insert table=users rows=2 status=committed": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "database",
+    "condition": "default",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.077254999999994,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/database/default/2",
+    "bytes": 4368,
+    "lines": 70,
+    "tokens": 1292,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=db-7 operation=insert table=users rows=2 status=committed": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "database",
+    "condition": "default",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.987066792000007,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/database/default/3",
+    "bytes": 4368,
+    "lines": 70,
+    "tokens": 1289,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=db-7 operation=insert table=users rows=2 status=committed": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "http",
+    "condition": "conservative",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.020717957999999,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/http/conservative/1",
+    "bytes": 4106,
+    "lines": 70,
+    "tokens": 1193,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=http-7 method=GET path=/price status=200 total=30": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "http",
+    "condition": "conservative",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.172114875000005,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/http/conservative/2",
+    "bytes": 4108,
+    "lines": 70,
+    "tokens": 1193,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=http-7 method=GET path=/price status=200 total=30": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "http",
+    "condition": "conservative",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.127287625000008,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/http/conservative/3",
+    "bytes": 4108,
+    "lines": 70,
+    "tokens": 1194,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=http-7 method=GET path=/price status=200 total=30": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "http",
+    "condition": "default",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.077315999999996,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/http/default/1",
+    "bytes": 4359,
+    "lines": 70,
+    "tokens": 1286,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=http-7 method=GET path=/price status=200 total=30": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "http",
+    "condition": "default",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.130291540999991,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/http/default/2",
+    "bytes": 4360,
+    "lines": 70,
+    "tokens": 1286,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=http-7 method=GET path=/price status=200 total=30": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "http",
+    "condition": "default",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.066337375000018,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/http/default/3",
+    "bytes": 4360,
+    "lines": 70,
+    "tokens": 1289,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "request=http-7 method=GET path=/price status=200 total=30": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "integration",
+    "condition": "conservative",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.925582834,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/integration/conservative/1",
+    "bytes": 4238,
+    "lines": 71,
+    "tokens": 1225,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "refresh completed request=refresh-7 records=12 status=ok": true,
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "integration",
+    "condition": "conservative",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.0976855830000005,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/integration/conservative/2",
+    "bytes": 4239,
+    "lines": 71,
+    "tokens": 1228,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "refresh completed request=refresh-7 records=12 status=ok": true,
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "integration",
+    "condition": "conservative",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.914624291999985,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/integration/conservative/3",
+    "bytes": 4239,
+    "lines": 71,
+    "tokens": 1226,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "refresh completed request=refresh-7 records=12 status=ok": true,
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "integration",
+    "condition": "default",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.88133925,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/integration/default/1",
+    "bytes": 4559,
+    "lines": 71,
+    "tokens": 1351,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "refresh completed request=refresh-7 records=12 status=ok": true,
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "integration",
+    "condition": "default",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 6.095242416000005,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/integration/default/2",
+    "bytes": 4560,
+    "lines": 71,
+    "tokens": 1354,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "refresh completed request=refresh-7 records=12 status=ok": true,
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "integration",
+    "condition": "default",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.863747958000005,
+    "counts": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/integration/default/3",
+    "bytes": 4559,
+    "lines": 71,
+    "tokens": 1345,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "refresh completed request=refresh-7 records=12 status=ok": true,
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "mixed",
+    "condition": "conservative",
+    "run": 1,
+    "valid": true,
+    "exit": 1,
+    "seconds": 5.876548584000001,
+    "counts": {
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/mixed/conservative/1",
+    "bytes": 6963,
+    "lines": 106,
+    "tokens": 1993,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true,
+      "quantity price": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "mixed",
+    "condition": "conservative",
+    "run": 2,
+    "valid": true,
+    "exit": 1,
+    "seconds": 6.100485333000009,
+    "counts": {
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/mixed/conservative/2",
+    "bytes": 6963,
+    "lines": 106,
+    "tokens": 2001,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true,
+      "quantity price": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "mixed",
+    "condition": "conservative",
+    "run": 3,
+    "valid": true,
+    "exit": 1,
+    "seconds": 5.981160249999988,
+    "counts": {
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/mixed/conservative/3",
+    "bytes": 6963,
+    "lines": 106,
+    "tokens": 1998,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true,
+      "quantity price": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "mixed",
+    "condition": "default",
+    "run": 1,
+    "valid": true,
+    "exit": 1,
+    "seconds": 5.854353249999999,
+    "counts": {
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/mixed/default/1",
+    "bytes": 7980,
+    "lines": 106,
+    "tokens": 2393,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true,
+      "quantity price": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "mixed",
+    "condition": "default",
+    "run": 2,
+    "valid": true,
+    "exit": 1,
+    "seconds": 5.982367832999998,
+    "counts": {
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/mixed/default/2",
+    "bytes": 7980,
+    "lines": 106,
+    "tokens": 2389,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true,
+      "quantity price": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "mixed",
+    "condition": "default",
+    "run": 3,
+    "valid": true,
+    "exit": 1,
+    "seconds": 6.155144082999982,
+    "counts": {
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/mixed/default/3",
+    "bytes": 7979,
+    "lines": 106,
+    "tokens": 2397,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {
+      "inventory cache stale request=refresh-7 age=61s threshold=60s fallback=database": true,
+      "quantity price": true
+    },
+    "container_streams": []
+  },
+  {
+    "scenario": "unit",
+    "condition": "conservative",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.575192790999999,
+    "counts": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/unit/conservative/1",
+    "bytes": 3221,
+    "lines": 56,
+    "tokens": 869,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {},
+    "container_streams": []
+  },
+  {
+    "scenario": "unit",
+    "condition": "conservative",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.522572749999995,
+    "counts": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/unit/conservative/2",
+    "bytes": 3221,
+    "lines": 56,
+    "tokens": 867,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {},
+    "container_streams": []
+  },
+  {
+    "scenario": "unit",
+    "condition": "conservative",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.69560337499999,
+    "counts": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/unit/conservative/3",
+    "bytes": 3221,
+    "lines": 56,
+    "tokens": 868,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {},
+    "container_streams": []
+  },
+  {
+    "scenario": "unit",
+    "condition": "default",
+    "run": 1,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.590965833000002,
+    "counts": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/unit/default/1",
+    "bytes": 3221,
+    "lines": 56,
+    "tokens": 867,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {},
+    "container_streams": []
+  },
+  {
+    "scenario": "unit",
+    "condition": "default",
+    "run": 2,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.5058048749999955,
+    "counts": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/unit/default/2",
+    "bytes": 3221,
+    "lines": 56,
+    "tokens": 867,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {},
+    "container_streams": []
+  },
+  {
+    "scenario": "unit",
+    "condition": "default",
+    "run": 3,
+    "valid": true,
+    "exit": 0,
+    "seconds": 5.647842874999981,
+    "counts": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence": "investigation/routine-reading/main/initial/unit/default/3",
+    "bytes": 3221,
+    "lines": 56,
+    "tokens": 869,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "signals": {},
+    "container_streams": []
+  }
+]

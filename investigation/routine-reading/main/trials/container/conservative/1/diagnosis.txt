@@ -1,0 +1,11 @@
+I’ll inspect the change and previous test output, then run `./test.sh` to verify the behavior and check for warnings.
+The change matches the worker’s `worker ready` output. The supplied `test-output.log` reports success: 1 test passed, no failures or errors, and `readiness=ok`.
+
+Fresh verification with `./test.sh` was blocked: Docker socket access returned `Operation not permitted`, producing 1 test error before readiness could be checked.
+
+Warnings and unexpected behavior:
+
+- The worker emits `WARN cache stale request=worker-7 age=61s threshold=60s`. This is written to container log artifacts rather than the console, so the successful console output omits it. Readiness success does not establish cache health.
+- Kotlin emits a deprecation warning for `sun.misc.Unsafe::objectFieldOffset`.
+
+No files were changed.

@@ -1,0 +1,11 @@
+I’ll run `./test.sh`, investigate any failures, and keep any changes confined to `RoutineService.java`.
+The suite has one failure: `total(10, 3)` returns `13` because it adds price and quantity. I’ll change it to multiplication, then rerun the suite and the existing unit checks, including zero quantity. The run also emitted a stale-cache warning from the test fixture and a Kotlin dependency deprecation warning.
+Fixed the sole failure in `RoutineService.java`: `total()` added price and quantity, returning 13 instead of 30. Changed `+` to `*`; no other source files changed.
+
+Verification:
+- `./test.sh`: all 13 tests passed.
+- `./test.sh -Dexperiment.scenario=unit`: both tests passed, including zero quantity.
+
+Warnings remain: Kotlin uses deprecated `sun.misc.Unsafe::objectFieldOffset`, and the mixed test deliberately logs a stale-cache warning. Neither causes failures.
+
+The workspace has no Git repository, so Git status was unavailable.

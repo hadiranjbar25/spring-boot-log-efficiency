@@ -1,0 +1,10 @@
+I’ll inspect the change and previous test output, then run `./test.sh` to verify the behavior and check for warnings.
+The previous run passed the HTTP check, but this rerun failed because the environment denied binding a local server socket. I’ll run the existing unit scenario to verify the pricing change directly. Both runs also show a Kotlin compiler warning about deprecated `sun.misc.Unsafe` usage.
+The pricing change succeeds in unit verification: `total()` now multiplies price by quantity.
+
+- `./test.sh -Dexperiment.scenario=unit`: **2 tests passed**, covering `10 × 3 = 30` and zero quantity.
+- Previous `test-output.log`: HTTP test passed with status 200 and body `30`.
+- Fresh `./test.sh`: blocked by `SocketException: Operation not permitted` when binding the local HTTP server, before assertions ran.
+- Warning: Kotlin compiler uses deprecated `sun.misc.Unsafe::objectFieldOffset`, scheduled for removal in a future Java release.
+
+No source files were changed. Full HTTP verification remains blocked in this environment.

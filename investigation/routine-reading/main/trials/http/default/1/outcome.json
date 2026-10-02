@@ -1,0 +1,87 @@
+{
+  "case": "http",
+  "scenario": "http",
+  "condition": "default",
+  "run": 1,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "budget_seconds": 120,
+  "status": "finished",
+  "debugging_began": true,
+  "session_exit": 0,
+  "elapsed_seconds": 52.53753666699998,
+  "verification_exit": 0,
+  "verification_seconds": 5.681798916999924,
+  "verification_counts": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "immutable_changes": [],
+  "profile": {
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dkotlin.compiler.daemon=false",
+      "-DtrimStackTrace=false",
+      "-Dspring.output.ansi.enabled=never",
+      "-Dexperiment.case=01",
+      "-Dtest=ProfileVerificationTest",
+      "-Dexperiment.profileArtifact=/Users/hadiranjbar/Downloads/java/token.usage/investigation/routine-reading/main/trials/http/default/1/profile-verification.txt",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 5.444698291999998,
+    "verified": true
+  },
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--json",
+    "-s",
+    "workspace-write",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-C",
+    "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-agent-hyzejzni",
+    "A change is ready for verification. Verify the behavior, report whether it succeeds, and note any warnings or unexpected behavior. The change is in change.diff. Complete previous test output is available in test-output.log."
+  ],
+  "verification_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.scenario=http",
+    "-Dtest=RoutineCasesTest",
+    "test"
+  ],
+  "usage": [
+    {
+      "input_tokens": 108480,
+      "cached_input_tokens": 95872,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 553,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "workspace": "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-agent-hyzejzni",
+  "initial_evidence": "investigation/routine-reading/main/initial/http/default/1",
+  "fix_valid": null,
+  "success_recognized": null,
+  "warning_recognized": null
+}

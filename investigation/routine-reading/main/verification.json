@@ -1,0 +1,200 @@
+{
+  "full_read_baseline_files_checked": 3663,
+  "historical_files_checked": 1285,
+  "changed_historical_files": [],
+  "initial_runs": 36,
+  "all_initial_test_counts_correct": true,
+  "all_initial_profile_probes_passed": true,
+  "source_hashes_by_scenario": {
+    "container": [
+      "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024"
+    ],
+    "database": [
+      "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024"
+    ],
+    "http": [
+      "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024"
+    ],
+    "integration": [
+      "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024"
+    ],
+    "mixed": [
+      "58f686048d2ccaeb2c8076b200dd0617d144e8ce735ca61882de466961f82681"
+    ],
+    "unit": [
+      "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024"
+    ]
+  },
+  "test_hashes": [
+    "ddfd715ec02d95cc5456c7124af0410397599963c315bab757adcdbc8dddd1e7"
+  ],
+  "mixed_reference_controls_passed": 2,
+  "container_streams": [
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/1/initial-container-logs/routine-worker.container.STDERR.log",
+      "sha256": "9ab9e3f821aa2eeef5fb6dfee05405f3151142c4778d07f581f32b8ade81f52e",
+      "alternate_combined_copy": false,
+      "bytes": 56,
+      "lines": 1,
+      "tokens": 17,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/1/initial-container-logs/routine-worker.container.STDOUT.log",
+      "sha256": "109f8ac1fe0adcc038f39c625e8e1b82655060d0a07bc9f71371077c141dc62b",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/1/initial-container-logs/routine-worker.container.log",
+      "sha256": "6c903fc72228d03ef2a5ca671b2677c78b93c2c586cca417670debfbcd8ea9d9",
+      "alternate_combined_copy": true,
+      "bytes": 69,
+      "lines": 2,
+      "tokens": 20,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/2/initial-container-logs/routine-worker.container.STDERR.log",
+      "sha256": "9ab9e3f821aa2eeef5fb6dfee05405f3151142c4778d07f581f32b8ade81f52e",
+      "alternate_combined_copy": false,
+      "bytes": 56,
+      "lines": 1,
+      "tokens": 17,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/2/initial-container-logs/routine-worker.container.STDOUT.log",
+      "sha256": "109f8ac1fe0adcc038f39c625e8e1b82655060d0a07bc9f71371077c141dc62b",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/2/initial-container-logs/routine-worker.container.log",
+      "sha256": "ea768f0dd84eee602a4dff60f5c8cf69faed7bae6dca02e3b87c2b87ffc65c6e",
+      "alternate_combined_copy": true,
+      "bytes": 69,
+      "lines": 2,
+      "tokens": 20,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/3/initial-container-logs/routine-worker.container.STDERR.log",
+      "sha256": "9ab9e3f821aa2eeef5fb6dfee05405f3151142c4778d07f581f32b8ade81f52e",
+      "alternate_combined_copy": false,
+      "bytes": 56,
+      "lines": 1,
+      "tokens": 17,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/3/initial-container-logs/routine-worker.container.STDOUT.log",
+      "sha256": "109f8ac1fe0adcc038f39c625e8e1b82655060d0a07bc9f71371077c141dc62b",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/conservative/3/initial-container-logs/routine-worker.container.log",
+      "sha256": "6c903fc72228d03ef2a5ca671b2677c78b93c2c586cca417670debfbcd8ea9d9",
+      "alternate_combined_copy": true,
+      "bytes": 69,
+      "lines": 2,
+      "tokens": 20,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/1/initial-container-logs/routine-worker.container.STDERR.log",
+      "sha256": "9ab9e3f821aa2eeef5fb6dfee05405f3151142c4778d07f581f32b8ade81f52e",
+      "alternate_combined_copy": false,
+      "bytes": 56,
+      "lines": 1,
+      "tokens": 17,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/1/initial-container-logs/routine-worker.container.STDOUT.log",
+      "sha256": "109f8ac1fe0adcc038f39c625e8e1b82655060d0a07bc9f71371077c141dc62b",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/1/initial-container-logs/routine-worker.container.log",
+      "sha256": "6c903fc72228d03ef2a5ca671b2677c78b93c2c586cca417670debfbcd8ea9d9",
+      "alternate_combined_copy": true,
+      "bytes": 69,
+      "lines": 2,
+      "tokens": 20,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/2/initial-container-logs/routine-worker.container.STDERR.log",
+      "sha256": "9ab9e3f821aa2eeef5fb6dfee05405f3151142c4778d07f581f32b8ade81f52e",
+      "alternate_combined_copy": false,
+      "bytes": 56,
+      "lines": 1,
+      "tokens": 17,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/2/initial-container-logs/routine-worker.container.STDOUT.log",
+      "sha256": "109f8ac1fe0adcc038f39c625e8e1b82655060d0a07bc9f71371077c141dc62b",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/2/initial-container-logs/routine-worker.container.log",
+      "sha256": "ea768f0dd84eee602a4dff60f5c8cf69faed7bae6dca02e3b87c2b87ffc65c6e",
+      "alternate_combined_copy": true,
+      "bytes": 69,
+      "lines": 2,
+      "tokens": 20,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/3/initial-container-logs/routine-worker.container.STDERR.log",
+      "sha256": "9ab9e3f821aa2eeef5fb6dfee05405f3151142c4778d07f581f32b8ade81f52e",
+      "alternate_combined_copy": false,
+      "bytes": 56,
+      "lines": 1,
+      "tokens": 17,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/3/initial-container-logs/routine-worker.container.STDOUT.log",
+      "sha256": "109f8ac1fe0adcc038f39c625e8e1b82655060d0a07bc9f71371077c141dc62b",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/routine-reading/main/initial/container/default/3/initial-container-logs/routine-worker.container.log",
+      "sha256": "6c903fc72228d03ef2a5ca671b2677c78b93c2c586cca417670debfbcd8ea9d9",
+      "alternate_combined_copy": true,
+      "bytes": 69,
+      "lines": 2,
+      "tokens": 20,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    }
+  ],
+  "raw_container_streams_identical_across_both_conditions": true,
+  "active_agent_trials": 21,
+  "planned_slots": 36,
+  "temporary_trial_directories_removed": true
+}

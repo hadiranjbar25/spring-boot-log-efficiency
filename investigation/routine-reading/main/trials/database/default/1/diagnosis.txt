@@ -1,0 +1,8 @@
+I’ll inspect the change and previous test output, then run `./test.sh` to verify the behavior and check for warnings.
+Verification succeeded: `./test.sh` exited 0 with **BUILD SUCCESS**—1 test passed, no failures, errors, or skips.
+
+The change generates distinct emails per ID. The database test successfully inserted two users under a unique-email constraint and confirmed two distinct emails, matching the previous test output.
+
+Warning: Kotlin’s compiler calls deprecated `sun.misc.Unsafe::objectFieldOffset`, which will be removed in a future Java release. This warning also appeared previously and did not affect the test.
+
+No unexpected application behavior observed. Verification covered the configured database scenario. No files were modified.

@@ -1,0 +1,54 @@
+Use ./test.sh to run the tests. Implementation is in investigation/src/test/java/com/ai/token/experiment/RoutineService.java. Modify only that implementation file. Do not change tests, expectations, build configuration, logging, or test.sh; do not remove functionality or hard-code test results. You may inspect the repository and use debugging tools normally. Keep temporary files inside this workspace. Do not read outside this workspace except installed tools and the shared Maven dependency cache. Do not use subagents. Explain your findings and verification in your final response.
+package com.ai.token.experiment;
+
+public class RoutineService {
+    public int total(int price, int quantity) { return price * quantity; }
+    public String email(int id) { return "user" + id + "@example.test"; }
+    public String readiness() { return ".*worker ready.*\\n"; }
+}
+investigation/src/test/java/com/ai/token/experiment/Defects.java
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java
+investigation/src/test/resources/application-p1.yml
+investigation/src/test/resources/application-p2.yml
+investigation/src/test/java/com/ai/token/experiment/Defects.java:14:    public int total(int price, int quantity) { return price + quantity; }
+investigation/src/test/java/com/ai/token/experiment/Defects.java:36:        try (var s = c.createStatement()) { s.execute("CREATE TABLE users(id INT PRIMARY KEY, email VARCHAR(100), CONSTRAINT uq_email UNIQUE(email))"); }
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java:4:    public int total(int price, int quantity) { return price * quantity; }
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java:5:    public String email(int id) { return "user" + id + "@example.test"; }
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java:6:    public String readiness() { return ".*worker ready.*\\n"; }
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:20:class RoutineCasesTest {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:28:        if (!System.getProperty("experiment.scenario", "unit").equals("unit")) {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:39:    @TestFactory Stream<DynamicTest> checks() {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:40:        return switch (System.getProperty("experiment.scenario", "unit")) {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:42:                DynamicTest.dynamicTest("quantity pricing", () -> assertEquals(30, app.total(10, 3))),
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:43:                DynamicTest.dynamicTest("zero quantity", () -> assertEquals(0, app.total(8, 0))));
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:44:            case "integration" -> Stream.of(DynamicTest.dynamicTest("context and refresh", () -> {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:46:                assertEquals(30, app.total(10,3)); routine();
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:48:            case "http" -> Stream.of(DynamicTest.dynamicTest("request price", () -> {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:51:                    byte[] body = Integer.toString(app.total(10,3)).getBytes(StandardCharsets.UTF_8);
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:56:                    LOG.info("request=http-7 method=GET path=/price status=200 total=30");
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:68:            case "database" -> Stream.of(DynamicTest.dynamicTest("save distinct users", () -> {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:70:                    try(var s=c.createStatement()) { s.execute("CREATE TABLE users(id INT PRIMARY KEY, email VARCHAR(100) UNIQUE)"); }
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:72:                        for(int id=1;id<=2;id++) { s.setInt(1,id);s.setString(2,app.email(id));assertEquals(1,s.executeUpdate()); }
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:74:                    try(var s=c.createStatement();var r=s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) {r.next();assertEquals(2,r.getInt(1));}
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:78:            case "container" -> Stream.of(DynamicTest.dynamicTest("worker readiness", () -> {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:81:                    .withLogConsumer(frame -> FailureCasesTest.streamLog(frame,"routine-worker"))
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:82:                    .waitingFor(Wait.forLogMessage(app.readiness(),1)).withStartupTimeout(Duration.ofSeconds(8))) {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:83:                    try {box.start();assertTrue(box.isRunning());LOG.info("request=worker-7 readiness=ok");}
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:84:                    finally {FailureCasesTest.containerLogs(box,"routine-worker");}
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:88:                java.util.stream.IntStream.rangeClosed(1,12).mapToObj(id -> DynamicTest.dynamicTest("user record "+id, () -> {
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:89:                    assertEquals("user"+id+"@example.test",app.email(id));
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:92:                })), Stream.of(DynamicTest.dynamicTest("quantity pricing", () -> assertEquals(30,app.total(10,3),"quantity price"))));
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java:93:            default -> throw new IllegalArgumentException("unknown scenario");
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java:15:class ProfileVerificationTest {
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java:16:    @Test void effectiveProfile() throws Exception {
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java:17:        var boot = new SpringApplication(FailureCasesTest.Empty.class);
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:21:class FailureCasesTest {
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:35:    @Test void scenario() throws Exception {
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:37:            case "01" -> assertEquals(30, app.total(10,3), "total price");
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:58:                    try(var s = c.createStatement(); var r = s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) { r.next(); assertEquals(2,r.getInt(1)); }
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:76:                    try { db.start(); try(var c=app.database(db.getJdbcUrl(),db.getUsername(),db.getPassword())) { app.save(c); try(var s=c.createStatement(); var r=s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) { r.next(); assertEquals(2,r.getInt(1)); } } }
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:82:                        .withLogConsumer(frame -> streamLog(frame,"readiness"))
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:85:                    finally { containerLogs(box,"readiness"); }

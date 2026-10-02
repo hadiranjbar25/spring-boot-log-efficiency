@@ -1,0 +1,91 @@
+{
+  "case": "unit",
+  "scenario": "unit",
+  "condition": "conservative",
+  "run": 2,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "budget_seconds": 120,
+  "status": "finished",
+  "debugging_began": true,
+  "session_exit": 0,
+  "elapsed_seconds": 33.737366250000036,
+  "verification_exit": 0,
+  "verification_seconds": 5.4136360830000285,
+  "verification_counts": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "immutable_changes": [],
+  "profile": {
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dkotlin.compiler.daemon=false",
+      "-DtrimStackTrace=false",
+      "-Dspring.output.ansi.enabled=never",
+      "-Dexperiment.case=01",
+      "-Dspring.profiles.active=agent",
+      "-Dexperiment.deduplicate=true",
+      "-Dtest=ProfileVerificationTest",
+      "-Dexperiment.profileArtifact=/Users/hadiranjbar/Downloads/java/token.usage/investigation/routine-reading/main/trials/unit/conservative/2/profile-verification.txt",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 5.497229415999982,
+    "verified": true
+  },
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--json",
+    "-s",
+    "workspace-write",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-C",
+    "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-agent-cs9ohi9c",
+    "A change is ready for verification. Verify the behavior, report whether it succeeds, and note any warnings or unexpected behavior. The change is in change.diff. Complete previous test output is available in test-output.log."
+  ],
+  "verification_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dspring.profiles.active=agent",
+    "-Dexperiment.deduplicate=true",
+    "-Dexperiment.scenario=unit",
+    "-Dtest=RoutineCasesTest",
+    "test"
+  ],
+  "usage": [
+    {
+      "input_tokens": 65404,
+      "cached_input_tokens": 52352,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 405,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "workspace": "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/routine-agent-cs9ohi9c",
+  "initial_evidence": "investigation/routine-reading/main/initial/unit/conservative/2",
+  "fix_valid": null,
+  "success_recognized": null,
+  "warning_recognized": null
+}

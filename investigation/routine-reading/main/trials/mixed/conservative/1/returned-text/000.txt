@@ -1,0 +1,5 @@
+fatal: not a git repository (or any of the parent directories): .git
+test.sh
+AGENTS.md
+investigation/src/test/java/com/ai/token/experiment/RoutineService.java
+investigation/src/test/java/com/ai/token/experiment/RoutineCasesTest.java

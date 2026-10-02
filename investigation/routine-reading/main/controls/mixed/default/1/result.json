@@ -1,0 +1,56 @@
+{
+  "scenario": "mixed",
+  "condition": "default",
+  "run": 1,
+  "command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.scenario=mixed",
+    "-Dtest=RoutineCasesTest",
+    "test"
+  ],
+  "exit": 0,
+  "seconds": 5.48638274999999,
+  "counts": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "expected_counts": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "valid": true,
+  "profile": {
+    "command": [
+      "mvn",
+      "-o",
+      "-B",
+      "-ntp",
+      "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+      "-Pinvestigation",
+      "-Dkotlin.compiler.daemon=false",
+      "-DtrimStackTrace=false",
+      "-Dspring.output.ansi.enabled=never",
+      "-Dexperiment.case=01",
+      "-Dtest=ProfileVerificationTest",
+      "-Dexperiment.profileArtifact=/Users/hadiranjbar/Downloads/java/token.usage/investigation/routine-reading/main/controls/mixed/default/1/profile-verification.txt",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 5.3889227079999955,
+    "verified": true
+  },
+  "source_sha256": "c66a7f926dbc056cd58e8d02a8a3f4bddcf1951e4bbd086a8ae3fcf430efa024",
+  "test_sha256": "ddfd715ec02d95cc5456c7124af0410397599963c315bab757adcdbc8dddd1e7"
+}

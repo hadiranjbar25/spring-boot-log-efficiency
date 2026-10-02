@@ -1,0 +1,10 @@
+{
+  "status": "not_started_approval_review_quota",
+  "planned_scenario": "mixed",
+  "planned_repeats_per_condition": 3,
+  "purpose": "Capture persisted model-visible tool responses to resolve missing-prefix/possible streamed-chunk gaps in completed command events.",
+  "executed": false,
+  "blocker": "Automatic approval review failed: You have hit your usage limit; try again at 11:20 PM.",
+  "action_rejected": "Prepare separate mixed-complete batch and execute initial collection; compound command was rejected before execution.",
+  "risk_note": "No unsafe command finding was stated; rejection was a reviewer resource limit. No bypass attempted."
+}

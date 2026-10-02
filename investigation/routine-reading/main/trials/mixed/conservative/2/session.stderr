@@ -1,0 +1,4 @@
+Reading additional input from stdin...
+2026-10-02T16:57:31.287118Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-02T17:14:50.430594Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 216ms)... turn_id=01a0fd8c-b1ba-7211-95b6-4098c5cab1ae retries=1 max_retries=5 sampling_error=stream disconnected before completion: IO error: Connection reset by peer (os error 54)
+2026-10-02T17:21:02.356989Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 406ms)... turn_id=01a0fd8c-b1ba-7211-95b6-4098c5cab1ae retries=2 max_retries=5 sampling_error=stream disconnected before completion: IO error: Connection reset by peer (os error 54)
