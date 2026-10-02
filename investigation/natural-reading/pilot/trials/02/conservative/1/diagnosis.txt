@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, make a minimal fix, and verify it with `./test.sh`.
+`connect()` passes `"eighty"` to the integer parser, causing the `NumberFormatException` wrapped by the client setup error. The test expects port 8080. I’ll correct the port string to `"8080"`, preserving parsing and error handling.
+Fixed [Defects.java:17](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-qds7ugsk/investigation/src/test/java/com/ai/token/experiment/Defects.java:17): `connect()` supplied `"eighty"` to `Integer.parseInt`, causing the wrapped exception. Changed that input to `"8080"`, preserving parsing and error handling.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, zero failures or errors.

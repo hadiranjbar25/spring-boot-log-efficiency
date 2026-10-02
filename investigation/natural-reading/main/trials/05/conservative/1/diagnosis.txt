@@ -1,0 +1,7 @@
+I’ll inspect the failure and implementation, make the smallest fix, and verify it with `./test.sh`.
+`save()` inserts two users with the same email, so the second insert violates the unique email constraint. The test requires two distinct emails. I’ll derive each email from the user ID with a one-line change.
+The failure came from `save()` assigning both users `same@example.test`, violating the unique email constraint.
+
+Changed one line in `Defects.java` to generate each email from its user ID: `"user" + id + "@example.test"`.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed with no failures or errors. Only the implementation file was modified.

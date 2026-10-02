@@ -1,0 +1,5 @@
+2026-10-01T00:55:00.216+02:00 ERROR 49967 --- [token.usage] [           main] com.ai.token.experiment.Defects          : client setup failed
+
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.Defects.connect(Defects.java:20) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:39) ~[test-classes/:na]

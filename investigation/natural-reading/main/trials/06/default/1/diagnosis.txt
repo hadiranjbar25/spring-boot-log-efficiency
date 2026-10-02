@@ -1,0 +1,9 @@
+I’ll inspect the failure and implementation, make the smallest targeted fix, and verify it with `./test.sh`.
+
+`save()` inserts the same email for both users, so the second insert violates the unique constraint and `saveCaught()` returns `false`. I reproduced the failure. I’ll include each user’s ID in the email so both inserts succeed.
+
+Fixed the single email expression in [Defects.java](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-1y9xbisj/investigation/src/test/java/com/ai/token/experiment/Defects.java:41).
+
+Both inserts used `same@example.test`, violating the email uniqueness constraint. Emails now include the user ID, allowing both distinct users to be saved.
+
+Verified with `./test.sh`: **1 test passed, 0 failures, BUILD SUCCESS**. Only the implementation file was edited.

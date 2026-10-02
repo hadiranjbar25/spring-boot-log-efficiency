@@ -1,0 +1,47 @@
+{
+  "09/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: derive distinct emails from user IDs, retaining both inserts and database uniqueness constraint. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "09/conservative/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: derive distinct emails from user IDs, retaining both inserts and database uniqueness constraint. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "09/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: derive distinct emails from user IDs, retaining both inserts and database uniqueness constraint. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "09/default/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: derive distinct emails from user IDs, retaining both inserts and database uniqueness constraint. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "09/default/3": {
+    "fix_valid": false,
+    "root_cause_correct": null,
+    "review": "Quota interrupted after initial inspection, before any repair or recorded diagnosis. Independent original PostgreSQL test still fails; unresolved resource interruption, not an observed incorrect attempted repair."
+  },
+  "10/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: match worker ready while retaining actual container readiness gating. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "10/conservative/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: match worker ready while retaining actual container readiness gating. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "10/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: match worker ready while retaining actual container readiness gating. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  },
+  "10/default/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed patch and explicit diagnosis: match worker ready while retaining actual container readiness gating. Independent original real-container test passed. Agent-side Docker verification blocked by sandbox socket permissions; no changed tests or expectations accepted."
+  }
+}

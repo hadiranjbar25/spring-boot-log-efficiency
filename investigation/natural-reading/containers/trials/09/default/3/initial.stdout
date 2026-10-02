@@ -1,0 +1,120 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-57ued2kh/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-57ued2kh/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.FailureCasesTest
+CASE_BEGIN 09
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-02T00:59:08.343+02:00  INFO 59246 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.6 using Java 25 with PID 59246 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-57ued2kh)
+2026-10-02T00:59:08.345+02:00  INFO 59246 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2026-10-02T00:59:08.423+02:00  INFO 59246 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.274 seconds (process running for 0.707)
+2026-10-02T00:59:08.438+02:00  INFO 59246 --- [token.usage] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-10-02T00:59:08.438+02:00  INFO 59246 --- [token.usage] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-10-02T00:59:08.443+02:00  INFO 59246 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-10-02T00:59:08.576+02:00  INFO 59246 --- [token.usage] [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-10-02T00:59:08.797+02:00  INFO 59246 --- [token.usage] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2026-10-02T00:59:08.798+02:00  INFO 59246 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-10-02T00:59:08.814+02:00  INFO 59246 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.6.2
+  API Version: 1.55
+  Operating System: Docker Desktop
+  Total Memory: 7936 MB
+  Labels: 
+    com.docker.desktop.address=unix:///Users/hadiranjbar/Library/Containers/com.docker.docker/Data/docker-cli.sock
+2026-10-02T00:59:08.904+02:00  INFO 59246 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-10-02T00:59:08.976+02:00  INFO 59246 --- [token.usage] [           main] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2026-10-02T00:59:09.044+02:00  INFO 59246 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 789794a6aad19f964276ef9947f01afb3e7c28a4fb75b29ae9962420234d63a2
+2026-10-02T00:59:09.248+02:00  INFO 59246 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT0.344345S
+2026-10-02T00:59:09.253+02:00  INFO 59246 --- [token.usage] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-10-02T00:59:09.253+02:00  INFO 59246 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-10-02T00:59:09.253+02:00  INFO 59246 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2026-10-02T00:59:09.254+02:00  INFO 59246 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Creating container for image: postgres:17.6-alpine
+2026-10-02T00:59:09.298+02:00  INFO 59246 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Container postgres:17.6-alpine is starting: 818f0d0308ae01b67840c833fff1771794dd365b2238d675e978a2c17e938b26
+2026-10-02T00:59:10.144+02:00  INFO 59246 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Container postgres:17.6-alpine started in PT0.890292S
+2026-10-02T00:59:10.145+02:00  INFO 59246 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Container is started (JDBC URL: jdbc:postgresql://localhost:60206/test?loggerLevel=OFF)
+CASE_END 09
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.444 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 2.409 s <<< ERROR!
+org.postgresql.util.PSQLException: 
+ERROR: duplicate key value violates unique constraint "uq_email"
+  Detail: Key (email)=(same@example.test) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.ai.token.experiment.Defects.save(Defects.java:41)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:76)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:76 » PSQL ERROR: duplicate key value violates unique constraint "uq_email"
+  Detail: Key (email)=(same@example.test) already exists.
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.985 s
+[INFO] Finished at: 2026-10-02T00:59:10+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project token.usage: 
+[ERROR] 
+[ERROR] See /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-57ued2kh/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

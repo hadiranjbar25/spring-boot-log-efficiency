@@ -1,0 +1,6 @@
+java.net.SocketException: Operation not permitted
+java.net.SocketException: Operation not permitted
+00:54:45.043 ERROR [main] o.t.d.DockerClientProviderStrategy: Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+[ERROR]   FailureCasesTest.scenario:76 » IllegalState Could not find a valid Docker environment. Please see logs and check configuration
+[INFO] BUILD FAILURE

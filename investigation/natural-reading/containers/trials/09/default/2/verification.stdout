@@ -1,0 +1,91 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-verify-gpwxpcol/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-verify-gpwxpcol/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.FailureCasesTest
+CASE_BEGIN 09
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-02T00:57:50.349+02:00  INFO 58585 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.6 using Java 25 with PID 58585 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-verify-gpwxpcol)
+2026-10-02T00:57:50.351+02:00  INFO 58585 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2026-10-02T00:57:50.429+02:00  INFO 58585 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.309 seconds (process running for 0.757)
+2026-10-02T00:57:50.444+02:00  INFO 58585 --- [token.usage] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-10-02T00:57:50.445+02:00  INFO 58585 --- [token.usage] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-10-02T00:57:50.450+02:00  INFO 58585 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-10-02T00:57:50.579+02:00  INFO 58585 --- [token.usage] [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-10-02T00:57:50.803+02:00  INFO 58585 --- [token.usage] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2026-10-02T00:57:50.804+02:00  INFO 58585 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-10-02T00:57:50.820+02:00  INFO 58585 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.6.2
+  API Version: 1.55
+  Operating System: Docker Desktop
+  Total Memory: 7936 MB
+  Labels: 
+    com.docker.desktop.address=unix:///Users/hadiranjbar/Library/Containers/com.docker.docker/Data/docker-cli.sock
+2026-10-02T00:57:50.908+02:00  INFO 58585 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-10-02T00:57:50.985+02:00  INFO 58585 --- [token.usage] [           main] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2026-10-02T00:57:51.059+02:00  INFO 58585 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 159bf9d57e88322072bf92990565256bbaa34b02ce06852c4b2dad083c2d6ba4
+2026-10-02T00:57:51.274+02:00  INFO 58585 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT0.365649S
+2026-10-02T00:57:51.278+02:00  INFO 58585 --- [token.usage] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-10-02T00:57:51.278+02:00  INFO 58585 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-10-02T00:57:51.279+02:00  INFO 58585 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2026-10-02T00:57:51.279+02:00  INFO 58585 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Creating container for image: postgres:17.6-alpine
+2026-10-02T00:57:51.326+02:00  INFO 58585 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Container postgres:17.6-alpine is starting: 3417ad340aa4ad107dbb38c0c3bd6b52a614bbccdc008ef9ef22adbbfcd92c93
+2026-10-02T00:57:52.215+02:00  INFO 58585 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Container postgres:17.6-alpine started in PT0.936065S
+2026-10-02T00:57:52.216+02:00  INFO 58585 --- [token.usage] [           main] tc.postgres:17.6-alpine                  : Container is started (JDBC URL: jdbc:postgresql://localhost:60089/test?loggerLevel=OFF)
+CASE_END 09
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.522 s -- in com.ai.token.experiment.FailureCasesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.966 s
+[INFO] Finished at: 2026-10-02T00:57:52+02:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,195 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-lg3523o9/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-lg3523o9/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.FailureCasesTest
+CASE_BEGIN 09
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+00:56:35.786 INFO [main] o.a.m.surefire.booter.ForkedBooter: Starting ForkedBooter v3.5.6 using Java 25 with PID 58108 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-lg3523o9)
+00:56:35.788 INFO [main] o.a.m.surefire.booter.ForkedBooter: The following 1 profile is active: "agent"
+00:56:35.868 INFO [main] o.a.m.surefire.booter.ForkedBooter: Started ForkedBooter in 0.285 seconds (process running for 0.742)
+00:56:35.883 INFO [main] o.testcontainers.images.PullPolicy: Image pull policy will be performed by: DefaultPullPolicy()
+00:56:35.884 INFO [main] o.t.utility.ImageNameSubstitutor: Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+00:56:35.889 INFO [main] o.testcontainers.DockerClientFactory: Testcontainers version: 2.0.5
+00:56:36.021 INFO [main] o.t.d.DockerClientProviderStrategy: Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+00:56:36.247 INFO [main] o.t.d.DockerClientProviderStrategy: Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+00:56:36.248 INFO [main] o.testcontainers.DockerClientFactory: Docker host IP address is localhost
+00:56:36.263 INFO [main] o.testcontainers.DockerClientFactory: Connected to docker: 
+  Server Version: 29.6.2
+  API Version: 1.55
+  Operating System: Docker Desktop
+  Total Memory: 7936 MB
+  Labels: 
+    com.docker.desktop.address=unix:///Users/hadiranjbar/Library/Containers/com.docker.docker/Data/docker-cli.sock
+00:56:36.368 INFO [main] tc.testcontainers/ryuk:0.14.0: Creating container for image: testcontainers/ryuk:0.14.0
+00:56:36.442 INFO [main] o.t.utility.RegistryAuthLocator: Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+00:56:36.537 INFO [main] tc.testcontainers/ryuk:0.14.0: Container testcontainers/ryuk:0.14.0 is starting: eb729759b91647ac160bcaf8b0c5e75c7703c547f3e3bd4c799b6b33bfb44bc4
+00:56:36.750 INFO [main] tc.testcontainers/ryuk:0.14.0: Container testcontainers/ryuk:0.14.0 started in PT0.381692S
+00:56:36.754 INFO [main] o.t.utility.RyukResourceReaper: Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+00:56:36.755 INFO [main] o.testcontainers.DockerClientFactory: Checking the system...
+00:56:36.755 INFO [main] o.testcontainers.DockerClientFactory: ✔︎ Docker server version should be at least 1.6.0
+00:56:36.755 INFO [main] tc.postgres:17.6-alpine: Creating container for image: postgres:17.6-alpine
+00:56:36.822 INFO [main] tc.postgres:17.6-alpine: Container postgres:17.6-alpine is starting: e2b8ed63a47d50c3e7e36da2586fb4e40818128702b3382c5565d2f1567dac16
+00:56:37.711 INFO [main] tc.postgres:17.6-alpine: Container postgres:17.6-alpine started in PT0.955323S
+00:56:37.711 INFO [main] tc.postgres:17.6-alpine: Container is started (JDBC URL: jdbc:postgresql://localhost:59974/test?loggerLevel=OFF)
+CASE_END 09
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.586 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 2.552 s <<< ERROR!
+org.postgresql.util.PSQLException: 
+ERROR: duplicate key value violates unique constraint "uq_email"
+  Detail: Key (email)=(same@example.test) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.ai.token.experiment.Defects.save(Defects.java:41)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:76)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:76 » PSQL ERROR: duplicate key value violates unique constraint "uq_email"
+  Detail: Key (email)=(same@example.test) already exists.
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.349 s
+[INFO] Finished at: 2026-10-02T00:56:38+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project token.usage: 
+[ERROR] 
+[ERROR] See /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-lg3523o9/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.jetbrains.kotlin.com.intellij.util.containers.Unsafe (file:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar)
+WARNING: Please consider reporting this to the maintainers of class org.jetbrains.kotlin.com.intellij.util.containers.Unsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+package com.ai.token.experiment;
+
+import java.io.*;
+import java.net.URI;
+import java.net.http.*;
+import java.sql.*;
+import java.util.concurrent.*;
+import org.slf4j.*;
+import org.springframework.context.annotation.*;
+import org.springframework.web.bind.annotation.*;
+
+public class Defects {
+    private static final Logger LOG = LoggerFactory.getLogger(Defects.class);
+    public int total(int price, int quantity) { return price + quantity; }
+    public int parsePort(String port) { return Integer.parseInt(port); }
+    public int connect() {
+        try { return parsePort("eighty"); }
+        catch (NumberFormatException e) {
+            var cause = new IOException("invalid upstream port", e);
+            var failure = new IllegalStateException("cannot initialize client", cause);
+            failure.addSuppressed(new IOException("cleanup socket failed"));
+            throw failure;
+        }
+    }
+    @RestController
+    public static class Orders {
+        @GetMapping("/orders") public String orders(@RequestParam("count") int count) { return "count=" + count; }
+    }
+    public String ordersUrl() { return "/orders?count=two"; }
+    @Configuration(proxyBeanMethods=false)
+    public static class BrokenStartup {
+        @Bean String port() { return "port=" + Integer.parseInt("eighty"); }
+    }
+    public Connection database(String url, String user, String password) throws SQLException {
+        var c = DriverManager.getConnection(url, user, password);
+        try (var s = c.createStatement()) { s.execute("CREATE TABLE users(id INT PRIMARY KEY, email VARCHAR(100), CONSTRAINT uq_email UNIQUE(email))"); }
+        return c;
+    }
+    public void save(Connection c) throws SQLException {
+        try (var s = c.prepareStatement("INSERT INTO users VALUES (?, ?)")) {
+            for (int id=1; id<=2; id++) { s.setInt(1,id); s.setString(2,"same@example.test"); s.executeUpdate(); }
+        }
+    }
+    public boolean saveCaught(Connection c) {
+        try { save(c); return true; }
+        catch (SQLException e) {
+            LOG.error("save users failed request=db-6", e);
+            if (Boolean.getBoolean("experiment.deduplicate")) LOG.error("request=db-6 failed; exception logged by save users");
+            else LOG.error("request=db-6 failed at service boundary", e);
+            return false;
+        }
+    }
+    public int call(URI base) {
+        return org.springframework.web.client.RestClient.create().get().uri(base.resolve("/wrong")).retrieve().body(Integer.class);
+    }
+    public int async() throws Exception {
+        try (var executor = Executors.newSingleThreadExecutor(r -> new Thread(r,"invoice-worker-7"))) {
+            return executor.submit(() -> {
+                org.slf4j.MDC.put("request", "invoice-42");
+                try { return Integer.parseInt("ten"); }
+                catch (RuntimeException e) { LOG.error("invoice-42 calculation failed", e); throw e; }
+                finally { org.slf4j.MDC.clear(); }
+            }).get(5, TimeUnit.SECONDS);
+        }
+    }
+    public String readyPattern() { return ".*service ready.*\\n"; }
+}
+#!/bin/sh
+export JAVA_HOME=/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home
+unset DEBUG SPRING_PROFILES_ACTIVE LOGGING_CONFIG
+exec mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation -Dkotlin.compiler.daemon=false -DtrimStackTrace=false -Dspring.output.ansi.enabled=never -Dexperiment.case=09 -Dspring.profiles.active=agent -Dexperiment.deduplicate=true -Dtest=FailureCasesTest test "$@"

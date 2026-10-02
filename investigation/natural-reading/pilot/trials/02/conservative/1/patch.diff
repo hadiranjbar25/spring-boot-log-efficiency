@@ -1,0 +1,11 @@
+--- a/Defects.java
++++ b/Defects.java
+@@ -14,7 +14,7 @@
+     public int total(int price, int quantity) { return price + quantity; }
+     public int parsePort(String port) { return Integer.parseInt(port); }
+     public int connect() {
+-        try { return parsePort("eighty"); }
++        try { return parsePort("8080"); }
+         catch (NumberFormatException e) {
+             var cause = new IOException("invalid upstream port", e);
+             var failure = new IllegalStateException("cannot initialize client", cause);

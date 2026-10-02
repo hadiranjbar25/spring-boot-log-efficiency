@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, run `./test.sh`, and make the smallest fix in `Defects.java`.
+The container emits `worker ready`, but `readyPattern()` waits for `service ready`, causing the timeout in `failure.log`. I’ll correct that pattern. The local test run is blocked earlier because Testcontainers cannot access Docker; I’ll rerun after the fix to check compilation and test status.
+Changed only `Defects.java`: `readyPattern()` now matches `worker ready` instead of `service ready`. The mismatch caused the readiness timeout shown in `failure.log`.
+
+Ran `./test.sh` after the fix. Compilation succeeded, but the test was blocked by “Could not find a valid Docker environment.” Full runtime verification remains incomplete.

@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, make a minimal fix in `Defects.java`, and verify it with `./test.sh`.
+The logged failure comes from `call()` requesting `/wrong`; the server serves the price at `/price`. I’ll correct that path. The test run here is blocked earlier because the sandbox prevents the test server from binding a local socket.
+Changed only `Defects.java:54`: `call()` now requests `/price` instead of `/wrong`, which caused the logged HTTP 404.
+
+Ran `./test.sh` after the fix. Compilation succeeded, but verification is blocked by the sandbox: the test’s HTTP server cannot bind a socket (`SocketException: Operation not permitted`). A passing test run remains unconfirmed.

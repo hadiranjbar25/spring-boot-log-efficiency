@@ -1,0 +1,11 @@
+--- a/Defects.java
++++ b/Defects.java
+@@ -26,7 +26,7 @@
+     public static class Orders {
+         @GetMapping("/orders") public String orders(@RequestParam("count") int count) { return "count=" + count; }
+     }
+-    public String ordersUrl() { return "/orders?count=two"; }
++    public String ordersUrl() { return "/orders?count=2"; }
+     @Configuration(proxyBeanMethods=false)
+     public static class BrokenStartup {
+         @Bean String port() { return "port=" + Integer.parseInt("eighty"); }

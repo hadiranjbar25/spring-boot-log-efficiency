@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, make the smallest fix, and verify it with `./test.sh`.
+The failure is reproduced: `total(10, 3)` adds price and quantity, returning 13. Total price requires multiplication, so I’ll change that operator.
+Fixed [Defects.java:14](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-a3hujmn0/investigation/src/test/java/com/ai/token/experiment/Defects.java:14): `total()` added price and quantity instead of multiplying them. Changed `+` to `*`, so `total(10, 3)` returns 30.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, zero failures or errors. Only the implementation file was edited.

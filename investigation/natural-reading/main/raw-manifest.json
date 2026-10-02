@@ -1,0 +1,1986 @@
+{
+  "investigation/natural-reading/main/trials/01/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/Defects.java": {
+    "bytes": 3090,
+    "sha256": "d718ac5e2178ccfbaef2a371cf8a3aba9b81b13cd88969b4655fad6b316acebd"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/diagnosis.txt": {
+    "bytes": 665,
+    "sha256": "a560b922d5587dbbb7359c0e64ff7fdd8726f521c3a046a6156f8ec8eb0ddc51"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/failure.log": {
+    "bytes": 4827,
+    "sha256": "712183b71978d00ee7de1321a6ec3ebad949df6327af072c6a9cf99834504dae"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/initial.stdout": {
+    "bytes": 4263,
+    "sha256": "c7a4262140c3c0449a241406d20c41d142e68189c4900a25a659aa3b0d5453a2"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/outcome.json": {
+    "bytes": 1728,
+    "sha256": "37b4936cd2f436aa507ae3727b436930e02ba758731918b3ade187e44882414f"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/patch.diff": {
+    "bytes": 460,
+    "sha256": "9c0083c1736be3561c997eec3a2047b69233b21123bee63e940329748af88805"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "52e75f0675f73ad0313829ddaf8b3416b214452ff034ccee266a8164fd3306aa"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/session.jsonl": {
+    "bytes": 27814,
+    "sha256": "c28dc65cfb40f2a19a2202cfc7d4c07897eb650bde458c4ab6cb73e28acc25d1"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "11ada415bed82f99357fd4d7c07f9c5a05b2d7786fb6ca8246b961acaf8eff85"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/setup.json": {
+    "bytes": 1466,
+    "sha256": "3ac1db607c13df72721e5f26b2c96588448a7880839d6622f52bfafbcf1ae7e8"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/tool-results.json": {
+    "bytes": 25023,
+    "sha256": "522a95bf483ac58ebb3cb7e1b2ad0e54533ccbc0537b37802c2b398a9ea4632d"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 25838,
+    "sha256": "350e8d5954ebbc9787d2cf0b7f0873edef7f9f6efeb8a189d20a028ac5ad9ace"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "0d76d83b0ed6c2c05a6e2b6f3340f486116aa264452eaed314c92afcb4cbe29d"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/1/verification.stdout": {
+    "bytes": 2681,
+    "sha256": "fa810d8c08c2bab821839a684bb6830218b9db107520a1819d255a7f2e44da01"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/Defects.java": {
+    "bytes": 3090,
+    "sha256": "d718ac5e2178ccfbaef2a371cf8a3aba9b81b13cd88969b4655fad6b316acebd"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/diagnosis.txt": {
+    "bytes": 658,
+    "sha256": "ce3888644717c75418244d7039fdfa7250a8c75e2c8cf2b0bf1d9c84c2c4bce0"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/failure.log": {
+    "bytes": 4827,
+    "sha256": "c69ffdaa19a4dbb39883e2b0d5eeed8cab4fb43e19adbf120ebed6cd9d010065"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/initial.stdout": {
+    "bytes": 4263,
+    "sha256": "c82da3569d5b84e1a7d120b63dac9e4371934b03dd91530fc67d825311d17705"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/outcome.json": {
+    "bytes": 1728,
+    "sha256": "168aa72711fae973bbfa1639746542d5fb22a9e4037cda9e74c272655c4abb37"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/patch.diff": {
+    "bytes": 460,
+    "sha256": "9c0083c1736be3561c997eec3a2047b69233b21123bee63e940329748af88805"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "adc722d6412d054231b54396f28b4f63bd7fec494e9996ab266274888f7ed502"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/session.jsonl": {
+    "bytes": 20646,
+    "sha256": "94a2aadbfec6bf9c58b1bcfc6c2e98256239dddb6ef28d0ca5d12103282c4107"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/session.stderr": {
+    "bytes": 461,
+    "sha256": "bac534ab177b1d9a03c1c2b10851008e6d7d4e4026e22d078c418c1113d39fc4"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/setup.json": {
+    "bytes": 1474,
+    "sha256": "84edf8a11d216d7d6350c4ef5024af793e3b4b829adcf6967635a429a17c2b96"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/tool-results.json": {
+    "bytes": 18002,
+    "sha256": "b1c08494b3972f3a939193ef7e592ab6a739658cdcf1191459cebd33dcc7fcd4"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 25838,
+    "sha256": "8b467aed112a8a79e18254789b88592e1fddf530ec1facad9b946dbe6a9180f3"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "77a566da572dc950d59f5d2926276c0bd4b970ae175e8a8094c637d374f595fc"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/2/verification.stdout": {
+    "bytes": 2681,
+    "sha256": "9ece711d1589683d92e9e13aa833115ba7b74ed93d5d89fc7f476a6ee8d94531"
+  },
+  "investigation/natural-reading/main/trials/01/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "af6acaf12422a445cdb5ab218dd2a3e2822731718c26934000481d903781981d"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/Defects.java": {
+    "bytes": 3090,
+    "sha256": "d718ac5e2178ccfbaef2a371cf8a3aba9b81b13cd88969b4655fad6b316acebd"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/diagnosis.txt": {
+    "bytes": 637,
+    "sha256": "999f635b00456603d65abf81c15542b4c0c5e1c31664004c69abf7f47527c9f3"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/failure.log": {
+    "bytes": 4827,
+    "sha256": "fe8759ec8307c9e33d50a749f41a490bb995693cad767247cde12b9bfcc79334"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/initial.stdout": {
+    "bytes": 4263,
+    "sha256": "6517a292bf04f0178c939065413423731b21f7a0961666df2959ebaaf8a87df7"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/outcome.json": {
+    "bytes": 1642,
+    "sha256": "2565fe2237f87239309c7f972ee6a0d8e4212174e247b4a040c2efec3cf8dc1b"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/patch.diff": {
+    "bytes": 460,
+    "sha256": "9c0083c1736be3561c997eec3a2047b69233b21123bee63e940329748af88805"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "f0698a3c69f44b1f2d230aa42a1c3d1f0493257ae0ec110ffeb91ca88ca58165"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "472883943bc98f1bbba4ca5d7537f0092e0ea58ee044deb8a9dac260aa06cf66"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/session.jsonl": {
+    "bytes": 27545,
+    "sha256": "46eac8ec2afba03a9c2ff3f252139a2c0d01b4a65896f12bdd487949df3a8de0"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "c461ed2ea433ff2ed76b577470aad31f3197e39a281aeeba601f24f4d6e13cc4"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/setup.json": {
+    "bytes": 1313,
+    "sha256": "ab7dc1fe1717c195339dac09d833a45bf7ecbfa85a0dc03d8ccecc2d6dc8b2b4"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/tool-results.json": {
+    "bytes": 24759,
+    "sha256": "bcb9ce94c5852d8ebb018f9e7697a855917c6045302380f19ca89a70a89a4d91"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 25719,
+    "sha256": "c39c7388fe31e32cc9db56f553aeef19d3738e1438f01d6092557d115f379088"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "8b9aa70f04b50da21f8418b7d43ccf53704616739114f4b67a2e6169fbd6f593"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/default/1/verification.stdout": {
+    "bytes": 2681,
+    "sha256": "f0d2553611d4ab7048914bf94f4e442012af5d516d6268a4dfda22624bfb2781"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/Defects.java": {
+    "bytes": 3090,
+    "sha256": "d718ac5e2178ccfbaef2a371cf8a3aba9b81b13cd88969b4655fad6b316acebd"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/diagnosis.txt": {
+    "bytes": 652,
+    "sha256": "c77fa08fff3c0f6e70776840c41822edcb902ccbe6d4680016919c91fa9c453c"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/failure.log": {
+    "bytes": 4827,
+    "sha256": "86d87959be6c43d22a301d942797d4d5eaceb605e1afe55510b5628a860a02c1"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/initial.stdout": {
+    "bytes": 4263,
+    "sha256": "bae73e8b46b27ab3123ae36ed904aeb883d1814917c355998aea04352d237385"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/outcome.json": {
+    "bytes": 1647,
+    "sha256": "2230676cf676a3b80d343ff744356c597864972905d65fcd9853928a6f8ff635"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/patch.diff": {
+    "bytes": 460,
+    "sha256": "9c0083c1736be3561c997eec3a2047b69233b21123bee63e940329748af88805"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/profile-probe.stdout": {
+    "bytes": 3621,
+    "sha256": "d7c1f2425480d14195a4a2042f7ebecd0cf7811d3e7fd28068d3f8a9bfb3a6fd"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "1a5d69f39f38c6d65d030d2b9e3b75c6d40f892d6b38d6dabbdccc9618253cf0"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/session.jsonl": {
+    "bytes": 34732,
+    "sha256": "4b5a73075d4e07e986b06cf1ef03c1734897778dc40f340e6f07da6a727d8a11"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/session.stderr": {
+    "bytes": 173,
+    "sha256": "9ce85382cf0a0bc636799b2403026e6ded1da0138d5272ceac079b1429d6b204"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/setup.json": {
+    "bytes": 1319,
+    "sha256": "a6a2f0aae7e0b09d8d262976241e7cb618edac431a2f8b955e0fd742c1358051"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/tool-results.json": {
+    "bytes": 31613,
+    "sha256": "86a963eaf8593b03df781a7362eb44910e5cc517baea99f77054a004c80de234"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 25723,
+    "sha256": "f83647b1ead48ddb57238940cb6af6369136d0335c6e2e30c723bba2ba6dd9d4"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "77a566da572dc950d59f5d2926276c0bd4b970ae175e8a8094c637d374f595fc"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/01/default/2/verification.stdout": {
+    "bytes": 2681,
+    "sha256": "6c52bd4063e9e95552e7849ce91e513916d39ba35a0bb56e90766162d86e3507"
+  },
+  "investigation/natural-reading/main/trials/01/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "9ddecd7ab4f5d00d3df58204fe9840912af0697681c3bc24c3b4d326fd292583"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/Defects.java": {
+    "bytes": 3088,
+    "sha256": "0434f7f9e87f6a02b22a38d6c030ad4d6fa7468c4badbbdb634bfdb4cd4cb7c2"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/diagnosis.txt": {
+    "bytes": 758,
+    "sha256": "20f3b826ca64ca8e473e6deb2e16c6c7877e65f24eb51e652ef1c67273b219cd"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/failure.log": {
+    "bytes": 7525,
+    "sha256": "0f19cbacd46b7d74e4109e9c165b8e7f293bbf29e09fd6f17790088faba583f3"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/initial.stdout": {
+    "bytes": 6961,
+    "sha256": "896f772e85328d1dff6ba4caa9ade418b9351d0756f34da385a7995eeb3f213b"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/outcome.json": {
+    "bytes": 1730,
+    "sha256": "62f5815a1225f53a5501cd8ee555c26d082ec8befc723a73f10619452421fd51"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/patch.diff": {
+    "bytes": 524,
+    "sha256": "7a172dd6d2d2f5a8db32d8c18d29762e96e760e3fd8c3f3426a27fcf520b58c0"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "860dd520aea650f9f42d5f89521ab4d757c11ff32fa4f41e6cc26024c58a49f7"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/session.jsonl": {
+    "bytes": 35688,
+    "sha256": "3ef48137b6560609e8219a299dee2d429092e6283a86e9af5069659b73d7d6c4"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "b8dc686684cf47b86ca007d6a7814d4f04c1879c8e418bfda7d6b96f05cca6ab"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/setup.json": {
+    "bytes": 1470,
+    "sha256": "37e87d1cd2ad645e9df979f62cc1a83d663e934151bd0d20b98e827020e542a2"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/tool-results.json": {
+    "bytes": 32438,
+    "sha256": "98263ddad89597b3fdefa39499db728ef6b1e923eab0e8f479cd3b60eff5f365"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27429,
+    "sha256": "c643b3c7276adb8c4d0293a2a5c1415cdfa87556dadf90fcead3758121c5464d"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "e77f7a48a9570d0819bd0c050f325bf1a3825b49d42fcb9a71b5b584f9d4535f"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/1/verification.stdout": {
+    "bytes": 3435,
+    "sha256": "07aa36db1a49ff84f43b5015dc81c9811fefc675e1f1582b625e0eff342568c8"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/Defects.java": {
+    "bytes": 3088,
+    "sha256": "0434f7f9e87f6a02b22a38d6c030ad4d6fa7468c4badbbdb634bfdb4cd4cb7c2"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/diagnosis.txt": {
+    "bytes": 637,
+    "sha256": "5f21da89aae1d9f08a473865fa0055a286f06ad53d04278711f33c87006707e0"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/failure.log": {
+    "bytes": 7523,
+    "sha256": "c04304a4068ea7c24b7f894245085b558eaf52144401e11ae1e3ae6462009773"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/initial.stdout": {
+    "bytes": 6959,
+    "sha256": "7413c8a62cffa413488f3b00772f70e289f84f7941bb7a0b3daa51f923575122"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/outcome.json": {
+    "bytes": 1727,
+    "sha256": "07ace9e7addc6426513ec93ff0d118b23246939e2b19bd292f4fc8f37c82033f"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/patch.diff": {
+    "bytes": 524,
+    "sha256": "7a172dd6d2d2f5a8db32d8c18d29762e96e760e3fd8c3f3426a27fcf520b58c0"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "a219304e42611110b5dc396085117968901ac45a767eaaf16c8195c67b5f57ca"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/session.jsonl": {
+    "bytes": 32924,
+    "sha256": "974b49661a14f9e3eaccf81409d8b15863cf99be056254784cbcd00e8a5a29da"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/session.stderr": {
+    "bytes": 173,
+    "sha256": "79a68d471e65c12d45ae567f4ddc2032ea2bf5b8c38c23d807fd15a2fce903bb"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/setup.json": {
+    "bytes": 1470,
+    "sha256": "31d0ed0d4eaccd9fe23bf33b6f036526b4b6c009a613b6aa2b0f85b500b8c26d"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/tool-results.json": {
+    "bytes": 30413,
+    "sha256": "75d9d870b96f8f4860a4f3f074d824d182abf57ebb065792bd2d562270941bb3"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27427,
+    "sha256": "3ad7b978cf5a13f6ab9ce8b4c4cd28ed3346f4d16fe536d0feb269c46f44c9df"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "c94b843da382be295789335acd7c03877269ed6695455f718ca81f515d1fc985"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/2/verification.stdout": {
+    "bytes": 3435,
+    "sha256": "e40f1dcf2afee22a1a59243ba4a87c44bf43dc105948615e6b6b9c6528ec09db"
+  },
+  "investigation/natural-reading/main/trials/02/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "47ff965b42eec7c70277fb543bd8324d80d13609e17f20b32e0011b5f3a77d55"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/Defects.java": {
+    "bytes": 3088,
+    "sha256": "0434f7f9e87f6a02b22a38d6c030ad4d6fa7468c4badbbdb634bfdb4cd4cb7c2"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/diagnosis.txt": {
+    "bytes": 693,
+    "sha256": "23ca6e0f8046076d11d8d084b006d5f52695e9a858a257fa5e62acd383c66277"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/failure.log": {
+    "bytes": 19012,
+    "sha256": "9cea0cbac3f52684118d462e67c0d6b8ae8cac3422273de9ab63e75daa33e982"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/initial.stdout": {
+    "bytes": 18448,
+    "sha256": "6d04d9388568a746d63546cd06ef03f29686165c89790c206f8a373eed63e9cc"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/outcome.json": {
+    "bytes": 1649,
+    "sha256": "40082d9eb3103f16e0970876ba6329354965d19bdd20ce81b6c32e5fa5bef06a"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/patch.diff": {
+    "bytes": 524,
+    "sha256": "7a172dd6d2d2f5a8db32d8c18d29762e96e760e3fd8c3f3426a27fcf520b58c0"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "79550bb597dc7864b24b116c9524badc7fe891ad278bc77a0e1aad5d6d431062"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "89a7e1fcc1c81cdee4c0b69b2e44fe581d1129a786fbef80ef532744c96309c3"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/session.jsonl": {
+    "bytes": 37952,
+    "sha256": "d91a47337590dd033939da3230f1be37f3be02d22d7a5103d4a39b66a6fa218e"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "a983e3e39cfffa56d318fd4a3f02a4cfc28766748de549c7d259aa51c079f2bb"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/setup.json": {
+    "bytes": 1315,
+    "sha256": "d8b78da5d55817ad2ee53f40cb35c682de878a2aa9ae892048264b30df034833"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/tool-results.json": {
+    "bytes": 35294,
+    "sha256": "9337d4ba298cb6b927189992ae09680980aabf3ed0cccbc366aced2ac6293ccf"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27018,
+    "sha256": "e8f7f85609ec2c271237aacf343d647326722d4bf1a92f89034a5570d6ad4382"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "95831de12ef550003cce431f3cfc1bb649d42511a2fa2c0cf455da53800d50d1"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/default/1/verification.stdout": {
+    "bytes": 3640,
+    "sha256": "51263c96dc62c79974a5f10c9f4a3acbfb2af80187b6d0c389ea6b6561e74952"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/Defects.java": {
+    "bytes": 3088,
+    "sha256": "0434f7f9e87f6a02b22a38d6c030ad4d6fa7468c4badbbdb634bfdb4cd4cb7c2"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/diagnosis.txt": {
+    "bytes": 815,
+    "sha256": "9dde89dcc20b57d427029193c4d9892365cc6d86fb90214f8980188ec5e2e251"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/failure.log": {
+    "bytes": 19012,
+    "sha256": "e1fef39e438140788d83c8573824b01394298cc3022dccad9160abdb4292af3e"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/initial.stdout": {
+    "bytes": 18448,
+    "sha256": "e0dca53d96523fdcf7380aca7056f85903e06640b0689eff3f4ea4acc4345645"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/outcome.json": {
+    "bytes": 1649,
+    "sha256": "fdb6b39379599f97c58d87f616546518c09cc6492f1543469996b032b0233126"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/patch.diff": {
+    "bytes": 524,
+    "sha256": "7a172dd6d2d2f5a8db32d8c18d29762e96e760e3fd8c3f3426a27fcf520b58c0"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "ef8bff6066a07adea79547db99d4bb5cad903ccc6947cb4ba8c5a2c2509fb15c"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "469553104aa3a05ae50c24178d2f627d263aef9231ab562e8179feb44b103643"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/session.jsonl": {
+    "bytes": 58135,
+    "sha256": "6f82d36f779f8e57c0b0e83c161d2ce6af6e8e759af71fc88e6eec0e7b69ef78"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/session.stderr": {
+    "bytes": 461,
+    "sha256": "b93bec68f7167e879b25fc2735276cd86f62b024751f957dda8bd2566375c508"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/setup.json": {
+    "bytes": 1315,
+    "sha256": "bc1973fd259a387a3f14ec93b0cc0bec76de0f393dfb5b0aa48e7c5aaa1b6ee5"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/tool-results.json": {
+    "bytes": 54938,
+    "sha256": "a5e1ed5f609856e79841b5a955d3c51020104e98af158a30195a17ac5355514f"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27013,
+    "sha256": "3f993450ef2e7a967eaa34c763fb9d94f383abd4a8f3cfdab784469143e68716"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "acad0878cda33ba153adc8882abe606e9fe98b11409f8940a8ab466435128d50"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/02/default/2/verification.stdout": {
+    "bytes": 3639,
+    "sha256": "b112726a1c76160ed26939b95bb430c07de27386df1d6cd58709209a3abeef0f"
+  },
+  "investigation/natural-reading/main/trials/02/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "28524dbb9592e72b2a7c96bce3f4939e7bec35d40a8b8e24a98618935a7536c5"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/Defects.java": {
+    "bytes": 3088,
+    "sha256": "67ecc77eea09de725b4aeda3825999d8306a534bfe67aa0ec8a6230498fa989e"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/diagnosis.txt": {
+    "bytes": 800,
+    "sha256": "47b0dd81566bcdbc957a8506c5f22bddf11541144ca4dc0b5e8cefb4a4513962"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/failure.log": {
+    "bytes": 11493,
+    "sha256": "069fcde502bab651250c7809ce2b2ef5fcee0aae1304f51c471447b2ce05df0f"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/initial.stdout": {
+    "bytes": 10929,
+    "sha256": "c527428416b45873c7e472d978a79c773dfd28196e147364d30b0b94fada3289"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/outcome.json": {
+    "bytes": 1726,
+    "sha256": "097a664d4878b8405d9eb31ce9efec370c31394d0ebf9c8a742c8b2cd6b3274f"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/patch.diff": {
+    "bytes": 500,
+    "sha256": "f38e517629c9e0f2a0722dd7a2b57f9ce61384b07f8340cc205a211975ac5629"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "bdfaee88f583cabdb73591dbb728a4aeef788c7fa42b26098ada64e962edac22"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/session.jsonl": {
+    "bytes": 30684,
+    "sha256": "16d393453ae9a56ea96336f6abafe54c5a4d7f7e54988b0db72e59e5d03167b1"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "4c93135bb744d371ad1ebebcf3d40682ec4bd34064aa78c0d45b48fd57c305f0"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/setup.json": {
+    "bytes": 1470,
+    "sha256": "0c908bb918568a89c3204c36a443a083de3a66a8d4be5e7060a934fee1bc21d0"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/tool-results.json": {
+    "bytes": 27910,
+    "sha256": "33454bae7b654eb5d7007dd8493132a1caefbace06fcd201633b06aab945bfbd"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27813,
+    "sha256": "1cfa8bae93938f0a3d88ac6b2fe761d5002b4072ffc0b32e4233bf966204c380"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "dc65e7d2bb0bc2ca3d2166c51574c8364d0d5232c4ea3b92b789e984cc271452"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/1/verification.stdout": {
+    "bytes": 3815,
+    "sha256": "6b24e3d73308e4e9f0da933b0e117a1cd1324253d04014810c5bcc0a965ed0b3"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/Defects.java": {
+    "bytes": 3090,
+    "sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/diagnosis.txt": {
+    "bytes": 120,
+    "sha256": "22a3ac70b8cadfe2b4e53ef6651d297f7be0428ad9d4ad3292ef1c9077cd0c07"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/failure.log": {
+    "bytes": 11493,
+    "sha256": "8e42854cf7f3a74e96f8bb49fdf0aaa7f9743d25787fc2ddc68a696a01523ee8"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/initial.stdout": {
+    "bytes": 10929,
+    "sha256": "2d08af933c8307189f9ef79a76d89710caff9d04a2db1cabd0a32b9d80c21c0f"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/outcome.json": {
+    "bytes": 1549,
+    "sha256": "2aa1e27058ba92d4cae32c5c27bd4fd471c4ab746c8b2a34c4b79b8f0eb80cdb"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/patch.diff": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "cafb04497fc4f47108b66a0c457607e87741898934a32c2ac8e95e53c78b35b9"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/session.jsonl": {
+    "bytes": 15713,
+    "sha256": "d7bf218daef14d8f47681152ce3b72291e325bb30f09642085947f87248c364f"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/session.stderr": {
+    "bytes": 2185,
+    "sha256": "4a83ef9448f416a9222d27b3455f83a57a5d53ccefc23359ef706dd5cf94e580"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/setup.json": {
+    "bytes": 1476,
+    "sha256": "6633ed9220b1089ef7ef76e8b08f971c0230503afb931e00ecd32fb616e2d6ea"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/tool-results.json": {
+    "bytes": 15170,
+    "sha256": "16ad8a040703cc16e0233006ab4c54802c8ce7e77b42fc96a730457d5632314a"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 34064,
+    "sha256": "ab8eb56bed810cb74f87228e8e3dd65faf9650d5efb81bf8bbbc1f0c52fc79ba"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 1016,
+    "sha256": "865e916e52b71cee77091575477f459ac03cbe970d5fd9c599f158ed868e1c61"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/2/verification.stdout": {
+    "bytes": 10938,
+    "sha256": "3dcc55d3b0a8b66492ed7b8a981f28ab06005c3abf0bdbea78ed43d29ffc7bcb"
+  },
+  "investigation/natural-reading/main/trials/03/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "4699f45e003365df06d667ef87b4d323dbb9d0638384b3d9c0dcf1fa026c129a"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/Defects.java": {
+    "bytes": 3088,
+    "sha256": "67ecc77eea09de725b4aeda3825999d8306a534bfe67aa0ec8a6230498fa989e"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/diagnosis.txt": {
+    "bytes": 600,
+    "sha256": "dd84075e23c4804ceca7cefc9f8c83f72336675a139746cd7d1244f0c9a05e2b"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/failure.log": {
+    "bytes": 23222,
+    "sha256": "5bf8ee4e6a2f3cc29ac117d276bfab1256162d123702a9e9979483dbda0e8715"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/initial.stdout": {
+    "bytes": 22658,
+    "sha256": "0c4efd4dc312085cf778956b131cedcef7197308c21035be836adf2f3875421f"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/outcome.json": {
+    "bytes": 1641,
+    "sha256": "cf8a4c1ba4d2bc295a442428235ab3960fde5bc8352c815626127b8ae2c9705e"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/patch.diff": {
+    "bytes": 500,
+    "sha256": "f38e517629c9e0f2a0722dd7a2b57f9ce61384b07f8340cc205a211975ac5629"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "2015dbf6fce4d3261387790ae2eb4790581dc48faacfc81dbd1f383e263d538e"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "e98ea3634c51c88c80391b6b3e521da78b36ac65509f2d36a5fd46133ab6c0c7"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/session.jsonl": {
+    "bytes": 91935,
+    "sha256": "b59553a2fc6c2a233f5e4e1cb76ab8241450ce15b6eb9f615eb26c992a7f2e8e"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "c72123aebb9afad6e8c0f12205eb6ef8143dc5f6fab98c805ff45e4d6c00a45e"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/setup.json": {
+    "bytes": 1321,
+    "sha256": "ecf5fea359f2666913526aee3cd4f526bf3f242df0cb6f0aa4afb3cbf3aca1f9"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/tool-results.json": {
+    "bytes": 88763,
+    "sha256": "da26b4941ee5637a6024f6abf2b05524d6a945e70d75dc11a53c03462cc802bf"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27645,
+    "sha256": "34d1b87140fec6f52865e8a0b9ad67802d4bf79e4c34b80722c5645e59b2e7e6"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "ab188b67c95ae47406bd6bbb1592e1bc8096d6ae0da5c7421855f8c6679dd4db"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/default/1/verification.stdout": {
+    "bytes": 4271,
+    "sha256": "d8b18b6395889578f6579928d0aa1ba6df0f3e7f7906a5d7a37ecdb061c5bbe7"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/Defects.java": {
+    "bytes": 3090,
+    "sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/diagnosis.txt": {
+    "bytes": 101,
+    "sha256": "05ec2d4ad8b28ef638841f18ee68b498a842d8508c05ca8911971ad998388bc6"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/failure.log": {
+    "bytes": 23223,
+    "sha256": "d7fbec78da0ab72a193d07bcba415b1c39bbb554c089cbf022048b1e451ce3b4"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/initial.stdout": {
+    "bytes": 22659,
+    "sha256": "16c9cfae4a241f08e0df2e0718d633e8f737518f22892c234e99bbed7c87f6d9"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/outcome.json": {
+    "bytes": 1469,
+    "sha256": "d7e5d0159df8415f9d9ca2cd43413e21f78f4a1bcc72caf466f133059b70c316"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/patch.diff": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "69a8bea551fcf735242f9bbb77a62aa3c501e38fff31309eca713c1f8256b66f"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "d31485d5c11a66c2bf6f3709c5f78c43be4c87fcf2725c18183cf915db752026"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/session.jsonl": {
+    "bytes": 27896,
+    "sha256": "c67bd199bf021f8c1d8cf1b6f1d561c2a4febdd146b037fd6ad031b95f72298d"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/session.stderr": {
+    "bytes": 1301,
+    "sha256": "4287e180d7e07ced0aa3f18cfeece7d38e92b939ee2f446a61fcaacaf88af477"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/setup.json": {
+    "bytes": 1321,
+    "sha256": "e0ffc93b0f14f46b57b916203d287b5854d8299a2abad7101c4f6f73d012c0d6"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/tool-results.json": {
+    "bytes": 27219,
+    "sha256": "4c4e0f97c2b4058b51b72543cafcdb3512117c66e8cec4b25a4a52604da04c3e"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 45173,
+    "sha256": "9f4d3e57d18e4f1c47f65548a7de2b83e0d8ec63911b261b0bce7e4577894b30"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 1016,
+    "sha256": "38b4ccca71348aafa38ac75c73e085cce96fda0f4cd0cbe2cf37811576c306f3"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/03/default/2/verification.stdout": {
+    "bytes": 22667,
+    "sha256": "f2835dc84f1e5b2262db1837eec2b7f6b753e1c891f93afa7c059a1db9097225"
+  },
+  "investigation/natural-reading/main/trials/03/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "74d3c925abf367a484ca45b426f5a63dbe124d28110e4a937d3f4db5dda2a6cd"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/Defects.java": {
+    "bytes": 3090,
+    "sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/diagnosis.txt": {
+    "bytes": 322,
+    "sha256": "ab0b665332c2d172afc7296fb7580260b38a1085e57edfad83edeeab49e56518"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/failure.log": {
+    "bytes": 15455,
+    "sha256": "74bb7b4d0b3a1f25d5ca7383a37f3550db1d560bf17b236df9d78b8e49060861"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/initial.stdout": {
+    "bytes": 14891,
+    "sha256": "80ec1087a015588ed9e4e90c27e42b0991c472c052fcf55b5ecec900cb88f349"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/outcome.json": {
+    "bytes": 1549,
+    "sha256": "d13468208631e505c1a293a70ace6faaa6a0b7928668d1d40b2cdc56de694ee4"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/patch.diff": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/profile-probe.stdout": {
+    "bytes": 3416,
+    "sha256": "b4cd3c4d136fcf0a11e94214391ea6c80155be4a09a31934c6715c6eba18b722"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/session.jsonl": {
+    "bytes": 28927,
+    "sha256": "238f101cd12db7a56630eb81532120ba604b5c289d9dab35a71077373a3c39ba"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "f549322dbe7278c4741ba23aaed38a94974cd8cba1e52f66b8601eb09c2d6f19"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/setup.json": {
+    "bytes": 1482,
+    "sha256": "82ef2a3e19314442ce67f0d0f0f6865e8f24336bab2e357219df1f1c7b0fce00"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/tool-results.json": {
+    "bytes": 27472,
+    "sha256": "d2c205dae9f20bceed8600786245dd4f148b24925ccd77585a27bdd83dc6b930"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 38071,
+    "sha256": "9db3b36979239e0e36fde5c7b27d5dbdcb06f27a0c532b45f9f0314514670da3"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 4323,
+    "sha256": "8fa3418f17ece447ac7e95393450bcc6483d6ea21c762f5e92570ea42d014f82"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/1/verification.stdout": {
+    "bytes": 14902,
+    "sha256": "f19767f1c2e0a460b345db17afcb46ab07f390a011a343497f2ac699329d618b"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/Defects.java": {
+    "bytes": 3090,
+    "sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/diagnosis.txt": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/failure.log": {
+    "bytes": 15456,
+    "sha256": "74dc6ffdf2514ee8eda70c02a4a12245931552d4357ab27ecc12a794b4114335"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/initial.stdout": {
+    "bytes": 14892,
+    "sha256": "c2ca92bd719bda40327ad59d8719a673350cd80d88322a93374fb5fd966e6b46"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/outcome.json": {
+    "bytes": 1546,
+    "sha256": "9e486a568ba5dcdb31e0858e41a6d872d5d5b00217d39608a9941a93ec0c3606"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/patch.diff": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/profile-probe.stdout": {
+    "bytes": 3416,
+    "sha256": "01571dead4a7b7e457f82ba986274e0c11b392f8289d10919e1f8af85bf51054"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/session.jsonl": {
+    "bytes": 529,
+    "sha256": "2ef5517743f4b7033bd0edd205ab9d05e42f7c7e376e6f84161deda1cf5663cf"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/session.stderr": {
+    "bytes": 461,
+    "sha256": "3a6322ab1ed68283243250f4b11b7bf1af90bd7fa563e6e0125c9d553089ff62"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/setup.json": {
+    "bytes": 1482,
+    "sha256": "110478391f0e456638a2dc16fb7640af8a6e8a5c0b0da553f764e7b7c4c7efa0"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/2/tool-results.json": {
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "investigation/natural-reading/main/trials/04/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "268545006e4a414c95337186a9b1893e4d82cd3a1e054d5a192685748aeb4fee"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/Defects.java": {
+    "bytes": 3090,
+    "sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/diagnosis.txt": {
+    "bytes": 101,
+    "sha256": "05ec2d4ad8b28ef638841f18ee68b498a842d8508c05ca8911971ad998388bc6"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/failure.log": {
+    "bytes": 27147,
+    "sha256": "ec406d7243d314d8cc0b87f8576b74e3d05fa90007121cebcf2821a2f0bf3d9e"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/initial.stdout": {
+    "bytes": 26583,
+    "sha256": "64dee7fbdc58c0050f68b21c6b1d3061123bda046a9fd2c73d61c92a11eefe93"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/outcome.json": {
+    "bytes": 1469,
+    "sha256": "aba4c3cfecb8e753dbcc05520bdc7b823de77616378a0df995957469866178f0"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/patch.diff": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "1ac6137573c52b5b66eb0e2741d78380e38741700071fbb1720e37c5aa8d62e6"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "49eaadd97fd3662e64e1685b4878ca5a746f99e8746df3b2f69448fd553a3604"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/session.jsonl": {
+    "bytes": 40118,
+    "sha256": "40fc198b847b9fe112c7796ea08f2496e7f56dc7ffc36c5e3d359654ff8efbb9"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/session.stderr": {
+    "bytes": 2369,
+    "sha256": "ac074bab74bcb5512610efa28343fea687fbeeca02d45cf5a3e2d21120936351"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/setup.json": {
+    "bytes": 1327,
+    "sha256": "cb55f172d7d9ebb962be67ce3530c6ddace3a7b08b77d3defd3fe4227d6ed865"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/tool-results.json": {
+    "bytes": 39082,
+    "sha256": "763151acad656c17578ad944a5a2bf2ccfc477e2762ffd5797991c3f11c758d2"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 49142,
+    "sha256": "c667f4e9423139a914851b065253db6edeb8f3448a0be19a622a4486962aefff"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 4323,
+    "sha256": "8d268c2c7e2789a083491a28ed665e2a4af155952d2b8688fb873461db97a4c4"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/default/1/verification.stdout": {
+    "bytes": 26593,
+    "sha256": "31af38f7653390b455139c624891dc649b6d09da005c35eb72085be1daf5e859"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/Defects.java": {
+    "bytes": 3090,
+    "sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/diagnosis.txt": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/failure.log": {
+    "bytes": 27147,
+    "sha256": "e39f990f7f4a08988c670104d028623059e3ffd08252b0a6c27f0463ea50874b"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/initial.stdout": {
+    "bytes": 26583,
+    "sha256": "4f8a5e991e33b78881dbb2973a7043ceb7102864f33ef4747672d393f466dea0"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/outcome.json": {
+    "bytes": 1466,
+    "sha256": "b1c015792b0b7a106450ee557ede71ffba2f5c32494bc8f358a5b32ed2a6bdd9"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/patch.diff": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "0950c27a9393268b7a36cc8aa33f76b9b356560a974ff1b1f96d2c04ab45ac92"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "8ef30edd62fff211a19679cb88098a5360c9f0cd256c007b79aa6bd7e05e0268"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/session.jsonl": {
+    "bytes": 529,
+    "sha256": "20ff892554950b3cdadc309a55a61380ef90cea396f6646d655e4be6e61bd5c7"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/session.stderr": {
+    "bytes": 749,
+    "sha256": "89c3134f02ee8f6fdf3b05f45cdb790fa37ae8d41c41b494abfea5ba53dde095"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/setup.json": {
+    "bytes": 1327,
+    "sha256": "d56dabd41bc38c71c6056d3afac7c74f0733c193aab397046e36e6223e50d111"
+  },
+  "investigation/natural-reading/main/trials/04/default/2/tool-results.json": {
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "investigation/natural-reading/main/trials/04/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "70237dba554881e8e99fe3d0e6b0deeff33037a249b051ecc0f0b33b6d7339a1"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/Defects.java": {
+    "bytes": 3100,
+    "sha256": "608b3c5bcd549f4821ad3c187a80586dc89f08fff655793b6a288fca67e0f710"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/diagnosis.txt": {
+    "bytes": 667,
+    "sha256": "f667deeb8fd714405be727d0f5fb09cd1ff9ebf53fb6e4a5eb54796692e8a8bc"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/failure.log": {
+    "bytes": 6693,
+    "sha256": "d94f751add9d0bef77d8e8b745fb5156bc78555d78b0827bc22a07fffb893520"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/initial.stdout": {
+    "bytes": 6129,
+    "sha256": "72930d26e966ce635c4ee3ab1abf86c31a0914b994af4caa68d1cb2e2767f2cc"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/outcome.json": {
+    "bytes": 1729,
+    "sha256": "774c94f6a05f5aab358231cc9b4c2f1fb35b4789aec11a156a147a0f34400cef"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/patch.diff": {
+    "bytes": 507,
+    "sha256": "c65b96bd81a6d95e51c56ee8dc60535564cdd7e2f8c3ba8e641fd181ca94da83"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "476965bca3b6e134258c64db2f18a68ea1fef4f47c28a1d6132a5d15aaa6e4fd"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/session.jsonl": {
+    "bytes": 31960,
+    "sha256": "1c72500a235ffdb6a99b7ded8588e6f5a0999ad75a1ca56d0df8951642af5217"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "a45f96f139d5d0a7aaffa4c6c131b70ec3b24309cb89f822e176d49433d3a429"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/setup.json": {
+    "bytes": 1483,
+    "sha256": "cf191f02fc06c6913ad170b19e7af378d6787af40c3a080b7187a16bfb6d89cf"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/tool-results.json": {
+    "bytes": 29071,
+    "sha256": "1acfe9d5e9ba380958bfa231a8792ded2215f1c91a01654f079bda6cc820e038"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27429,
+    "sha256": "330a4d51b511909916c9628581baa9c924ed392e50068ed21ca847c72547e1de"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "dc65e7d2bb0bc2ca3d2166c51574c8364d0d5232c4ea3b92b789e984cc271452"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/1/verification.stdout": {
+    "bytes": 3435,
+    "sha256": "d6331615315c4fc8ec87c136c0bf43d2e349ec1de4d7bf8ed8594cea40da74d8"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/2/outcome.json": {
+    "bytes": 204,
+    "sha256": "c25df9aee38971ce72145ac2788ef90de3c92efc71aff5974f25d54c2aec123d"
+  },
+  "investigation/natural-reading/main/trials/05/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "694e0c8922ad0cdcf77e513580f32ca9b1e3a04ad12b1b23d1e83f1f0c8c06b6"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/Defects.java": {
+    "bytes": 3100,
+    "sha256": "608b3c5bcd549f4821ad3c187a80586dc89f08fff655793b6a288fca67e0f710"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/diagnosis.txt": {
+    "bytes": 675,
+    "sha256": "b915c5d7e93c7cb5423911f309907ed2687134f466690487a35d5433777e41aa"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/failure.log": {
+    "bytes": 6899,
+    "sha256": "d4e5a9304320479d735c450593e3f7490e254e7f4134963cfba0d09bd0d891b3"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/initial.stdout": {
+    "bytes": 6335,
+    "sha256": "a7e085142fbe2077858d96189c07c779034ca4bed27979c064e91569335c5e96"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/outcome.json": {
+    "bytes": 1643,
+    "sha256": "4936eda46717a064ded2ca0d75b2cc5bf658581d423fa509b6883fb441868d57"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/patch.diff": {
+    "bytes": 507,
+    "sha256": "c65b96bd81a6d95e51c56ee8dc60535564cdd7e2f8c3ba8e641fd181ca94da83"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "8ecdfc7c0667dd1a048e937778972df4b493cd62f1c9dbc767553b59ea83b5e3"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "5356d05ab6ad0f273b9c94df220cfdfdf079e9d122639252f8f160e094cabafa"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/session.jsonl": {
+    "bytes": 35296,
+    "sha256": "183b1acf89f95cbb2f46e0497468b4accdfd9ea105de3bf65e70cef84dbd593e"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "ba798442842692e43190528c5577abc24445d7a5a70a647076f26a98a233ad8c"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/setup.json": {
+    "bytes": 1328,
+    "sha256": "fff9a29973e2534c94ac67310c9fe159e63eaf3ff19c3f0d91dffc2a043b50de"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/tool-results.json": {
+    "bytes": 32404,
+    "sha256": "958835d717f21c70e755d4ba139a0aeacb49eeacf86d0853fa6ef65a4a69be4a"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27013,
+    "sha256": "95f025d6b715672439eb00faca6f85e1ab6e61662e52692cd780a35e4bad84f9"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "a70a64351456af00e9f149c947a890313f6b14b2eceaa7b179a0b905b3fdd1e0"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/05/default/1/verification.stdout": {
+    "bytes": 3640,
+    "sha256": "b58996a90247f198fbbcdbe289fb7cc6f92dfe588dd0ecef61de988aa4154f20"
+  },
+  "investigation/natural-reading/main/trials/05/default/2/outcome.json": {
+    "bytes": 199,
+    "sha256": "2a9b6cc4c397fb8201100f24384971ce8c026f7c80aaff3df5ebfe96651e66a6"
+  },
+  "investigation/natural-reading/main/trials/05/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "98951ebdb86a143f5c19de1a2af7e68c660b90a1e117fa900197d9719af37455"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/Defects.java": {
+    "bytes": 3100,
+    "sha256": "608b3c5bcd549f4821ad3c187a80586dc89f08fff655793b6a288fca67e0f710"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/diagnosis.txt": {
+    "bytes": 707,
+    "sha256": "9869fe21d2f9da0476e67819cd0733c61205d09fc0618c13872283a06eb6d69d"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/failure.log": {
+    "bytes": 8376,
+    "sha256": "892bc66c31e1e2a3dd644e3034dc410350d6959c721ace0e4079e68b327e634f"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/initial.stdout": {
+    "bytes": 7812,
+    "sha256": "36fce2d6be860d65ba78e0fc9633c86db241ccc8549e2838a89019c742002a09"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/outcome.json": {
+    "bytes": 1726,
+    "sha256": "0d1eb51697c427dd8bfdea06beecc4bdd136e7ef7779bdb65740a7b2efab949c"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/patch.diff": {
+    "bytes": 507,
+    "sha256": "c65b96bd81a6d95e51c56ee8dc60535564cdd7e2f8c3ba8e641fd181ca94da83"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "d8c4d2d5725a5d8616fbe7da762e8e7e8ef7bf8693bf81d353ebb1d64df4e9c9"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/session.jsonl": {
+    "bytes": 35315,
+    "sha256": "6fdd937b346ac8ee9caea81e2295326e2ad358797c265d566426d25c3616676a"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "0792c91d265a2fe8f4f821b8ace0ebdf6a0b4da0478bbac5ec61d8aecbf60b6e"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/setup.json": {
+    "bytes": 1479,
+    "sha256": "374efb828ed0659562d9d40c556766032d5eeeb4514d6da84ab5ceec994273aa"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/tool-results.json": {
+    "bytes": 32426,
+    "sha256": "cea4faa43fb87abebc0273641894149365f88fda5355434dc95ea96abe4269c4"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27428,
+    "sha256": "a246e9c3e829281b4b60463c37f03283937fb4fb61b5bafc4df86b3e20001c20"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "039bc09aa68d2090189eea6a16e8c7e6f14ce6c508f62ed0345e11c904267341"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/1/verification.stdout": {
+    "bytes": 3434,
+    "sha256": "97263f1d4101a9147589b68c6721d41b80ada4217ed12e4e97b243fe13122ed7"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/2/outcome.json": {
+    "bytes": 204,
+    "sha256": "eae98347bb2368b9f7e37aa557886bf4b969efb98ab14585c62b1fa28f2ea9d3"
+  },
+  "investigation/natural-reading/main/trials/06/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "109112f262b6672e806f67ba2f6c6aa9f1544a1ff628a61e081e9bb9f16ddced"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/Defects.java": {
+    "bytes": 3100,
+    "sha256": "608b3c5bcd549f4821ad3c187a80586dc89f08fff655793b6a288fca67e0f710"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/diagnosis.txt": {
+    "bytes": 809,
+    "sha256": "cbe67becdc6dcaea15f68404cb198370ad7780a012f0a1115770249a2eb4616d"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/failure.log": {
+    "bytes": 33698,
+    "sha256": "2c378c16014a360f7a104941de70dbbbd54c705898ce54866b9145ba80ce0db0"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/initial.stdout": {
+    "bytes": 33134,
+    "sha256": "f8864b5073ec4b442516cefda89e8df55fb29a56e4059ddfbdac22be02c52c1d"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/outcome.json": {
+    "bytes": 1648,
+    "sha256": "ea3c0f60d867d5ba79583fc4b2ea92397528246889e992cd5a990c9653f8828e"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/patch.diff": {
+    "bytes": 507,
+    "sha256": "c65b96bd81a6d95e51c56ee8dc60535564cdd7e2f8c3ba8e641fd181ca94da83"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "72f476fccef9dcf34557b866ff018a84b9aec744de8031f5faedf4bb4bf6b427"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "e2ebc96f76e44dba053f43ecb0491485c5e4e4a784d922105b0d2177024e7151"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/session.jsonl": {
+    "bytes": 83668,
+    "sha256": "5dc0b9a7dbe5a7873cbc5239b3f293013e2ee3ea4eb1f93bf3875bb937551345"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "8c747d469958c308d569bc57cc90de90708be3bfb39a722f66c15872836b42a1"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/setup.json": {
+    "bytes": 1324,
+    "sha256": "a23e184fb403ddad07cee8f25b37bdc036acf5d039ee1eb13c477164a188551b"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/tool-results.json": {
+    "bytes": 80605,
+    "sha256": "2a0c4541136dc73db0ec5d926b74ec908f378a67d0d5e22010fb4e8c497a7dec"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27014,
+    "sha256": "dca49402777a4824a6d0833b4ed051765a5a1ee4e69bfbf044e780c905be608b"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "25f07f0042baaf8a1baafa3e518e6b528228b00753d18657e6d9c5997bf3d6ad"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/06/default/1/verification.stdout": {
+    "bytes": 3640,
+    "sha256": "ceef47bae9ba87f0885f8dc8bd2d9085158f24263b8bc9bc3d0cdc7bb2e19663"
+  },
+  "investigation/natural-reading/main/trials/06/default/2/outcome.json": {
+    "bytes": 199,
+    "sha256": "b4f7112ac9a7dde6d63397ad007d83d242ff335e47d9022b3fd5f8b22c9d1fc9"
+  },
+  "investigation/natural-reading/main/trials/06/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "0e027d7f4136b7515b146a70e46e45d2414d3e44aa065ebc00dac384aeaa06af"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/Defects.java": {
+    "bytes": 3090,
+    "sha256": "8524e3301d3c721fef4ca206554575cd012e52b1e7ddc3d8ad18ddbe700fecc8"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/diagnosis.txt": {
+    "bytes": 703,
+    "sha256": "62b52c6de5fd79d7f066ab8cfabf13059c8541a83496ce757896b4af420a4245"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/failure.log": {
+    "bytes": 6744,
+    "sha256": "78a8900786eaa00fef73d8c9fecb9c9e91d5988558bde298783eece50295ddc2"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/initial.stdout": {
+    "bytes": 6180,
+    "sha256": "d061da411d93bdbe8164d2db85716607c828e3bbb0a52c8f11b13f86a8974415"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/outcome.json": {
+    "bytes": 1727,
+    "sha256": "4e86fadb03678834fc82f773ccf88bc628a99bc0f1cffd7b5a184624746a06eb"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/patch.diff": {
+    "bytes": 528,
+    "sha256": "18e2dffb2887f59ddcb699f6b4f60d49e60180e6217f504739e502caa39b9ac9"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "c72a9d38f45aacb6ac6b4c1d252341b1d5fe462aa53d2ef59dd1c6e8e1d66dcd"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/session.jsonl": {
+    "bytes": 33125,
+    "sha256": "0f7439b0fae63f4ab858fedd3df0bc3455ecf791fb2127478b466580e4668fcf"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/session.stderr": {
+    "bytes": 805,
+    "sha256": "235dcb688e7e171f7b3827bca654a7e8187aeed8dcab07abd8b55447e9904fbd"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/setup.json": {
+    "bytes": 1458,
+    "sha256": "95e03246c81ea5fb52e089547f42906c646256f40771a5dd5ba270c581a9a0bc"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/tool-results.json": {
+    "bytes": 30495,
+    "sha256": "756db945db3ed1323543d984b51f5986e4201a07bc2980cf11cfee74d54a0b5e"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 28937,
+    "sha256": "3ec82ba7dd49424683629bbb2668e0b70b53644a9c4cb1785b53aa9b48e9de0b"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 1675,
+    "sha256": "a1e17549fae78704745ce159d2656b07344e841f6b1e5d14fdf7cb7a0ba7b285"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/1/verification.stdout": {
+    "bytes": 5801,
+    "sha256": "c8437ccfa10cb329b78978fb7021dd7457c07a00b0e10ee75e40b16ccbbcdb79"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/2/outcome.json": {
+    "bytes": 204,
+    "sha256": "41de88b587831feaeab4635cddb5da948c71ee3e1aed1888dd36a7876ffe8485"
+  },
+  "investigation/natural-reading/main/trials/07/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "52ecebd7c6271aec18423b16aa2feef0761f78b3a32e08b58857aadfefd87b8b"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/Defects.java": {
+    "bytes": 3090,
+    "sha256": "8524e3301d3c721fef4ca206554575cd012e52b1e7ddc3d8ad18ddbe700fecc8"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/diagnosis.txt": {
+    "bytes": 626,
+    "sha256": "3bcc9c2c908b264cde7c6cf3cac72db4f5e37826a4be6d901d4b9d9e7cdec5e0"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/failure.log": {
+    "bytes": 6949,
+    "sha256": "631ad804908074c83bfe06997463fe4e609bf9dafe9a29d70664ad01643a436b"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/initial.stdout": {
+    "bytes": 6385,
+    "sha256": "570f6506a1aeb8e07ce17d2b6d10a6ccfd6fb66315bfe4d1e5f79dc9a9c61a71"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/outcome.json": {
+    "bytes": 1646,
+    "sha256": "8b96169657d118f480d81519774aed2184bddea969ada475877fbb4bf2dcf741"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/patch.diff": {
+    "bytes": 528,
+    "sha256": "18e2dffb2887f59ddcb699f6b4f60d49e60180e6217f504739e502caa39b9ac9"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/profile-probe.stdout": {
+    "bytes": 3621,
+    "sha256": "de6a21ad6aa1f3e1954c6e9b0f58afdc0468ae79a5e708cb9e492cae45577acc"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "8824fe5517677657c2c25d4e96670f20b894d8b143a24b830ca0262f29fbfc5b"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/session.jsonl": {
+    "bytes": 42609,
+    "sha256": "83ca9d98106018bee671e785bcaba468517287df3708bfd0875b3f610bf1ba36"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "af4676cf1da8240050f7c6401081a92c520ddd9fd41953cd46c6d25275268fa7"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/setup.json": {
+    "bytes": 1303,
+    "sha256": "f0d15c62c476e8a041c663473a5d6a14e4004098547d81bacc35645dd0f39bf8"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/tool-results.json": {
+    "bytes": 39707,
+    "sha256": "34f8f527a6455ff627e7fde7d08018b4920ba21ce274d091cb3ec783d73236d6"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 28522,
+    "sha256": "2c1d689c516db6d949f08ec6bc9796f462f57f966d88fbe3b18aac7b3ddcbeea"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 1675,
+    "sha256": "d5341158aaffe79f00584e937115d22ac22b2584b6b5af9d83181e24cf774517"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/07/default/1/verification.stdout": {
+    "bytes": 6006,
+    "sha256": "bc1b9d96dde053ef89d429084eecb84a5391a83e0e4ac8a6755ec8deef8ef31a"
+  },
+  "investigation/natural-reading/main/trials/07/default/2/outcome.json": {
+    "bytes": 199,
+    "sha256": "f17a39bc9868ee01339b05a48a9f807ce342ebcc86c85a25fa79939887086cbf"
+  },
+  "investigation/natural-reading/main/trials/07/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "611286f6e9570bb3249dc18756ff75fac2958556f0579803b9fb3af9a60b84e4"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/Defects.java": {
+    "bytes": 3089,
+    "sha256": "651af9c24aea97a509919e3aba2972ac3295521bb49b56252e1c684b47808634"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/diagnosis.txt": {
+    "bytes": 835,
+    "sha256": "61be0f7b06bd87df10c470fc8e4c4a833d82ecca3b27f57c4d8fdacfe10db920"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/failure.log": {
+    "bytes": 6878,
+    "sha256": "9ac258bbf2941d2fe29c6a46a4e103bab6a7e3c69cc5fb8e55785e637db92c45"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/initial.stdout": {
+    "bytes": 6314,
+    "sha256": "3c8b23c4a074fced21ad3c44c09ab3e8b21b8d60f554068588303f578a557c6e"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/outcome.json": {
+    "bytes": 1728,
+    "sha256": "39dc5b8e98db3f7b76040a7b4aca19757b4bf98cd0a4a937bbca037ed2ec6e81"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/patch.diff": {
+    "bytes": 577,
+    "sha256": "088629f912bafd7bc5049b1cb9ac19f4b9cd9020bad0224a3afbc965b706d67d"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/profile-probe.stdout": {
+    "bytes": 3417,
+    "sha256": "07100d6594cb20a79650106ffd2c32adbc84d9eafb566a553cff66e7beed0417"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/profile-verification.txt": {
+    "bytes": 258,
+    "sha256": "00271274b44a2971bce0e9146f5980cb1936b66af147b4f6169d22f2315c1dc9"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/session.jsonl": {
+    "bytes": 34123,
+    "sha256": "f2913c8a4e958e99164e07898f1d3135c6467311b9d0b9e33937dd1dc007fee1"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/session.stderr": {
+    "bytes": 461,
+    "sha256": "cd81cd82d372ef053514fe875863e7179fde9e2490a1f6a14fda8752de183800"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/setup.json": {
+    "bytes": 1485,
+    "sha256": "964bb281e87fef09b848e3c70251314de0b33d00d703f0749036dec46d09793c"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/tool-results.json": {
+    "bytes": 31119,
+    "sha256": "b5219ca01120c2f25d25b57a3731ea13d63edeaaca6591ffcc8a3b7cff935940"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27428,
+    "sha256": "0f33f2f1cf3d543df225e9dc15a4d2632f9cf055ff1be5b0746cb3434b68b08f"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "140ec45e065dae7f70ed05598eb13c04035b8df10ead328c061bccc6bf6487d6"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/1/verification.stdout": {
+    "bytes": 3435,
+    "sha256": "512cfe343d998e2607cb62bbcbc8dac5b27d03a36afc90581af3cbefc22e23a7"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/2/outcome.json": {
+    "bytes": 204,
+    "sha256": "3f00fe030657af9bf328c0cfe3be2de3bdec0844a78eb897c968e78a957403f6"
+  },
+  "investigation/natural-reading/main/trials/08/conservative/3/outcome.json": {
+    "bytes": 204,
+    "sha256": "0eb66c394df3313c3180ae75fa2ad3c347a29ca9cca873eaa085dfc81f573c8a"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/AGENTS.md": {
+    "bytes": 543,
+    "sha256": "e491494680162351c2bc53728c068ac712a79f2f09026886d9019ee8f4021ca5"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/Defects.java": {
+    "bytes": 3089,
+    "sha256": "651af9c24aea97a509919e3aba2972ac3295521bb49b56252e1c684b47808634"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/diagnosis.txt": {
+    "bytes": 824,
+    "sha256": "a7fcffbda1e70ae01aec2ad1d409be6f7ac3732b4bfaa7351a33a0a625086a44"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/failure.log": {
+    "bytes": 7133,
+    "sha256": "c942b649169dd6ed5f9e5a30b3fffb3449c0751a81046969feec6b55799914b2"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/initial.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/initial.stdout": {
+    "bytes": 6569,
+    "sha256": "2aeb22c37ecfdcbbe75ee65cd92f3d6dc09704e4a412335f35375c045fed80d2"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/outcome.json": {
+    "bytes": 1647,
+    "sha256": "cdcdee730a40fd9bd1144b398f93ff63db941acd0a705f7d2d76802bc4f6e514"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/patch.diff": {
+    "bytes": 577,
+    "sha256": "088629f912bafd7bc5049b1cb9ac19f4b9cd9020bad0224a3afbc965b706d67d"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/profile-probe.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/profile-probe.stdout": {
+    "bytes": 3622,
+    "sha256": "4ba5bd694190aa8c53cd85f2723278b6ba86e480eb28e2a0671d261f276ee629"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/profile-verification.txt": {
+    "bytes": 251,
+    "sha256": "b3f33bf370139b02d31f7d7d6b9d46811192933f5c84af2ce6a21d2727f895b1"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/prompt.txt": {
+    "bytes": 155,
+    "sha256": "aaf6c68a1905920026a5216e321befb6e24392b5b86d09f7f17088dbb0d145c3"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/session.jsonl": {
+    "bytes": 26358,
+    "sha256": "5f8aaa80ef3161998e521794765f1969f741777f41891d2002b2a2f5b13eb130"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/session.stderr": {
+    "bytes": 173,
+    "sha256": "32d625aa61189ff2f67f20dec659bbd45e18e383e4139fb1c572a712cfdbe92f"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/setup.json": {
+    "bytes": 1330,
+    "sha256": "920db103b2e20c2fe48999a7b4a8c4280b678312f591e570ddcee43ccad2e0a5"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/tool-results.json": {
+    "bytes": 23409,
+    "sha256": "c8f6a9f51d938106f257fff51a95b073a0abf7f199360abe4ce256696dc85b2f"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/verification-reports/TEST-com.ai.token.experiment.FailureCasesTest.xml": {
+    "bytes": 27014,
+    "sha256": "dd0ae22448cb0802df41de28713a0603928f22a3e5d436d4dd8c559454b4ee0e"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/verification-reports/com.ai.token.experiment.FailureCasesTest.txt": {
+    "bytes": 330,
+    "sha256": "b9df78394e32a44d637c330be60013ad6fd39d57091fc62dd8f1eafd8af6d9d1"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/verification.stderr": {
+    "bytes": 564,
+    "sha256": "68ab55337d880db90a14669187f22743789fd2ded8137166ccd452b933ab3399"
+  },
+  "investigation/natural-reading/main/trials/08/default/1/verification.stdout": {
+    "bytes": 3640,
+    "sha256": "d90c25cdb998d8ce5c9c7e77628d5232229a33c9f9467db918d8d941157abe2b"
+  },
+  "investigation/natural-reading/main/trials/08/default/2/outcome.json": {
+    "bytes": 199,
+    "sha256": "c8dbb019cc4b436c4b001993914112161d02997abb9791e0d37fcccdfc9d624b"
+  },
+  "investigation/natural-reading/main/trials/08/default/3/outcome.json": {
+    "bytes": 199,
+    "sha256": "6b541487c8f30a66dc557e7bc7dfba691681ebbfac9ae805d3cb9df903a26101"
+  }
+}

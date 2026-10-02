@@ -1,0 +1,90 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/container-control-h6z6sl8w/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/container-control-h6z6sl8w/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.FailureCasesTest
+CASE_BEGIN 10
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-02T00:54:31.821+02:00  INFO 57418 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.6 using Java 25 with PID 57418 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/container-control-h6z6sl8w)
+2026-10-02T00:54:31.822+02:00  INFO 57418 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2026-10-02T00:54:31.901+02:00  INFO 57418 --- [token.usage] [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.297 seconds (process running for 0.771)
+2026-10-02T00:54:31.916+02:00  INFO 57418 --- [token.usage] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-10-02T00:54:31.917+02:00  INFO 57418 --- [token.usage] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-10-02T00:54:31.922+02:00  INFO 57418 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-10-02T00:54:32.052+02:00  INFO 57418 --- [token.usage] [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-10-02T00:54:32.270+02:00  INFO 57418 --- [token.usage] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2026-10-02T00:54:32.271+02:00  INFO 57418 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-10-02T00:54:32.283+02:00  INFO 57418 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.6.2
+  API Version: 1.55
+  Operating System: Docker Desktop
+  Total Memory: 7936 MB
+  Labels: 
+    com.docker.desktop.address=unix:///Users/hadiranjbar/Library/Containers/com.docker.docker/Data/docker-cli.sock
+2026-10-02T00:54:32.377+02:00  INFO 57418 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-10-02T00:54:32.453+02:00  INFO 57418 --- [token.usage] [           main] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2026-10-02T00:54:32.523+02:00  INFO 57418 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 9e5a9be4682de2743fa972aa0fcd3039bd745c4f6c4fd4502074f3a84b35f7c6
+2026-10-02T00:54:32.739+02:00  INFO 57418 --- [token.usage] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT0.361803S
+2026-10-02T00:54:32.743+02:00  INFO 57418 --- [token.usage] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-10-02T00:54:32.743+02:00  INFO 57418 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-10-02T00:54:32.743+02:00  INFO 57418 --- [token.usage] [           main] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2026-10-02T00:54:32.744+02:00  INFO 57418 --- [token.usage] [           main] tc.alpine:3.22.1                         : Creating container for image: alpine:3.22.1
+2026-10-02T00:54:32.782+02:00  INFO 57418 --- [token.usage] [           main] tc.alpine:3.22.1                         : Container alpine:3.22.1 is starting: 946f0d066d98743155bcb08c57a4ee68fcad684daa978a1f66b15308a088febc
+2026-10-02T00:54:32.939+02:00  INFO 57418 --- [token.usage] [           main] tc.alpine:3.22.1                         : Container alpine:3.22.1 started in PT0.195803S
+CASE_END 10
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.584 s -- in com.ai.token.experiment.FailureCasesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.810 s
+[INFO] Finished at: 2026-10-02T00:54:33+02:00
+[INFO] ------------------------------------------------------------------------

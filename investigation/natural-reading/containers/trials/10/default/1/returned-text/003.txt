@@ -1,0 +1,38 @@
+Use ./test.sh to run the failing test. Implementation is in investigation/src/test/java/com/ai/token/experiment/Defects.java. Modify only that implementation file. Do not change tests, expectations, build configuration, logging, or test.sh; do not remove functionality or hard-code test results. You may inspect the repository and use debugging tools normally. Do not read outside this workspace except installed tools and the shared Maven dependency cache. Do not use subagents. Explain the diagnosis and verification in your final response.
+                    x.sendResponseHeaders(x.getRequestURI().getPath().equals("/price") ? 200 : 404,body.length);
+                    try(var out=x.getResponseBody()) { out.write(body); }
+                });
+                server.start();
+                try { assertEquals(42,app.call(URI.create("http://127.0.0.1:"+server.getAddress().getPort()))); }
+                finally { server.stop(0); }
+            }
+            case "08" -> assertEquals(10,app.async());
+            case "09" -> {
+                try(var db = new PostgreSQLContainer("postgres:17.6-alpine")) {
+                    db.withLogConsumer(frame -> streamLog(frame,"database"));
+                    try { db.start(); try(var c=app.database(db.getJdbcUrl(),db.getUsername(),db.getPassword())) { app.save(c); try(var s=c.createStatement(); var r=s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) { r.next(); assertEquals(2,r.getInt(1)); } } }
+                    finally { containerLogs(db,"database"); }
+                }
+            }
+            case "10" -> {
+                try(var box = new GenericContainer<>("alpine:3.22.1").withCommand("sh","-c","echo 'worker ready'; sleep 45")
+                        .withLogConsumer(frame -> streamLog(frame,"readiness"))
+                        .waitingFor(Wait.forLogMessage(app.readyPattern(),1)).withStartupTimeout(Duration.ofSeconds(8))) {
+                    try { box.start(); assertTrue(box.isRunning()); }
+                    finally { containerLogs(box,"readiness"); }
+                }
+            }
+            default -> fail("unknown case");
+        }
+    }
+    static synchronized void streamLog(org.testcontainers.containers.output.OutputFrame frame, String name) {
+        if(frame.getType()==org.testcontainers.containers.output.OutputFrame.OutputType.END) return;
+        try { Files.write(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container."+frame.getType()+".log"),frame.getBytes(),StandardOpenOption.CREATE,StandardOpenOption.APPEND); }
+        catch(java.io.IOException e) { throw new java.io.UncheckedIOException(e); }
+    }
+    static void containerLogs(GenericContainer<?> box, String name) throws Exception {
+        try { if(box.getContainerId()!=null) Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"), name+".container.log"),box.getLogs()); }
+        catch(RuntimeException e) { Files.writeString(Path.of(System.getProperty("experiment.artifactDir","target"),name+".retrieval-error.log"),e.toString()); }
+    }
+}
+fatal: not a git repository (or any of the parent directories): .git

@@ -1,0 +1,40 @@
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 9.667 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 9.631 s <<< ERROR!
+org.testcontainers.containers.ContainerLaunchException: Container startup failed for image alpine:3.22.1
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:346)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:317)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:84)
+Caused by: org.rnorth.ducttape.RetryCountExceededException: Retry limit hit with exception
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:88)
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:331)
+	... 2 more
+Caused by: org.testcontainers.containers.ContainerLaunchException: Could not create/start container
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:551)
+	at org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:341)
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81)
+	... 3 more
+Caused by: org.testcontainers.containers.ContainerLaunchException: Timed out waiting for log output matching '.*service ready.*\n'
+	at org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy.waitUntilReady(LogMessageWaitStrategy.java:47)
+	at org.testcontainers.containers.wait.strategy.AbstractWaitStrategy.waitUntilReady(AbstractWaitStrategy.java:52)
+	at org.testcontainers.containers.GenericContainer.waitUntilContainerStarted(GenericContainer.java:904)
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:487)
+	... 5 more
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:84 » ContainerLaunch Container startup failed for image alpine:3.22.1
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.432 s
+[INFO] Finished at: 2026-10-02T00:55:07+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project token.usage: 
+[ERROR] 
+[ERROR] See /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-zn0dyxu5/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.

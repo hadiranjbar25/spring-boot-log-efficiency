@@ -1,0 +1,5 @@
+fatal: not a git repository (or any of the parent directories): .git
+investigation/src/test/java/com/ai/token/experiment/Defects.java:15:    public int parsePort(String port) { return Integer.parseInt(port); }
+investigation/src/test/java/com/ai/token/experiment/Defects.java:16:    public int connect() {
+investigation/src/test/java/com/ai/token/experiment/Defects.java:17:        try { return parsePort("eighty"); }
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java:39:                try { assertEquals(8080, app.connect()); }

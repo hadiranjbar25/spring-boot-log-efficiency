@@ -1,0 +1,22 @@
+Launching JShell execution engine threw: FailOverExecutionControlProvider: FAILED: 0:jdi:hostname(127.0.0.1) --
+  Exception: java.net.SocketException: Operation not permitted
+                  java.base/sun.nio.ch.Net.bind0(Native Method)
+                  java.base/sun.nio.ch.Net.bind(Net.java:522)
+                  java.base/sun.nio.ch.Net.bind(Net.java:511)
+                  java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+                  java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+FailOverExecutionControlProvider: FAILED: 1:jdi:launch(true) --
+  Exception: java.net.SocketException: Operation not permitted
+                  java.base/sun.nio.ch.Net.bind0(Native Method)
+                  java.base/sun.nio.ch.Net.bind(Net.java:522)
+                  java.base/sun.nio.ch.Net.bind(Net.java:511)
+                  java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+                  java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+FailOverExecutionControlProvider: FAILED: 2:jdi --
+  Exception: java.net.SocketException: Operation not permitted
+                  java.base/sun.nio.ch.Net.bind0(Native Method)
+                  java.base/sun.nio.ch.Net.bind(Net.java:522)
+                  java.base/sun.nio.ch.Net.bind(Net.java:511)
+                  java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+                  java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+

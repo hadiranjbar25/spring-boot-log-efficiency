@@ -1,0 +1,9 @@
+#!/bin/sh
+export JAVA_HOME=/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home
+unset DEBUG SPRING_PROFILES_ACTIVE LOGGING_CONFIG
+exec mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation -Dkotlin.compiler.daemon=false -DtrimStackTrace=false -Dspring.output.ansi.enabled=never -Dexperiment.case=02 -Dspring.profiles.active=agent -Dexperiment.deduplicate=true -Dtest=FailureCasesTest test "$@"
+src/test/kotlin/com/ai/token/usage/ApplicationTests.kt
+test.sh
+AGENTS.md
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java

@@ -1,0 +1,14 @@
+{
+  "completed_command_results": 58,
+  "categories": {
+    "other": 9,
+    "mixed": 21,
+    "test_command": 20,
+    "log_inspection": 4,
+    "source_read": 4
+  },
+  "log_directed_results": 14,
+  "unallocated_mixed_results": 0,
+  "truncation_markers": 0,
+  "review": "Audited all command strings. Nine full failure.log reads; two saved-rerun rg searches; three redirected-test tails. No direct container-stream file reads. JShell behavioral checks are test commands; Python source read plus assertions is mixed. Exact full-log matches and redirected tails account for all mixed log returns. No truncation markers. /tmp logs were created/read by conservative 09 sessions only, in separate repetitions; this workspace-only instruction deviation is disclosed."
+}

@@ -1,0 +1,7 @@
+I’ll inspect the failure and implementation, make the smallest fix, and verify it with `./test.sh`.
+The failure reproduces: the worker parses `"ten"` as an integer, causing a `NumberFormatException` that `Future.get()` wraps in an `ExecutionException`. I’ll correct the input to `"10"`, preserving the asynchronous execution, logging, and cleanup.
+Fixed [Defects.java:60](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-pqqabk5f/investigation/src/test/java/com/ai/token/experiment/Defects.java:60): changed the parsing input from `"ten"` to `"10"`.
+
+The invalid input caused `NumberFormatException` in the worker, propagated as `ExecutionException`. This one-line fix preserves parsing, asynchronous execution, logging, and cleanup.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, no failures or errors.

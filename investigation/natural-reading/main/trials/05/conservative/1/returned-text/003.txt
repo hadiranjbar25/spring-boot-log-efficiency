@@ -1,0 +1,6 @@
+#!/bin/sh
+export JAVA_HOME=/Users/hadiranjbar/Library/Java/JavaVirtualMachines/openjdk-25/Contents/Home
+unset DEBUG SPRING_PROFILES_ACTIVE LOGGING_CONFIG
+exec mvn -o -B -ntp -Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2 -Pinvestigation -Dkotlin.compiler.daemon=false -DtrimStackTrace=false -Dspring.output.ansi.enabled=never -Dexperiment.case=05 -Dspring.profiles.active=agent -Dexperiment.deduplicate=true -Dtest=FailureCasesTest test "$@"
+fatal: not a git repository (or any of the parent directories): .git
+AGENTS.md

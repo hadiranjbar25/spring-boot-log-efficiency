@@ -1,0 +1,15 @@
+00:57:38.945 INFO [main] o.a.m.surefire.booter.ForkedBooter: The following 1 profile is active: "agent"
+00:57:39.020 INFO [main] o.a.m.surefire.booter.ForkedBooter: Started ForkedBooter in 0.267 seconds (process running for 0.725)
+CASE_END 06
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.485 s -- in com.ai.token.experiment.FailureCasesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.771 s
+[INFO] Finished at: 2026-10-02T00:57:39+02:00
+[INFO] ------------------------------------------------------------------------

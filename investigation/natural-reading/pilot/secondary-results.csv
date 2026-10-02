@@ -1,0 +1,11 @@
+case,condition,run,method,matches,path,bytes,lines,tokens,tokenizer
+02,conservative,1,complete,3,investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/complete.txt,7526,128,2104,tiktoken 0.14.0 o200k_base
+02,conservative,1,window20,3,investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/window20.txt,1411,20,372,tiktoken 0.14.0 o200k_base
+02,conservative,1,filtered40,3,investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/filtered40.txt,1693,29,464,tiktoken 0.14.0 o200k_base
+02,conservative,1,boundary,3,investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/boundary.txt,2795,45,745,tiktoken 0.14.0 o200k_base
+02,conservative,1,dedup,3,investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/dedup.txt,2795,45,745,tiktoken 0.14.0 o200k_base
+02,default,1,complete,3,investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/complete.txt,19013,203,5410,tiktoken 0.14.0 o200k_base
+02,default,1,window20,3,investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/window20.txt,2543,20,691,tiktoken 0.14.0 o200k_base
+02,default,1,filtered40,3,investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/filtered40.txt,381,5,107,tiktoken 0.14.0 o200k_base
+02,default,1,boundary,3,investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/boundary.txt,14079,120,3973,tiktoken 0.14.0 o200k_base
+02,default,1,dedup,3,investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/dedup.txt,14079,120,3973,tiktoken 0.14.0 o200k_base

@@ -1,0 +1,31 @@
+Use ./test.sh to run the failing test. Implementation is in investigation/src/test/java/com/ai/token/experiment/Defects.java. Modify only that implementation file. Do not change tests, expectations, build configuration, logging, or test.sh; do not remove functionality or hard-code test results. You may inspect the repository and use debugging tools normally. Do not read outside this workspace except installed tools and the shared Maven dependency cache. Do not use subagents. Explain the diagnosis and verification in your final response.
+                catch(RuntimeException e) { LoggerFactory.getLogger(Defects.class).error("client setup failed", e); throw e; }
+            }
+            case "03" -> {
+                var mvc = MockMvcBuilders.standaloneSetup(new Defects.Orders()).build();
+                var result = mvc.perform(get(app.ordersUrl())).andReturn();
+                LoggerFactory.getLogger(Defects.class).error("GET {} status={} resolved={}", app.ordersUrl(), result.getResponse().getStatus(), result.getResolvedException());
+                assertEquals(200, result.getResponse().getStatus(), "GET orders valid count");
+                assertEquals("count=2", result.getResponse().getContentAsString());
+            }
+            case "04" -> {
+                var boot = new SpringApplication(Defects.BrokenStartup.class);
+                boot.setWebApplicationType(WebApplicationType.NONE);
+                try(var ignored = boot.run()) { assertEquals("port=8080",ignored.getBean("port")); }
+            }
+            case "05", "06" -> {
+                try(var c = app.database("jdbc:h2:mem:users", "sa", "")) {
+                    if(System.getProperty("experiment.case").equals("05")) app.save(c);
+                    else assertTrue(app.saveCaught(c), "both distinct users must be saved");
+                    try(var s = c.createStatement(); var r = s.executeQuery("SELECT COUNT(DISTINCT email) FROM users")) { r.next(); assertEquals(2,r.getInt(1)); }
+                }
+            }
+            case "07" -> {
+                var server = HttpServer.create(new InetSocketAddress("127.0.0.1",0),0);
+                server.createContext("/", x -> {
+                    byte[] body = (x.getRequestURI().getPath().equals("/price") ? "42" : "route not found: " + x.getRequestURI()).getBytes();
+                    x.sendResponseHeaders(x.getRequestURI().getPath().equals("/price") ? 200 : 404,body.length);
+                    try(var out=x.getResponseBody()) { out.write(body); }
+                });
+                server.start();
+fatal: not a git repository (or any of the parent directories): .git

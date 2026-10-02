@@ -1,0 +1,9 @@
+I’ll inspect the failure and implementation, make the smallest fix, and verify it with `./test.sh`.
+
+`connect()` passes `"eighty"` to `Integer.parseInt`, causing the `NumberFormatException` wrapped in the client initialization error. The test expects port 8080. I’ll correct the port string to `"8080"`, preserving parsing and error handling.
+
+Fixed [Defects.java:17](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-mb3lpupz/investigation/src/test/java/com/ai/token/experiment/Defects.java:17): changed the port input from `"eighty"` to `"8080"`.
+
+The invalid string caused `NumberFormatException`, which was wrapped as a client initialization failure. Parsing and error handling remain intact.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, no failures or errors.

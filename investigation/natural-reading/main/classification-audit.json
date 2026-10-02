@@ -1,0 +1,21 @@
+{
+  "reviewed_tool_results": 107,
+  "categories": {
+    "other": 13,
+    "mixed": 34,
+    "test_command": 30,
+    "log_inspection": 11,
+    "source_read": 19
+  },
+  "all_actual_log_inspections": "22 voluntary cat failure.log commands, once per active session; no log-content search, repeated read or context expansion observed",
+  "source_search_note": "rg searches targeting investigation source and filename-only rg --files are not counted as log inspection",
+  "mixed_rule_note": "Source reads combined with git status/discovery/test execution are mixed; log segments are literal matches of recorded returned bodies, with no disk-text filling",
+  "unallocated_log_mixed": 0,
+  "truncation_markers": 0,
+  "classifier_tests_passed": 9,
+  "non_command_events_observed": [
+    "agent_message",
+    "file_change"
+  ],
+  "non_command_log_reads_observed": false
+}

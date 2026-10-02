@@ -1,0 +1,7 @@
+I’ll inspect the failure and implementation, make the smallest correction, and verify it with `./test.sh`.
+The failure reproduces: `save()` inserts two users with the same email, violating the unique constraint. I’ll derive each email from the user ID so both users can be saved.
+Fixed the single email assignment in [Defects.java:41](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-k2064h6s/investigation/src/test/java/com/ai/token/experiment/Defects.java:41).
+
+`save()` used the same email for both users, violating `uq_email`. Emails now incorporate each user’s ID.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, zero failures or errors.

@@ -1,97 +1,292 @@
-# An opt-in Spring Boot logging profile for agent debugging
+# Natural log reading during agent debugging — Docker follow-up
 
-An empirical investigation, 30 September–1 October 2026. Local template application; exploratory study, not a non-inferiority trial.
+This report now includes real-container cases 09–10 after Docker was enabled. The earlier natural-reading cohort and its Docker blocker are historical; its complete report is retained below and [separately](REPORT.natural-pre-containers.md). The [forced-full-read baseline](REPORT.full-read.md) remains a separate study. No earlier raw artifacts or analysis tables were overwritten.
+
+## Current findings
+
+The container follow-up has **9 active debugging trials** out of 12 planned slots. Across 4 matched active pairs, returned log-inspection text totals **19,405–19,405 reference tokens default** and **12,190–12,190 conservative**, an observed reduction of **37.2%**. Valid independent repairs: **4/5 default**, **4/4 conservative**.
+
+The earlier non-container cohort observed 49.3% less returned log text and 8/11 valid repairs per condition. Cohorts are kept separate because Docker availability and collection dates differ. These small samples do not establish equivalence. Whole-session usage is separate from reference-tokenized log text, and its differences cannot all be attributed to logging.
+
+Within matched completed pairs, case 09 consumed **5,920 default versus 6,066 conservative tokens (2.5% more)**: extra conservative searches/tails outweighed the shorter initial log. Case 10 consumed **13,485 versus 6,124 tokens (54.6% less)**. Each case had 2/2 valid repairs per arm in these matched pairs. The ninth active trial (case 09 default, repetition 3) was interrupted by quota after initial inspection, with no patch or recorded diagnosis; three slots never began. That unpaired observation is retained in active-trial totals but excluded from the matched text comparison. No completed trial showed a changed verified outcome; this does not establish equivalence.
+
+## Container follow-up methods
+
+The same failure fixtures and repair criteria are reused: case 09 must insert two distinct emails while retaining the PostgreSQL unique constraint and both records; case 10 must recognize the actual `worker ready` message. Docker Desktop 29.6.2 runs actual `postgres:17.6-alpine` and `alpine:3.22.1` containers. [Environment and image pulls](natural-reading/container-environment/) retain the exact probes/digests. [Four preflights](natural-reading/container-preflight/) confirmed both intended failures under both conditions; [four evaluator-only repair controls](natural-reading/container-controls/) test the original criteria independently. Controls are not agent trials.
+
+Every trial starts in a fresh blind workspace with the same defective source/tests, complete failure.log, and identical instructions. Model `gpt-6-astra`, low reasoning, workspace-write sandbox, 120-second session budget, full Surefire, and alternating condition order match the earlier natural-reading cohort. Two trials can run concurrently. The conservative condition uses the Spring agent profile plus the existing case-06-only duplicate ownership property, which has no effect on these two cases. It does not enable aggressive Surefire trimming. Per-trial profile probes run separately before launch and their encoder artifact is excluded from measured failure.log.
+
+Exact task:
+
+> This test fails. Diagnose the cause, make the smallest correct implementation change, and verify the fix. Complete test output is available in failure.log.
+
+The identical workspace instructions and exact launch/test commands are retained per trial in `AGENTS.md`, `setup.json`, and `outcome.json`; [schedule](natural-reading/containers/schedule.json). No defect descriptions, reference repairs or earlier findings are copied into agent workspaces.
+
+Container stdout and stderr are additionally available for voluntary discovery in `container-logs/`; they are retained as `initial-container-logs/` outside each workspace. Each stream is also preserved after agent reruns (where available) and independent verification. `.container.log` is an alternate combined copy: it must not be summed with separate STDOUT/STDERR copies as extra produced output. The primary endpoint counts whichever text an agent actually requests, including repeated copies if read. Setup target directories are removed before launch. Independent verification uses original tests/configuration in another pristine workspace and only the proposed implementation.
+
+Docker is accessible to the outer evaluator, but agent test commands can encounter Docker socket permissions in the unchanged workspace-write sandbox. This is a limitation of agent-side verification, not evidence that Docker is unavailable or that a proposed patch is wrong. External real-container verification determines whether the implementation satisfies the unchanged tests. Each such blockage, attempted fallback, timeout and unresolved diagnosis remains visible in raw command returns.
+
+The ordinary application suite also passed during this follow-up; [command and result](natural-reading/container-environment/ordinary-suite.json). The earlier approval-quota blocker described in the historical cohort was not a test failure and does not describe this new successful check.
+
+## Container dispositions and per-trial results
+
+| Status | Slots |
+| --- | --- |
+| finished | 8 |
+| not_scheduled_quota | 3 |
+| quota_interrupted | 1 |
+
+
+Never-begun/quota-skipped slots are excluded from debugging outcome and text denominators. Once a quota error is observed the runner stops scheduling new trials; already-running sessions can finish. Missing provider usage remains unavailable.
+
+| Case / arm / repeat | Log tokens lower–upper | Valid repair | Correct diagnosis | Seconds agent / verifier | Status |
+| --- | --- | --- | --- | --- | --- |
+| 09 / conservative / 1 | 2,772–2,772 | True | True | 69.4 / 8.3 | finished |
+| 09 / conservative / 2 | 3,294–3,294 | True | True | 69.9 / 8.3 | finished |
+| 09 / default / 1 | 2,964–2,964 | True | True | 54.9 / 8.5 | finished |
+| 09 / default / 2 | 2,956–2,956 | True | True | 53.7 / 7.8 | finished |
+| 09 / default / 3 | 2,949–2,949 | False | None | 11.6 / 7.6 | quota_interrupted |
+| 10 / conservative / 1 | 3,061–3,061 | True | True | 70.4 / 6.6 | finished |
+| 10 / conservative / 2 | 3,063–3,063 | True | True | 31.2 / 7.1 | finished |
+| 10 / default / 1 | 6,742–6,742 | True | True | 69.3 / 7.4 | finished |
+| 10 / default / 2 | 6,743–6,743 | True | True | 65.7 / 6.6 | finished |
+
+
+Patch and diagnosis judgments are stored separately in [reviews.json](natural-reading/containers/reviews.json). A passing test does not excuse changed expectations, removed functionality or modified immutable files. Agent elapsed time and external verification time are separate; their sum is an observed time to independently verified repair for valid fixes only. The earlier timing caveat below remains applicable.
+
+## Observed reading behavior and returned text
+
+Classification rules are the same as the historical methods below: log-directed reads count returned strings, repeated reads count again, test commands and source reads are separate, and mixed results retain their whole body plus identifiable literal log segments. Unallocated mixed results widen primary bounds. Filename discovery is not log consumption. All complete returned strings, offsets and commands are linked from [tool-results.json](natural-reading/containers/tool-results.json). Full-file counts below refer specifically to explicit `cat failure.log` requests; other observed commands must be interpreted from the ledger.
+
+| Case / arm / repeat | Log calls | Searches | Exact repeats | Context requests | Full failure.log requests | Test reruns |
+| --- | --- | --- | --- | --- | --- | --- |
+| 09 / conservative / 1 | 3 | 2 | 0 | 0 | 1 | 4 |
+| 09 / conservative / 2 | 4 | 0 | 0 | 3 | 1 | 4 |
+| 09 / default / 1 | 1 | 0 | 0 | 0 | 1 | 3 |
+| 09 / default / 2 | 1 | 0 | 0 | 0 | 1 | 2 |
+| 09 / default / 3 | 1 | 0 | 0 | 0 | 1 | 0 |
+| 10 / conservative / 1 | 1 | 0 | 0 | 0 | 1 | 3 |
+| 10 / conservative / 2 | 1 | 0 | 0 | 0 | 1 | 1 |
+| 10 / default / 1 | 1 | 0 | 0 | 0 | 1 | 4 |
+| 10 / default / 2 | 1 | 0 | 0 | 0 | 1 | 3 |
+
+
+| Arm | Pure log tokens | Test-command tokens | Source-only tokens | Whole mixed tokens | Other tokens | Unallocated mixed calls |
+| --- | --- | --- | --- | --- | --- | --- |
+| default | 6742 | 69852 | 773 | 25464 | 423 | 0 |
+| conservative | 3370 | 21803 | 2053 | 15967 | 1980 | 0 |
+
+
+Observed strategy totals: 9 explicit full failure.log requests, 2 log-content search commands, 3 context/slice commands, and 0 exact repeated log commands. Full reads are agent choices; searches of saved rerun output are also included. 0 mixed log results remain unallocated.
+
+Mixed totals overlap attributed primary segments and must not be added to them. A fully redirected test followed solely by `tail` is classified mixed, but its whole returned body is attributed to the log tail because the test itself returns no console text. Ad hoc JShell checks count as test-command output; a Python command that reads source and asserts behavior counts as mixed source/test output. The classifier also distinguishes the word “find” inside a quoted search pattern from an actual find command. These rules have dedicated measurement checks; historical analysis files are not regenerated. Counts use tiktoken `o200k_base`, not an asserted exact tokenizer for Astra. Only returned text counts; stored container output is not automatically treated as consumed.
+
+Case 09, default, repetition 1:
+
+```sh
+/bin/zsh -lc 'cat failure.log; cat investigation/src/test/java/com/ai/token/experiment/Defects.java; cat test.sh'
+```
+
+[Complete returned body](natural-reading/containers/trials/09/default/1/returned-text/001.txt) (mixed; 2964–2964 attributed tokens). Representative excerpt:
+
+```text
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 2.749 s <<< ERROR!
+org.postgresql.util.PSQLException: 
+ERROR: duplicate key value violates unique constraint "uq_email"
+  Detail: Key (email)=(same@example.test) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+```
+
+Case 09, conservative, repetition 1:
+
+```sh
+/bin/zsh -lc 'cat failure.log; cat investigation/src/test/java/com/ai/token/experiment/Defects.java; cat test.sh'
+```
+
+[Complete returned body](natural-reading/containers/trials/09/conservative/1/returned-text/001.txt) (mixed; 2463–2463 attributed tokens). Representative excerpt:
+
+```text
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 2.837 s <<< ERROR!
+org.postgresql.util.PSQLException: 
+ERROR: duplicate key value violates unique constraint "uq_email"
+  Detail: Key (email)=(same@example.test) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+```
+
+Case 10, default, repetition 1:
+
+```sh
+/bin/zsh -lc 'cat failure.log'
+```
+
+[Complete returned body](natural-reading/containers/trials/10/default/1/returned-text/000.txt) (log_inspection; 6742–6742 attributed tokens). Representative excerpt:
+
+```text
+2026-10-02T00:55:20.432+02:00 ERROR 57728 --- [token.usage] [           main] tc.alpine:3.22.1                         : Could not start container
+
+org.testcontainers.containers.ContainerLaunchException: Timed out waiting for log output matching '.*service ready.*\n'
+	at org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy.waitUntilReady(LogMessageWaitStrategy.java:47) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.wait.strategy.AbstractWaitStrategy.waitUntilReady(AbstractWaitStrategy.java:52) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.GenericContainer.waitUntilContainerStarted(GenericContainer.java:904) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:487) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:341) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81) ~[duct-tape-1.0.8.jar:na]
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:331) ~[testcontainers-2.0.5.jar:2.0.5]
+```
+
+Case 10, conservative, repetition 1:
+
+```sh
+/bin/zsh -lc 'cat failure.log'
+```
+
+[Complete returned body](natural-reading/containers/trials/10/conservative/1/returned-text/000.txt) (log_inspection; 3061–3061 attributed tokens). Representative excerpt:
+
+```text
+00:55:06.891 ERROR [main] tc.alpine:3.22.1: Could not start container
+
+org.testcontainers.containers.ContainerLaunchException: Timed out waiting for log output matching '.*service ready.*\n'
+	at org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy.waitUntilReady(LogMessageWaitStrategy.java:47) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.wait.strategy.AbstractWaitStrategy.waitUntilReady(AbstractWaitStrategy.java:52) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.GenericContainer.waitUntilContainerStarted(GenericContainer.java:904) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:487) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:341) ~[testcontainers-2.0.5.jar:2.0.5]
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81) ~[duct-tape-1.0.8.jar:na]
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:331) ~[testcontainers-2.0.5.jar:2.0.5]
+```
+
+Case 09, conservative, repetition 1:
+
+```sh
+/bin/zsh -lc "rg 'Tests run:|BUILD SUCCESS' /tmp/natural-read-case05.log /tmp/natural-read-case06.log"
+```
+
+[Complete returned body](natural-reading/containers/trials/09/conservative/1/returned-text/006.txt) (log_inspection; 198–198 attributed tokens). Representative excerpt:
+
+```text
+/tmp/natural-read-case06.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.560 s -- in com.ai.token.experiment.FailureCasesTest
+/tmp/natural-read-case06.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+/tmp/natural-read-case06.log:[INFO] BUILD SUCCESS
+/tmp/natural-read-case05.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.537 s -- in com.ai.token.experiment.FailureCasesTest
+/tmp/natural-read-case05.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+/tmp/natural-read-case05.log:[INFO] BUILD SUCCESS
+```
+
+Case 09, conservative, repetition 1:
+
+```sh
+/bin/zsh -lc "rg 'Operation not permitted|Could not find a valid Docker environment|BUILD FAILURE' /tmp/natural-read-case09.log"
+```
+
+[Complete returned body](natural-reading/containers/trials/09/conservative/1/returned-text/008.txt) (log_inspection; 111–111 attributed tokens). Representative excerpt:
+
+```text
+java.net.SocketException: Operation not permitted
+java.net.SocketException: Operation not permitted
+00:54:45.043 ERROR [main] o.t.d.DockerClientProviderStrategy: Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+[ERROR]   FailureCasesTest.scenario:76 » IllegalState Could not find a valid Docker environment. Please see logs and check configuration
+[INFO] BUILD FAILURE
+```
+
+Case 09, conservative, repetition 2:
+
+```sh
+/bin/zsh -lc './test.sh > /tmp/natural-read-case09.log 2>&1; tail -n 24 /tmp/natural-read-case09.log'
+```
+
+[Complete returned body](natural-reading/containers/trials/09/conservative/2/returned-text/004.txt) (mixed; 360–360 attributed tokens). Representative excerpt:
+
+```text
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:76 » IllegalState Could not find a valid Docker environment. Please see logs and check configuration
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+```
+
+## Container actual session usage
+
+| Case / arm / repeat | Input | Cached input | Output |
+| --- | --- | --- | --- |
+| 09 / conservative / 1 | 221808 | 206592 | 955 |
+| 09 / conservative / 2 | 212673 | 185728 | 919 |
+| 09 / default / 1 | 199114 | 176000 | 837 |
+| 09 / default / 2 | 166158 | 139392 | 691 |
+| 09 / default / 3 | unavailable | unavailable | unavailable |
+| 10 / conservative / 1 | 176985 | 160640 | 1237 |
+| 10 / conservative / 2 | 98171 | 83968 | 509 |
+| 10 / default / 1 | 191348 | 173696 | 1273 |
+| 10 / default / 2 | 169408 | 139264 | 1182 |
+
+
+Provider-reported input includes cached input. These are whole-session values, affected by source reads, test execution, repeated context, instructions and cache state. They are not interchangeable with cumulative reference-tokenized log returns.
+
+## Container secondary evidence and limitations
+
+[Secondary complete-file and predetermined extractions](natural-reading/containers/secondary-results.csv) are retained separately from the primary reading endpoint. Legacy extraction windows/markers were designed around fixture/Surefire boundaries and may omit Testcontainers diagnostics emitted before those markers. Low extraction counts alone do not demonstrate diagnostic adequacy. Separate stream sizes/counts and immutable-evidence checks are in [verification.json](natural-reading/containers/verification.json).
+
+This is a small fixture study with constrained editable source and a single model/budget. Sandbox Docker restrictions limit agent-side verification. No claim of equivalent debugging ability follows from equal observed success counts. Resource errors are distinguished from active debugging failures. Cohort totals are not pooled to conceal different conditions or missing trials. All nine active agents chose one full initial read; none read the separately stored container stream files. Two rg searches and three tails inspected saved test-rerun output, not selective slices of the original failure.log. Conservative PostgreSQL sessions wrote and reread their own /tmp log files despite the workspace-only instruction; observed other-arm commands did not use these filenames, and the two conservative sessions ran sequentially. This is a procedural-isolation deviation, not proof of adversarial isolation. Returned text remains recorded, but those temporary files are not part of the retained raw filesystem. The exact patch reviews, unavailable usage and ambiguous text attribution govern interpretation.
+
+## Reproduction and evidence
+
+```sh
+python3 investigation/scripts/natural_trials.py --batch NEW_CONTAINER_BATCH --cases 09,10 --repeats 3 --workers 2 --seconds 120
+TIKTOKEN_CACHE_DIR="$PWD/investigation/.tokenizer-cache" investigation/.venv/bin/python investigation/scripts/natural_analyze.py --batch NEW_CONTAINER_BATCH
+```
+
+Use a new batch name; the harness refuses overwrite. [Raw trials](natural-reading/containers/trials/), [trial table](natural-reading/containers/trial-results.csv), [raw manifest](natural-reading/containers/raw-manifest.json), [pre-container preservation manifest](natural-reading/pre-container-snapshot/preserved-sha256.json). Run `container_report.py` to compose this report after analysis and review; it reads the preserved historical report and never regenerates historical tables or plots.
+
+---
+
+# Historical natural-reading cohort: cases 01–08
+
+**Scope of everything below:** the earlier non-container collection. Statements that Docker was unavailable, counts of 22 trials, all-full-read behavior, and its conclusions refer only to that earlier cohort. They are not current Docker status or container follow-up results. The text is reproduced unchanged from the preserved pre-container report.
+
+# Natural log reading during agent debugging
+
+Revised investigation, October 2026. The unit of measurement is text returned by an agent’s chosen inspections, not a log file merely stored on disk.
 
 ## Abstract
 
-We implemented ten isolated Java failure fixtures in a Kotlin Spring Boot template, executed 114 final ablation measurements across eight runnable cases (three repetitions per applicable condition), and measured a revised conservative bundle in another 24 runs. Real-container cases were blocked by an unavailable Docker daemon. On full console captures, the aggressive candidate reduced summed `o200k_base` tokens by **58.7%**; the conservative recommendation reduced them by **53.3%**. These are exact counts under a named reference tokenizer, **not established Astra-specific token counts**.
+We compared default logging with the final conservative configuration (Spring `agent` profile, case-specific duplicate exception ownership, and full Surefire reports). Both conditions received the same neutral task and could choose any reading strategy. The main schedule planned 48 trials across eight available failure cases, three per condition. At report generation, **22 trials performed debugging**, with 26 quota-related outcomes. Docker’s unavailable daemon prevented cases 09–10. A separate two-trial harness pilot is retained and excluded from main results.
 
-Fresh Codex sessions actually read debugging-tool output. Sixteen sessions performed debugging, one per runnable case and condition, and produced **7/8 externally verified valid fixes in each condition**. The original 48-slot schedule exhausted account usage; 36 attempts performed no debugging and are excluded from those denominators. Four supplemental sessions covered the missing cases after reset. In the 16 active trials, reference tokens in initial complete-log reads fell 48.5%, and reference tokens in all log-related command results fell 38.2%. Across the 7 matched case pairs with complete usage records, actual session input tokens fell 6.2%. This small, quota-limited, sandbox-confounded sample does not establish unchanged debugging ability or a general session-token saving. Test-runner trimming erased useful source frames; it remains opt-in and is omitted from the final recommended bundle, which was measured but not directly blind-tested.
+Across **11 matched active trial pairs**, cumulative identifiable log-inspection text was 49,422–49,422 reference tokens for default and 25,040–25,040 for conservative, an observed reduction of **49.3%**. Bounds reflect any inseparable mixed output. These are exact `o200k_base` counts of recorded returned text, not exact Astra model token attribution. Valid independently verified fixes were **8/11 default and 8/11 conservative**. These are small, resource- and time-limited observations, not evidence of equivalence. Whole-session usage is reported separately. Prior forced-first-full-read trials are preserved as a different baseline and are not pooled with this study.
 
-## 1. Questions and hypotheses
+## 1. Research questions and baseline separation
 
-RQ1: Does formatting reduce generated output, selected text, and text actually returned by debugging tools? RQ2: Do agents still identify and repair the defects? H1 predicts reduced log-related input; H2 predicts no meaningful degradation in correct fixes. We distinguish these endpoints and do not infer H2 from H1. No equivalence margin, statistical power calculation, randomized population sample, or sufficiently repeated debugging sample was available. A finding of equal successes is descriptive.
+RQ1: Does the conservative profile reduce cumulative text actually returned during agents’ self-selected log inspections, including repeated reads? RQ2: Do verified debugging outcomes differ? Full reads are allowed and may be an observed strategy; the experiment does not assume an agent will use grep. The primary endpoint excludes test execution and source reading unless an identifiable log segment is recovered from mixed output.
 
-## 2. Environment and methods
+The [previous full-read report](REPORT.full-read.md), [previous instructions](README.full-read.md), and original `raw/`, `trials/`, `extracted/`, result tables and positive controls remain unchanged. Their hashes are recorded in [the baseline manifest](baselines/full-read/preserved-sha256.json). That earlier study used an aggressive P4-trimmed treatment and asked agents to start with a complete file read. It is a separate intervention, not a control arm for this revision. No old percentages or sessions enter the new primary totals.
 
-The untouched template declared Java 25, Kotlin 2.3.21 and Spring Boot 4.1.1. It used Maven, Kotlin source directories, `spring-boot-starter`, `spring-boot-starter-test`, Kotlin JUnit integration and Logback. It had one ordinary context-loading test and no application-specific MVC, database, HTTP-client, or Testcontainers code. New experimental code is Java in `investigation/src/test/java`, added only by the Maven `investigation` profile; no language migration occurred. Dependencies added under that profile are Spring MVC, Jakarta Servlet, H2, Testcontainers PostgreSQL and PostgreSQL JDBC. The HTTP client is Spring RestClient against a JDK loopback HttpServer.
+## 2. Methods and exact task
 
-| Component | Observed version/state |
-| --- | --- |
-| JDK used | OpenJDK 25, macOS aarch64 (shell initially selected Temurin 17.0.13) |
-| Maven / wrapper | 3.9.16 |
-| Spring / Boot | 7.0.9 / 4.1.1 |
-| Logback / JUnit platform | 1.5.38 / 6.0.3 |
-| Surefire / H2 / Testcontainers | 3.5.6 / 2.4.240 / 2.0.5 |
-| Python / tiktoken | 3.9 / 0.14.0; o200k_base vocabulary |
-| Codex | 0.154.0-alpha.6.2; gpt-6-astra; low reasoning effort |
-| Docker client | 29.6.2; daemon unavailable at Docker Desktop socket |
-| Git / instructions | No .git repository; no applicable AGENTS.md found; original POM and application YAML preserved |
+### 2.1 Model, task and constraints
 
+Every new session receives exactly:
 
-See [environment/final.json](environment/final.json), [requirements-lock.txt](requirements-lock.txt), and the [original files](original/). Maven resolves the declared versions successfully with approved network access; no downgrade was used. Initial sandbox DNS/socket/Kotlin-daemon failures are retained under `environment/`. `DEBUG=release` in the inherited environment activated verbose Boot output in the first baseline; the measurement runner removes that variable and injected Spring/logging/JVM options consistently. Neither shared CI nor global profiles were changed. Ordinary tests pass with and without `agent`: [normal-tests.json](environment/normal-tests.json).
+> This test fails. Diagnose the cause, make the smallest correct implementation change, and verify the fix. Complete test output is available in failure.log.
 
-### 2.1 Experimental units and resets
+The same [workspace instructions](natural-reading/main/trials/01/default/1/AGENTS.md) identify `./test.sh` and the editable implementation file, forbid changes to expectations/tests/configuration or disabling functionality, and prohibit reading evaluation data outside the workspace. They do not prescribe log reads or mention token savings. The exact prompt and instructions are stored per trial.
 
-Each matrix unit is one forked JVM executing one JUnit scenario. H2 is a fresh in-memory database, connections are closed, executors are closed, and the HTTP stub binds an ephemeral loopback port and stops in `finally`. Maven matrix runs are serial, with a 100-second process-group timeout and five-second termination grace. The runner uses already compiled sources and `surefire:test`; blind trials run the complete `test` lifecycle and therefore include compilation noise. Exact commands, statuses, identity checks, source/class hashes, and profile evidence accompany each raw run. Case 01 intentionally has no Spring context: profile activation is not applicable there; its `profile_verified=true` metadata means “no runtime profile required,” not that Spring started. Every final v2 and conservative run triggers the intended failure and returns exit 1. Repetition ranges measure formatting/runtime variability, not diagnostic population uncertainty.
+Model `gpt-6-astra`, low reasoning effort, Codex CLI 0.154.0-alpha.6.2, fresh ephemeral sessions, workspace-write sandbox and 120-second session wall budget are fixed across conditions. Two separate workspaces may execute concurrently. The launch schedule alternates condition order by case and repetition; concurrency means completion order can differ. [Schedule and prompt](natural-reading/main/schedule.json). No session resumes or informed evaluator sessions serve as blind trials.
 
-### 2.2 Provenance and producer control
+### 2.2 Configuration and profile verification
 
-| Artifact/producer | What can affect it |
-| --- | --- |
-| Application logger stdout | P1 prefix, P2 exception rendering; P3 only the duplicate caught-database path |
-| Spring startup stdout | P1 and P2; P3 does not change Boot exception ownership |
-| Surefire/Maven stdout + stderr | P4 affects Surefire failure rendering; a Spring profile does not control Maven summaries |
-| Surefire XML/text reports | P4 affects report exception text; XML also embeds application output affected by P1–P3 |
-| Container STDOUT / STDERR | Container process; none of P1–P4 rewrites it |
-| Host readiness / runtime failure | Testcontainers logger and propagated exception; P1/P2/P4 may affect host rendering, not underlying readiness reason |
-| Derived extraction | Fixed parser rules only; never overwrite raw logs |
-
-
-Raw stdout and stderr are separate; a “complete console” is their deterministic concatenation, not a claim of interleaved event ordering. Source paths, byte counts, line counts, SHA-256 hashes, producer labels and token counts are in [artifacts-v2.csv](artifacts-v2.csv). [The full raw-artifact inventory](raw-artifact-inventory.csv) also indexes every excluded pilot and interrupted capture. [verification.json](verification.json) checks final identities, one failing test per report, report counts, original application YAML preservation and raw hashes. Application and startup events share stdout with runner output, explicitly labeled as mixed production; they are not mislabeled as a single exception report. Generated reports are measured individually and are not silently added to console totals. Container consumers are implemented to retain host and container output separately, with container STDOUT and STDERR files; no container-output aggregate is reported because no real container ran.
-
-## 3. Failure cases and predefined diagnostics
-
-| Case | Mechanism and intended cause | Objective valid-fix criterion | Required initial facts |
-| --- | --- | --- | --- |
-| 01 | Unit assertion: total adds quantity instead of multiplying | 10 × 3 = 30 | expected_actual, location |
-| 02 | Nested Java exception: invalid numeric port eighty | connect completes with a valid numeric port | outer, cause, root, suppressed, location |
-| 03 | MVC binding: client passes word two to integer request parameter | GET yields 200 and count=2 | binding, request, status, location |
-| 04 | Context startup: port bean parses nonnumeric configuration | context starts and provides port bean | bean, root, value, spring_frame, location |
-| 05 | Database propagated: two users have same email | two rows with distinct emails persisted | sql, constraint, location |
-| 06 | Database caught and logged: duplicate email caught, logged twice, returns false | two distinct users persist; saveCaught returns true | sql, constraint, request, location |
-| 07 | Local HTTP client: client requests /wrong instead of /price | controlled stub returns price 42 | status, request, body, location |
-| 08 | Async execution: worker parses ten as decimal integer | worker returns 10 within five seconds | wrapper, root, worker, request, location |
-| 09 | PostgreSQL container: duplicate email in PostgreSQL | two distinct users persist in PostgreSQL | constraint, sql, location |
-| 10 | Container readiness: readiness regex expects service while process announces worker | actual worker-ready container starts before timeout | readiness, container, runtime |
-
-
-The exact fact substrings were written in [cases.json](cases.json) before the final matrix. Case 02 additionally checks that the repaired connection returns 8080; case 04 checks `port=8080`. Case 09 verifies two distinct emails after insertion. Case 07 is a discovered two-stage defect: the initial 404 is caused by `/wrong`, but changing it to `/price` exposes `UnknownContentTypeException` because an untyped numeric body has no Integer message converter. A complete repair reads the body as String and parses it. The initial checklist cannot prove preservation of information about this not-yet-triggered second failure. The first failed reference repair is preserved in [positive-controls/07.stdout](positive-controls/07.stdout); all eight complete reference repairs pass in [positive-controls-v2/results.json](positive-controls-v2/results.json). Those repairs and evaluation metadata were never copied into debugging-agent workspaces.
-
-Cases 09–10 use real Testcontainers objects, PostgreSQL 17.6-alpine and Alpine 3.22.1. Case 10 runs a real process announcing `worker ready` while waiting for `service ready`; the wait is eight seconds and the process lifetime is 45 seconds. Docker’s elevated probe still reported an unavailable daemon. Thus constraint/readiness failures from real containers remain **unobserved**; runtime-unavailability attempts are not counted as successful injections. [Docker blocker](environment/docker.stderr). Four actual host attempts (default and aggressive for each container case) also failed with `Could not find a valid Docker environment`; [raw attempts](raw/container-blocker/) and [metrics](artifacts-container-blocker.csv) are explicitly excluded from intended-failure and savings results. No container stdout/stderr exists because startup did not reach container creation.
-
-## 4. Configurations and final recommendation
-
-### P1–P4
-
-P1 shortens timestamps to local time with milliseconds, removes repeated PID/application-name/separator fields, eliminates padding, retains the full thread name and uses Logback logger abbreviation. P2 removes complete JUnit, Surefire and non-module-qualified Java reflection frame lines from application-logged exceptions using Logback `%replace`; it retains Spring, JDBC, HTTP and executor frames, exception headers, messages, causes, suppressed exceptions, application frames and normal common-frame elision. `%nopex` prevents Logback from appending another automatic trace. No custom converter is needed. Module-qualified Java frames do not match this narrow regex and remain.
-
-P3 applies only to case 06: the same caught SQLException was logged by two layers. The treatment retains the first full exception and both ERROR events, replacing the second trace with an explicit reference containing the same request ID. This is sole-owner logging, not a global stateful exception suppressor; messages or unrelated failures are never dropped. P4 is Maven Surefire `trimStackTrace=true`, separately enabled by `-Pagent-reports`. It cannot be enabled by a Spring profile alone.
-
-| Identifier | Enabled mechanisms |
-| --- | --- |
-| default | Boot and Surefire defaults |
-| p1 | Prefix only; negative control in context-free case 01 |
-| p2 | Application exception filtering only |
-| p3 | Sole-owner caught-database logging only |
-| p4 | Surefire trimming only |
-| agent | Aggressive candidate: P1+P2+P3+P4; treatment in blind trials |
-| safe | Final conservative bundle: P1+P2+P3, full Surefire reports; actual Spring profile is agent |
-
-
-P2 is N/A for cases 01, 05, 07 and 09: their failure trace is not application-logged. P3 is N/A except case 06. The matrix runs only applicable single-mechanism conditions (plus P1 as an explicit negative control for case 01). The conservative bundle is deliberately not named a second Spring profile: the distinction is whether the separate Maven trimming option is added.
-
-### Exact opt-in application-agent.yml
+Both conditions use Java 25, Spring Boot 4.1.1, Maven 3.9.16, Kotlin 2.3.21 and Surefire 3.5.6. Normal application behavior and fixtures are unchanged. Both explicitly set `-DtrimStackTrace=false`; neither enables `agent-reports`. The conservative condition additionally sets `-Dspring.profiles.active=agent -Dexperiment.deduplicate=true`. The latter only changes duplicate exception ownership in caught-database case 06, as in the prior conservative definition; ERROR events remain. The Spring profile itself remains unchanged:
 
 ```yaml
 # Opt-in local console formatting. No log levels or application behavior change.
@@ -101,218 +296,205 @@ logging:
   exception-conversion-word: "%replace(%wEx){'(?m)^[ \\t]+at (?:org\\.junit\\.|org\\.apache\\.maven\\.surefire\\.|java\\.lang\\.reflect\\.|jdk\\.internal\\.reflect\\.)[^\\r\\n]*[\\r\\n]+',''}"
 ```
 
-The exception expression appears inline in the console pattern to avoid Spring-versus-Logback placeholder timing; the `logging.exception-conversion-word` property supplies the same policy for Boot-managed exception rendering. Normal inactive-profile logging is unchanged. Test resources `application-p1.yml` and `application-p2.yml` exist only for the experiment. Effective profiles and pattern properties are printed once per Spring fixture, and their instrumentation tokens are included in complete captures; this penalizes longer pattern settings rather than hiding their overhead.
+Before **each** trial, a separate Maven invocation runs `ProfileVerificationTest`. It asserts the requested/active profile match, inspects the actual Logback console encoder and writes `profile-verification.txt` outside the agent workspace. Probe stdout/stderr are separate artifacts. It also probes the unit-only case, while recognizing that the unit failure itself does not start Spring. `FailureCasesTest` no longer prints the effective regex. The measured failure log retains normal Spring startup output, including its ordinary active-profile announcement, but no custom pattern dump. [Example verified encoder](natural-reading/main/trials/02/conservative/1/profile-verification.txt).
 
-### Developer command
+The Kotlin compiler daemon is disabled identically to avoid the earlier known daemon-directory blocker. This environmental improvement and changed instrumentation further prevent causal comparisons with the old baseline. Network/loopback restrictions inside the agent sandbox remain a possible source of verification friction; the external verifier runs where controlled component tests can execute.
 
-Set Java 25, then use the conservative recommendation:
+### 2.3 Isolation and independent verification
 
-```sh
-env -u DEBUG mvn -Dmaven.repo.local="$PWD/investigation/.m2" -Dspring.profiles.active=agent test
-```
+Each external temporary workspace receives only source, POM, test fixtures/resources, neutral instructions, test.sh and the complete initial `failure.log`. It receives no case manifest, reference repair, report, previous findings or trial artifacts. The evaluator verifies the intended initial failure and profile before launching the agent; failed setup is not a debugging trial. Setup’s target directory is removed before agent activity, so there are no probe reports or stale compiled repairs. `failure.log` concatenates complete stdout then stderr without truncation and without asserting inter-stream ordering.
 
-An ordinary developer may omit the local repository override if dependencies are in their normal Maven cache. Add `-Dkotlin.compiler.daemon=false` if working inside the restricted local sandbox. Do **not** add `-Pagent-reports` by default: P4 erased `Defects.java` locations in propagated database and HTTP failures. It remains available as an explicitly measured tradeoff. For a fully configured deliberate case, use the command in [README.md](README.md).
+A second pristine directory independently verifies the proposed `Defects.java` using the original tests and build command. It never trusts the agent’s scripts, target/classes or edited expectations. Immutable changes are recorded, patches and diagnoses are reviewed, and valid fixes must preserve intended functionality. Independent XML/text test reports, stdout/stderr, patches and source are retained. Setup’s generated report files are not separately retained beyond complete console output. Every process has a bounded timeout; temporary workspaces are cleaned up. Isolation is procedural/workspace-based, not an adversarial barrier against ignoring outside-read instructions.
 
-## 5. Measurements and reading methods
+### 2.4 Cases and repair criteria
 
-### 5.1 Token and agent-input definitions
+| Case | Failure fixture | Verified criterion |
+| --- | --- | --- |
+| 01 | Unit assertion | 10 × 3 = 30 |
+| 02 | Nested Java exception | connect completes with a valid numeric port |
+| 03 | MVC binding | GET yields 200 and count=2 |
+| 04 | Context startup | context starts and provides port bean |
+| 05 | Database propagated | two rows with distinct emails persisted |
+| 06 | Database caught and logged | two distinct users persist; saveCaught returns true |
+| 07 | Local HTTP client | controlled stub returns price 42 |
+| 08 | Async execution | worker returns 10 within five seconds |
+| 09 | PostgreSQL container | two distinct users persist in PostgreSQL |
+| 10 | Container readiness | actual worker-ready container starts before timeout |
 
-All artifact token counts use real `tiktoken 0.14.0`, `o200k_base`, with special-looking text treated as ordinary text. No bytes-per-token estimate is used. `encoding_for_model("gpt-6-astra")` raises a mapping error in the installed package, so exact Astra-specific log-token attribution is **unavailable**. The reference encoding enables reproducible text comparisons. Separately, Codex `turn.completed.usage` supplies actual session input, cached input, output and reasoning-output usage when the turn completes. These counts include instructions, source reads, tool protocol and repeated context; they are not interchangeable with a tokenized file.
 
-Completed command events contain `aggregated_output`; these returned strings are saved individually in `returned-tool-text/` and measured in [tool-results-v1.csv](tool-results-v1.csv) and [tool-results-supplemental.csv](tool-results-supplemental.csv). This captures the CLI-visible tool-result body, not the hidden model wire envelope or its overhead. Log-related results are commands reading failure logs/reports or invoking tests; mixed commands can include source/environment text, so their count is a broad observable category, not exact causal log attribution. Pure initial `cat failure.log` reads are reported separately. No output stored on disk is counted as model input merely because it exists.
+Criteria are reused from [cases.json](cases.json) and the original tests. The nested port and startup cases require 8080. Database tests require two distinct stored emails, not dropped constraints or skipped inserts. The HTTP fixture is intentionally retained as the original two-stage problem: correcting `/wrong` to `/price` can expose `UnknownContentTypeException`; a route-only patch is incomplete. Asynchronous repairs must retain execution and propagation behavior. Reference repairs remain outside agent workspaces.
 
-### 5.2 Fixed extraction protocol
+`docker info` still cannot reach the Docker Desktop daemon. Therefore cases 09–10 have no natural-reading trials, no synthetic container output and no zero-valued savings. [Exact blocker](natural-reading/environment/docker.stderr). The same real Testcontainers fixtures and bounded cleanup remain available in the reproduction protocol.
 
-| Method | Exact rule |
+## 3. Measurement and classification
+
+The primary measure is the cumulative `o200k_base` count of **returned log-inspection strings**, including repetitions. A file stored on disk is not automatically counted. Completed Codex command events supply `aggregated_output`; every original returned body is saved under each trial’s `returned-text/`, along with recovered log segments and character offsets. This measures the CLI-visible body, not hidden model protocol framing. The tokenizer is tiktoken 0.14.0; its installed mapping cannot establish exact `gpt-6-astra` log tokens. Actual model-reported session input, cached input and output are separate measurements.
+
+| Class | Rule |
 | --- | --- |
-| complete | stdout followed by stderr, without truncation |
-| window20 | First documented failure-marker line and the next 19 raw lines |
-| filtered40 | First marker and next 39 raw lines, then remove frame lines matching Spring/JUnit/Apache/java/jdk/Logback packages |
-| boundary | First failure event through the line before Maven’s post-test Results section |
-| dedup | Same boundary; replace only byte-identical complete exception blocks with an explicit repeat reference; preserve each event header/context |
+| Log inspection | Content reads/searches aimed at failure.log, a log file or Surefire reports; include line numbers/context formatting and repeated reads. Filename-only discovery is not a read. |
+| Test command | Invoking ./test.sh or Maven; count all returned test output separately, even when it contains logging. |
+| Source read | Reading code, tests, build scripts or instructions without logs, test execution, discovery or status output in that result. |
+| Mixed | Combined log/source/test/discovery commands. Retain the complete body separately; recover only literal known full-log or numbered slice matches for primary attribution. |
+| Other | Discovery, repository status and other command output. |
 
 
-The fixed marker regex recognizes the fixture’s ERROR messages (`client setup failed`, `GET /orders`, `save users failed`, `invoice-42`, `Application run failed`) or Surefire `<<< FAILURE!` / `<<< ERROR!` lines. It ignores startup and profile-verification lines. Matching and boundary code is in [analyze.py](scripts/analyze.py); each output records match count, extraction command, source, size and fact outcomes. The rules are identical across conditions and never expanded until a desired cause appears. “20 lines after marker” is defined here to include the marker, so the policy is exactly 20 lines total. Framework filtering occurs **after** selecting 40 raw lines; filtering does not refill the window.
+For mixed results, `cat failure.log`, simple numbered `sed`, `head` and `tail` can be attributed only when their exact expected text appears in the actual returned body. Repeated occurrences at different positions count repeatedly. No missing/truncated text is filled from the disk file. Unresolved log-containing mixed results contribute zero to the primary lower bound and the entire mixed body to the upper bound. Entire mixed-result counts are an overlapping diagnostic view and must not be added to recovered log tokens again. Segment token counts are computed independently; tokenization across different boundaries is not exactly additive.
 
-Boundary extraction is fixture-aware, not a universal production log parser. It can retain both an application exception and the runner’s later report, intervening events and `CASE_END`; those are observed duplication/unrelated output, not additional independent failures. Exact-block dedup does not merge merely similar exceptions, different request headers or different throwables. All final extracted artifacts are no larger than their full concatenated source; the dedup reference is additional formatting, counted in its size.
+Counters distinguish content searches, exact repeated command strings, context/slice requests, full-file cat requests and test reruns. A full-file request may be tool-truncated; only returned strings count. Context requests are not automatically claimed to be successful context expansion. All 107 completed command results were audited: 13 other, 34 mixed, 30 test-command-only, 11 log-only and 19 source-only bodies. Eleven mixed bodies contained exactly recoverable full-log segments, giving 22 observed log reads overall; none was unallocated or marked truncated. [Classification audit](natural-reading/main/classification-audit.json). The classifier’s shell-pattern rules are in [natural_analyze.py](scripts/natural_analyze.py); measurement unit checks are in [test_natural_analyze.py](scripts/test_natural_analyze.py). The full [protocol](natural-reading/PROTOCOL.md) specifies boundaries, limitations and reproduction.
 
-### 5.3 Per-case full console results
+## 4. Natural-reading results
 
-Mean [minimum–maximum] over three repetitions. Counts include Maven overhead and explicit profile evidence. “Safe” is the recommended untrimmed-report configuration.
+### 4.1 Trial disposition
 
-| Case | Default bytes | Safe bytes | Default tokens | Aggressive tokens | Safe tokens | Safe change |
-| --- | --- | --- | --- | --- | --- | --- |
-| 01 | 2,784.0 [2,784–2,784] | 2,794.0 [2,794–2,794] | 704.0 [704–704] | 620.0 [620–620] | 707.0 [707–707] | -0.4% reduction |
-| 02 | 16,987.0 [16,987–16,987] | 5,851.7 [5,851–5,852] | 4,799.0 [4,799–4,799] | 1,523.0 [1,523–1,523] | 1,642.0 [1,642–1,642] | 65.8% reduction |
-| 03 | 21,197.0 [21,197–21,197] | 9,822.0 [9,822–9,822] | 5,920.0 [5,920–5,920] | 2,586.0 [2,586–2,586] | 2,673.0 [2,673–2,673] | 54.8% reduction |
-| 04 | 25,088.0 [25,088–25,088] | 13,750.7 [13,750–13,751] | 6,632.0 [6,632–6,632] | 2,850.0 [2,850–2,850] | 3,403.0 [3,403–3,403] | 48.7% reduction |
-| 05 | 4,873.7 [4,873–4,874] | 5,022.7 [5,022–5,023] | 1,333.0 [1,333–1,333] | 1,123.0 [1,123–1,123] | 1,404.0 [1,404–1,404] | -5.3% reduction |
-| 06 | 31,672.0 [31,672–31,672] | 6,705.0 [6,705–6,705] | 9,234.0 [9,234–9,234] | 1,931.0 [1,931–1,931] | 2,018.0 [2,018–2,018] | 78.1% reduction |
-| 07 | 4,923.0 [4,923–4,923] | 5,071.3 [5,071–5,072] | 1,260.0 [1,260–1,260] | 1,029.0 [1,029–1,029] | 1,331.0 [1,331–1,331] | -5.6% reduction |
-| 08 | 5,106.3 [5,106–5,107] | 5,206.0 [5,206–5,206] | 1,393.0 [1,393–1,393] | 1,261.0 [1,261–1,261] | 1,442.0 [1,442–1,442] | -3.5% reduction |
+| Recorded state | Slots |
+| --- | --- |
+| finished | 18 |
+| not_begun_quota | 2 |
+| not_scheduled_quota | 24 |
+| timeout | 4 |
 
 
-Cases 09–10: unavailable; no zero values or simulated savings are substituted. [All extraction results, CSV](results-v2.csv), [JSON](results-v2.json), [conservative CSV](results-conservative-v2.csv).
+“Not scheduled” and “model never began” do not enter active-trial success or token denominators. Quota-interrupted sessions that already used debugging tools remain active observations, with incomplete usage explicitly missing. Timeouts after genuine activity are unresolved debugging outcomes, not skipped trials. Planned three-repetition slots must not be confused with completed independent sessions. The runner stops scheduling new debugging work after a quota error; already-running sessions can finish.
 
-![Per-case token reduction](plots/token-reduction.png)
-
-### 5.4 Ablations
-
-Mean complete-console reference tokens; dash means not applicable.
-
-| Case | Default | P1 | P2 | P3 | P4 | Aggressive | Safe |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 01 | 704.0 | 705.0 | — | — | 620.0 | 620.0 | 707.0 |
-| 02 | 4,799.0 | 4,732.0 | 1,654.0 | — | 4,683.0 | 1,523.0 | 1,642.0 |
-| 03 | 5,920.0 | 5,763.0 | 2,775.0 | — | 5,836.0 | 2,586.0 | 2,673.0 |
-| 04 | 6,632.0 | 6,494.0 | 3,483.0 | — | 6,082.0 | 2,850.0 | 3,403.0 |
-| 05 | 1,333.0 | 1,288.0 | — | — | 1,055.0 | 1,123.0 | 1,404.0 |
-| 06 | 9,234.0 | 9,145.0 | 2,883.0 | 5,198.0 | 9,150.0 | 1,931.0 | 2,018.0 |
-| 07 | 1,260.0 | 1,215.0 | — | — | 961.0 | 1,029.0 | 1,331.0 |
-| 08 | 1,393.0 | 1,326.0 | 1,454.0 | — | 1,215.0 | 1,261.0 | 1,442.0 |
-
-
-P1 alone barely changes the context-free assertion, because Spring formatting cannot affect it. P2 alone increases async complete-console size: it removes few worker frames while the effective-configuration line adds the regex. This is a real unfavorable measurement, not omitted noise. P3 is particularly effective for the duplicated caught database trace. The conservative bundle increases complete-console counts for cases 01, 05, 07 and 08: the preserved runner report and printed effective-pattern instrumentation can outweigh prefix savings. These observations show why file-wide or pooled savings cannot be applied universally.
-
-### 5.5 Extraction and diagnostic survival
-
-Each cell reports reference-token mean followed by required facts retained/required in repetition 1. Full machine-readable per-run fact maps are in the result files.
-
-| Case / configuration | Complete | 20 lines | Filtered 40 | Boundary | Dedup |
+| Case | Default active n | Conservative active n | Default valid fixes | Conservative valid fixes | Diagnosis recorded correct D/C |
 | --- | --- | --- | --- | --- | --- |
-| 01 / default | 704.0; 2/2 | 294.0; 2/2 | 466.0; 2/2 | 204.0; 2/2 | 204.0; 2/2 |
-| 01 / agent | 620.0; 2/2 | 295.0; 2/2 | 467.0; 2/2 | 119.0; 2/2 | 119.0; 2/2 |
-| 01 / safe | 707.0; 2/2 | 294.0; 2/2 | 469.0; 2/2 | 204.0; 2/2 | 204.0; 2/2 |
-| 02 / default | 4,799.0; 5/5 | 691.0; 2/5 | 107.0; 2/5 | 3,973.0; 5/5 | 3,973.0; 5/5 |
-| 02 / agent | 1,523.0; 5/5 | 372.0; 5/5 | 467.0; 5/5 | 628.0; 5/5 | 628.0; 5/5 |
-| 02 / safe | 1,642.0; 5/5 | 372.0; 5/5 | 464.0; 5/5 | 745.0; 5/5 | 745.0; 5/5 |
-| 03 / default | 5,920.0; 4/4 | 745.0; 3/4 | 188.0; 4/4 | 4,848.0; 4/4 | 4,848.0; 4/4 |
-| 03 / agent | 2,586.0; 4/4 | 723.0; 3/4 | 183.0; 4/4 | 1,535.0; 4/4 | 1,535.0; 4/4 |
-| 03 / safe | 2,673.0; 4/4 | 723.0; 3/4 | 183.0; 4/4 | 1,620.0; 4/4 | 1,620.0; 4/4 |
-| 04 / default | 6,632.0; 5/5 | 790.0; 3/5 | 126.0; 3/5 | 5,392.0; 5/5 | 5,392.0; 5/5 |
-| 04 / agent | 2,850.0; 5/5 | 768.0; 3/5 | 194.0; 5/5 | 1,613.0; 5/5 | 1,613.0; 5/5 |
-| 04 / safe | 3,403.0; 5/5 | 768.0; 3/5 | 194.0; 5/5 | 2,164.0; 5/5 | 2,164.0; 5/5 |
-| 05 / default | 1,333.0; 3/3 | 390.0; 2/3 | 666.0; 3/3 | 445.0; 3/3 | 445.0; 3/3 |
-| 05 / agent | 1,123.0; 2/3 | 323.0; 2/3 | 559.0; 2/3 | 166.0; 2/3 | 166.0; 2/3 |
-| 05 / safe | 1,404.0; 3/3 | 390.0; 2/3 | 666.0; 3/3 | 445.0; 3/3 | 445.0; 3/3 |
-| 06 / default | 9,234.0; 4/4 | 670.0; 3/4 | 747.0; 4/4 | 8,392.0; 4/4 | 8,346.0; 4/4 |
-| 06 / agent | 1,931.0; 4/4 | 648.0; 3/4 | 904.0; 4/4 | 1,020.0; 4/4 | 1,020.0; 4/4 |
-| 06 / safe | 2,018.0; 4/4 | 648.0; 3/4 | 884.0; 4/4 | 1,105.0; 4/4 | 1,105.0; 4/4 |
-| 07 / default | 1,260.0; 4/4 | 420.0; 4/4 | 393.0; 4/4 | 420.0; 4/4 | 420.0; 4/4 |
-| 07 / agent | 1,029.0; 3/4 | 293.0; 3/4 | 465.0; 3/4 | 120.0; 3/4 | 120.0; 3/4 |
-| 07 / safe | 1,331.0; 4/4 | 420.0; 4/4 | 396.0; 4/4 | 420.0; 4/4 | 420.0; 4/4 |
-| 08 / default | 1,393.0; 4/5 | 411.0; 4/5 | 353.0; 4/5 | 559.0; 4/5 | 559.0; 4/5 |
-| 08 / agent | 1,261.0; 5/5 | 362.0; 5/5 | 484.0; 5/5 | 358.0; 5/5 | 358.0; 5/5 |
-| 08 / safe | 1,442.0; 5/5 | 389.0; 5/5 | 331.0; 5/5 | 537.0; 5/5 | 537.0; 5/5 |
+| 01 | 2 | 2 | 2/2 | 2/2 | 2 / 2 |
+| 02 | 2 | 2 | 2/2 | 2/2 | 2 / 2 |
+| 03 | 2 | 2 | 1/2 | 1/2 | 1 / 1 |
+| 04 | 1 | 1 | 0/1 | 0/1 | 0 / 1 |
+| 05 | 1 | 1 | 1/1 | 1/1 | 1 / 1 |
+| 06 | 1 | 1 | 1/1 | 1/1 | 1 / 1 |
+| 07 | 1 | 1 | 0/1 | 0/1 | 1 / 1 |
+| 08 | 1 | 1 | 1/1 | 1/1 | 1 / 1 |
+| 09 | 0 | 0 | unobserved | unobserved | 0 / 0 |
+| 10 | 0 | 0 | unobserved | unobserved | 0 / 0 |
 
 
-Substring survival is a necessary-content proxy, not proof of comprehension. It does not establish semantic completeness, readable causal ordering, or a successful repair. Default async output truncates `invoice-worker-7`; the agent pattern retains it, so default fails the strict full-thread-name fact although its suffix and request ID still help. Conversely, P4 removes application source frames in cases 05 and 07 even from the complete console. The conservative bundle restores them. In case 02, both fixed default windows miss the nested causes and suppressed cleanup exception because framework frames consume the window; filtering after the window cannot recover unseen lines. Context startup similarly exceeds fixed windows. Removing Spring frames from filtered windows can also erase useful lifecycle context even when a broad substring fact survives. No window is silently enlarged.
+Eight of eleven active trials per condition produced valid fixes. The unresolved cases were startup case 04 repetition 1 and MVC case 03 repetition 2 (timeouts without a patch), and HTTP case 07 repetition 1 (route-only patch, followed by UnknownContentTypeException in external verification). Both HTTP agents reported loopback socket permission failures during their own test run. No changed expectations, deleted tests or functionality-disabling repairs were accepted. Correct-diagnosis counts require recorded evidence in the explanation or explicit diagnosis, not inference solely from having read a stack trace. Missing explanations remain unknown. A passing external test does not override an invalid patch or altered expectations. Review details and unresolved causes are recorded per outcome; [main trial evidence](natural-reading/main/trials/).
 
-The pooled full-console reduction is 58.7% for the aggressive candidate and 53.3% for the recommendation, computed as `1 − sum(treatment tokens)/sum(default tokens)` across eight cases × three repetitions. Every case has equal repetition count, but long traces carry more weight. No container cases are included; this is not an average percentage across projects, reading methods or sessions.
+### 4.2 Primary returned-log text
 
-## 6. Direct debugging trials
+Mean [minimum–maximum] across active trials. Lower/upper bounds coincide when every mixed log portion is attributable. Missing cases are not assigned zero.
 
-Each trial used a new external temporary project with the same defective implementation for its case, model `gpt-6-astra`, low reasoning effort and a 120-second wall-time cap. No conversation was resumed. The workspace included source/tests and a complete failing console log, but no case manifest, reference fixes, earlier logs, report, transcripts or outcome metadata. The prompt asked the model to read `failure.log`, make the smallest behavioral repair in `Defects.java` only, and verify with `./test.sh`; it prohibited disabling functionality or changing expectations. Full stdout/stderr remained available. Immutable files were checked and restored before an independent external test run. All active trial patches and diagnoses were reviewed; no test expectation changes or functionality-disabling patches were observed.
-
-The shared dependency cache and installed tools were allowed; other outside reads were prohibited by instructions. This is protocol isolation rather than a sealed adversarial evaluation. Parallel independent copies avoid source and report collisions, but CPU contention and cache state may affect time. The original schedule alternated condition order by repetition. Quota prevented repetitions 2–3 from doing work. Twelve original sessions produced patches (one was interrupted by quota after its patch); four supplemental sessions completed the HTTP/async pairs after reset. Pilot trials are retained but excluded from primary outcomes because they preceded final fixture/profile instrumentation. **There is one active trial per case and condition, not three.**
-
-| Case | Default valid fix | Agent valid fix | Default seconds to external verification | Agent seconds | Root cause |
-| --- | --- | --- | --- | --- | --- |
-| 01 | 1/1 | 1/1 | 40.2 | 41.6 | Correct in both |
-| 02 | 1/1 | 1/1 | 46.8 | 45.9 | Correct in both |
-| 03 | 1/1 | 1/1 | 68.0 | 58.9 | Correct in both |
-| 04 | 1/1 | 1/1 | 62.6 | 67.3 | Correct in both |
-| 05 | 1/1 | 1/1 | 55.5 | 42.7 | Correct in both |
-| 06 | 1/1 | 1/1 | 51.7 | 46.4 | Correct in both |
-| 07 | 0/1 | 0/1 | unresolved | unresolved | Initial cause correct in both; HTTP second failure unresolved |
-| 08 | 1/1 | 1/1 | 38.5 | 45.0 | Correct in both |
+| Case | Default log tokens, lower | Default upper | Conservative lower | Conservative upper |
+| --- | --- | --- | --- | --- |
+| 01 | 1,301.5 [1,297–1,306] | 1,301.5 [1,297–1,306] | 1,297.0 [1,294–1,300] | 1,297.0 [1,294–1,300] |
+| 02 | 5,408.0 [5,406–5,410] | 5,408.0 [5,406–5,410] | 2,108.5 [2,108–2,109] | 2,108.5 [2,108–2,109] |
+| 03 | 6,529.0 [6,527–6,531] | 6,529.0 [6,527–6,531] | 3,135.0 [3,135–3,135] | 3,135.0 [3,135–3,135] |
+| 04 | 7,273.0 [7,273–7,273] | 7,273.0 [7,273–7,273] | 3,899.0 [3,899–3,899] | 3,899.0 [3,899–3,899] |
+| 05 | 1,944.0 [1,944–1,944] | 1,944.0 [1,944–1,944] | 1,871.0 [1,871–1,871] | 1,871.0 [1,871–1,871] |
+| 06 | 9,849.0 [9,849–9,849] | 9,849.0 [9,849–9,849] | 2,484.0 [2,484–2,484] | 2,484.0 [2,484–2,484] |
+| 07 | 1,871.0 [1,871–1,871] | 1,871.0 [1,871–1,871] | 1,797.0 [1,797–1,797] | 1,797.0 [1,797–1,797] |
+| 08 | 2,008.0 [2,008–2,008] | 2,008.0 [2,008–2,008] | 1,908.0 [1,908–1,908] | 1,908.0 [1,908–1,908] |
+| 09 | — | — | — | — |
+| 10 | — | — | — | — |
 
 
-![Observed debugging outcomes](plots/debugging-outcomes.png)
+For the 11 matched active case/repetition pairs, sum default lower/upper = **49,422/49,422**, conservative = **25,040/25,040**. The bounded reduction is **49.3%**, calculated conservatively as `1 − conservative_upper/default_lower` through `1 − conservative_lower/default_upper`. This weights longer observed inspections more heavily; it is not a universal percentage or an unweighted average of per-case savings. Unpaired sessions remain in per-case tables but are excluded from this pooled comparison.
 
-Both HTTP agents changed only the route and stopped without resolving the second failure. External verification returned 1 with `UnknownContentTypeException`; these are incomplete, not valid or superficial test-bypassing fixes. The other seven repairs in each condition are narrowly targeted and pass. Async patches preserve the executor and exception propagation. The quota-interrupted database default patch is externally valid but has no completed session usage record. Model-declared verification is not treated as authoritative: some agents reported being blocked by Kotlin daemon filesystem/socket restrictions, while external verification could run. This environmental friction limits conclusions about autonomous time-to-fix. The displayed successful time sums session wall time and external verification; it excludes initial setup, and is an upper bound on patch discovery time, not a measured first-success timestamp inside the session.
+The corresponding identifiable returned-log text totals are 175,949 bytes default and 91,834 bytes conservative. This demonstrates reduced returned text independently of whether the reference tokenizer matches Astra.
 
-### 6.1 Returned text, tool calls and actual usage
+![Returned log text](natural-reading/main/plots/returned-log-tokens.png)
 
-| Case / condition | Log-related calls | Pure initial-read reference tokens | All log-related reference tokens | Input tokens | Cached input | Output tokens |
+### 4.3 Observed reading strategies and separate output classes
+
+| Case / condition | Log inspections | Search commands | Exact repeats | Context requests | Full-file requests | Test reruns |
 | --- | --- | --- | --- | --- | --- | --- |
-| 01 / agent | 5 | 1193 | 4559 | 85508 | 76672 | 535 |
-| 01 / default | 5 | 1275 | 4619 | 85821 | 62976 | 561 |
-| 02 / agent | 5 | 2118 | 5917 | 129242 | 98688 | 681 |
-| 02 / default | 5 | 5395 | 9070 | 104451 | 89856 | 634 |
-| 03 / agent | 6 | 3177 | 19140 | 169157 | 130688 | 868 |
-| 03 / default | 7 | 6520 | 23480 | 278536 | 256384 | 958 |
-| 04 / agent | 7 | 3475 | 20663 | 285812 | 263040 | 1109 |
-| 04 / default | 7 | 7253 | 24708 | 198738 | 148608 | 842 |
-| 05 / agent | 5 | 1719 | 5689 | 90642 | 67328 | 607 |
-| 05 / default | 6 | 1929 | 17691 | 176220 | 159488 | 931 |
-| 06 / agent | 5 | 2526 | 6495 | 92253 | 81280 | 579 |
-| 06 / default | 6 | 9846 | 25393 | unavailable | unavailable | unavailable |
-| 07 / agent | 4 | 3456 | 4169 | 116879 | 104960 | 579 |
-| 07 / default | 4 | 3680 | 6317 | 96397 | 84352 | 524 |
-| 08 / agent | 5 | 1856 | 5825 | 90602 | 79232 | 616 |
-| 08 / default | 5 | 1993 | 5879 | 91485 | 79744 | 574 |
+| 01 / default | 2 | 0 | 0 | 0 | 2 | 4 |
+| 01 / conservative | 2 | 0 | 0 | 0 | 2 | 4 |
+| 02 / default | 2 | 0 | 0 | 0 | 2 | 3 |
+| 02 / conservative | 2 | 0 | 0 | 0 | 2 | 4 |
+| 03 / default | 2 | 0 | 0 | 0 | 2 | 2 |
+| 03 / conservative | 2 | 0 | 0 | 0 | 2 | 1 |
+| 04 / default | 1 | 0 | 0 | 0 | 1 | 0 |
+| 04 / conservative | 1 | 0 | 0 | 0 | 1 | 0 |
+| 05 / default | 1 | 0 | 0 | 0 | 1 | 2 |
+| 05 / conservative | 1 | 0 | 0 | 0 | 1 | 2 |
+| 06 / default | 1 | 0 | 0 | 0 | 1 | 2 |
+| 06 / conservative | 1 | 0 | 0 | 0 | 1 | 2 |
+| 07 / default | 1 | 0 | 0 | 0 | 1 | 1 |
+| 07 / conservative | 1 | 0 | 0 | 0 | 1 | 2 |
+| 08 / default | 1 | 0 | 0 | 0 | 1 | 1 |
+| 08 / conservative | 1 | 0 | 0 | 0 | 1 | 2 |
 
 
-Across 16 active sessions, pure initial returned-log reads shrink by 48.5% under the reference encoding; all log-related command result bodies shrink by 38.2%. Fuller-output requests matching the documented original-stream/report rule: 0. This does not mean no repeated reading: reruns and source/environment inspection are included in the transcripts. Returned output may be tool-truncated; detected truncation markers across completed command results: 0. These markers are a string-based indicator, not proof that every unmarked result was untruncated. Raw files remain complete.
+| Condition | Pure log result tokens | Test-command tokens | Source-only tokens | Whole mixed-result tokens | Other tokens | Unallocated mixed calls |
+| --- | --- | --- | --- | --- | --- | --- |
+| default | 33489 | 37422 | 10382 | 27671 | 10342 | 0 |
+| conservative | 10362 | 22019 | 5607 | 33744 | 315 | 0 |
 
-For actual session usage, compare only matched cases 01, 02, 03, 04, 05, 07, 08; case 06 is excluded because its default session was quota-interrupted. Summed default/agent input tokens are **1,031,648 / 967,842**, a descriptive 6.2% decrease. Cached input is **881,408 / 820,608** and output tokens are **5,024 / 4,995**. Individual sessions include both increases and decreases. Cache state, differing tool retries, large fixed instructions, read repetition and sandbox failures dominate some sessions. No claim that the log profile caused this exact total-session difference is justified. Do not sum cached input on top of input, or add separately reported reasoning tokens to output without knowing the provider’s accounting semantics.
 
-Transcripts, patches, diagnoses and verification are under [trials/v1](trials/v1/) and [trials/supplemental](trials/supplemental/); summaries are [trial-results-v1.csv](trial-results-v1.csv) and [supplemental CSV](trial-results-supplemental.csv). Empty/no-patch quota attempts are distinguishable in each `outcome.json` and are not unresolved debugging attempts. The runner now stops scheduling work after a quota error. The conservative revised bundle was **not** the treatment in these trials: its application profile is identical, but P4 is omitted. Its debugging performance remains directly unmeasured.
+These output-class totals describe all active sessions, including unpaired ones. Whole mixed results include source or other text and overlap recovered primary log segments; they are shown separately rather than mislabeled as logs. Test reruns can produce large output even when the initial inspection is short. In this completed sample all 22 active sessions chose one full-file read, with no repeated log inspections or log-content searches/context expansions. Therefore the primary endpoint happens to match one returned full-log body per trial; that is an observed choice, not an assumed reading policy. Source-code rg searches and filename discovery did occur and are classified separately. The number of full-file reads is an empirical result: choosing `cat` is permitted, and the revised prompt does not force a search strategy. Raw commands and body paths are in [tool-results.csv](natural-reading/main/tool-results.csv).
 
-## 7. Interpretation, tradeoffs and financial implications
+### 4.4 Strategies and representative returned excerpts
 
-The strongest supported finding is that the captured/generated text and the returned initial tool-result bodies can be smaller. These are distinct from total model input and successful diagnosis. Narrow exception filtering produces the main reduction for application-logged failures. Keeping all Spring/JDBC/HTTP frames is important because startup, SQL and HTTP diagnoses can rely on those frameworks. The parser still removes JUnit/reflection details that would matter if the test engine or reflection itself were broken; use default logs for such investigations. The experiment deliberately does not suppress ERROR, lower log levels or truncate at an arbitrary byte limit.
+These are bounded illustrations from recorded tool returns, not replacements for the full saved strings used in measurement.
 
-Short timestamps lose date/time-zone context across midnight; removing PID and constant application name assumes a single captured process/application. Logger abbreviation can collide; full thread names may be long but were useful here. The tested pattern does not explicitly include arbitrary MDC or tracing correlation fields; request context in these fixtures is in the message. It is unsuitable as a drop-in assumption for every distributed tracing setup without extension and re-evaluation. P3 cannot be generalized from identical caught objects to unrelated exceptions with equal messages. P4’s information loss is why the final recommendation retains full runner reports.
-
-No current price schedule is assumed. Given explicitly supplied prices per million uncached input, cached input and output tokens, compute cost as `((I−C)×p_uncached + C×p_cached + O×p_output)/1e6`, then compare sessions with complete usage. Repeated reads and caching can make equal log-token reductions yield different monetary changes. A byte reduction or reference-encoding count alone is not a dollar saving.
-
-## 8. Limitations and threats to validity
-
-- Eight runnable toy failures in one template, with two real-container cases blocked; no generalization to production outages or multilingual stacks.
-- One active blind trial per case/condition, resource-limited and partly resumed after a calendar/account reset; no equivalence claim or statistical non-inferiority conclusion.
-- Account quota and sandbox verification restrictions confound time and usage. A valid externally verified patch is not necessarily a completed autonomous repair session.
-- The final conservative bundle was selected after observing source-frame loss on these same cases and was not separately blind-tested; adaptive selection and no holdout set limit validation.
-- Exact model-specific log-token attribution is unavailable; reference-tokenizer results and actual whole-session usage must remain separate. CLI tool bodies omit hidden protocol overhead.
-- Diagnostic facts are substring checks. The HTTP second failure demonstrates their incompleteness. Supplied tests are small; manual patch review reduces but cannot eliminate test-overfitting risk.
-- The preliminary pilots include harness/configuration mistakes and an interrupted conservative batch. They are preserved, excluded from final pooled results, and documented in [amendments.json](amendments.json).
-- V1 P2-only settings were ineffective; v2 corrects them. Initial concurrent pilot reports were not reliably isolated, so no claims rely on their report completeness. The final v2 and conservative-v2 raw reports are isolated.
-- Live source instrumentation changed between pilot/final runs; only designated final batches are pooled. Main behavioral defects stayed fixed during final comparisons; debug-only container log-capture additions do not alter non-container behavior.
-
-## 9. Conclusions
-
-The opt-in profile demonstrably reduces captured and selected log text for these cases under a documented reference tokenizer, and actual debugging sessions received smaller initial log-result bodies. Actual total-session input also differed in the matched observed sessions, but causality and general savings are not established. Observed valid-fix counts were equal at 7/8 per condition; both conditions failed to complete the two-stage HTTP repair. This supports continued evaluation, **not** the assertion that debugging ability is unaffected. Real-container behavior, repeated blind trials and direct testing of the final conservative bundle remain outstanding. The recommended practical configuration is the Spring `agent` profile with full Surefire reports.
-
-## Appendix A. Commands and exact configurations
-
-All reproduction commands, prerequisites and clean-state rules are in [README.md](README.md). The authoritative per-run commands are in `raw/*/*/*/*/metadata.json`; the authoritative trial invocation and budget are in `trials/*/*/*/*/outcome.json`. Primary runs:
+**Case 01, conservative, repetition 1, result 1** — mixed; primary log attribution 1294–1294 reference tokens.
 
 ```sh
-python3 investigation/scripts/run.py --batch v2 --workers 1
-python3 investigation/scripts/run.py --batch conservative-v2 --configs safe --workers 1
-investigation/.venv/bin/python investigation/scripts/analyze.py --batch v2
-investigation/.venv/bin/python investigation/scripts/analyze.py --batch conservative-v2
-python3 investigation/scripts/trials.py --batch v1 --repeats 3 --workers 2 --seconds 120
-python3 investigation/scripts/trials.py --cases 07,08 --repeats 1 --batch supplemental --workers 2 --seconds 120
+/bin/zsh -lc 'cat failure.log; cat investigation/src/test/java/com/ai/token/experiment/Defects.java; cat test.sh'
 ```
 
-These batch names already exist and are protected against overwrite; use fresh names for reproduction. Compile the `investigation` Maven profile first. Ordinary Maven builds must not overlap matrix execution because they can remove experimental classes.
-
-## Appendix B. Representative unmodified excerpts
-
-Excerpts below are bounded illustrations, not the inputs used to compute full-log metrics. Complete sources are linked.
-
-### Before: nested exception
-
-[Complete raw stdout](raw/v2/02/default/1/stdout.log)
+[Complete returned body](natural-reading/main/trials/01/conservative/1/returned-text/001.txt)
 
 ```text
-2026-09-30T19:24:23.385+02:00 ERROR 39116 --- [token.usage] [           main] com.ai.token.experiment.Defects          : client setup failed
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.061 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.027 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: total price ==> expected: <30> but was: <13>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:201)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:590)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:37)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+```
+
+**Case 01, default, repetition 2, result 0** — log_inspection; primary log attribution 1297–1297 reference tokens.
+
+```sh
+/bin/zsh -lc 'cat failure.log'
+```
+
+[Complete returned body](natural-reading/main/trials/01/default/2/returned-text/000.txt)
+
+```text
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.057 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.025 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: total price ==> expected: <30> but was: <13>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:201)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:590)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:37)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+```
+
+**Case 02, default, repetition 1, result 1** — mixed; primary log attribution 5410–5410 reference tokens.
+
+```sh
+/bin/zsh -lc 'cat failure.log; cat investigation/src/test/java/com/ai/token/experiment/Defects.java; cat test.sh'
+```
+
+[Complete returned body](natural-reading/main/trials/02/default/1/returned-text/001.txt)
+
+```text
+2026-10-01T07:55:00.382+02:00 ERROR 51804 --- [token.usage] [           main] com.ai.token.experiment.Defects          : client setup failed
 
 java.lang.IllegalStateException: cannot initialize client
-	at com.ai.token.experiment.Defects.connect(Defects.java:21) ~[test-classes/:na]
-	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41) ~[test-classes/:na]
+	at com.ai.token.experiment.Defects.connect(Defects.java:20) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:39) ~[test-classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
@@ -322,30 +504,22 @@ java.lang.IllegalStateException: cannot initialize client
 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
 	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
 	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
 ```
 
-### After (recommended): nested exception
+**Case 02, conservative, repetition 1, result 1** — log_inspection; primary log attribution 2108–2108 reference tokens.
 
-[Complete raw stdout](raw/conservative-v2/02/safe/1/stdout.log)
+```sh
+/bin/zsh -lc 'cat failure.log'
+```
+
+[Complete returned body](natural-reading/main/trials/02/conservative/1/returned-text/001.txt)
 
 ```text
-00:07:55.257 ERROR [main] com.ai.token.experiment.Defects: client setup failed
+07:54:41.994 ERROR [main] com.ai.token.experiment.Defects: client setup failed
 
 java.lang.IllegalStateException: cannot initialize client
-	at com.ai.token.experiment.Defects.connect(Defects.java:21) ~[test-classes/:na]
-	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:41) ~[test-classes/:na]
+	at com.ai.token.experiment.Defects.connect(Defects.java:20) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:39) ~[test-classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
@@ -353,26 +527,100 @@ java.lang.IllegalStateException: cannot initialize client
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	Suppressed: java.io.IOException: cleanup socket failed
-		at com.ai.token.experiment.Defects.connect(Defects.java:22) ~[test-classes/:na]
+		at com.ai.token.experiment.Defects.connect(Defects.java:21) ~[test-classes/:na]
 		... 82 common frames omitted
-Caused by: java.io.IOException: invalid upstream port
-	at com.ai.token.experiment.Defects.connect(Defects.java:20) ~[test-classes/:na]
-	... 82 common frames omitted
-Caused by: java.lang.NumberFormatException: For input string: "eighty"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
-	at java.base/java.lang.Integer.parseInt(Integer.java:565) ~[na:na]
-	at java.base/java.lang.Integer.parseInt(Integer.java:662) ~[na:na]
-	at com.ai.token.experiment.Defects.parsePort(Defects.java:16) ~[test-classes/:na]
-	at com.ai.token.experiment.Defects.connect(Defects.java:18) ~[test-classes/:na]
-	... 82 common frames omitted
-
-CASE_END 02
 ```
 
-Case 05: [default full console](extracted/v2/05/default/1/complete.txt), [aggressive full console](extracted/v2/05/agent/1/complete.txt), [conservative full console](extracted/conservative-v2/05/safe/1/complete.txt). These show the runner-frame loss and full-thread-name preservation respectively.
+No completed log-content grep/rg/awk commands were observed in this main sample. Filename discovery does not count as log-content search. Do not invent search-strategy examples where the agent instead chose full reads.
 
-Case 08: [default full console](extracted/v2/08/default/1/complete.txt), [aggressive full console](extracted/v2/08/agent/1/complete.txt), [conservative full console](extracted/conservative-v2/08/safe/1/complete.txt). These show the runner-frame loss and full-thread-name preservation respectively.
+## 5. Actual session usage, time and verified outcomes
 
-## Appendix C. Primary documentation
+| Case / condition / repeat | Session input | Cached input | Output | Session seconds | External verification seconds | Valid fix | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 01 / conservative / 1 | 110009 | 99456 | 599 | 56.2 | 5.1 | True | finished |
+| 01 / conservative / 2 | 110010 | 67968 | 590 | 39.3 | 5.6 | True | finished |
+| 01 / default / 1 | 110134 | 99712 | 608 | 37.5 | 5.1 | True | finished |
+| 01 / default / 2 | 109962 | 98688 | 644 | 41.7 | 5.3 | True | finished |
+| 02 / conservative / 1 | 138128 | 117120 | 687 | 47.2 | 5.6 | True | finished |
+| 02 / conservative / 2 | 97167 | 71168 | 495 | 30.1 | 5.8 | True | finished |
+| 02 / default / 1 | 104794 | 80000 | 515 | 32.3 | 5.8 | True | finished |
+| 02 / default / 2 | 154204 | 136576 | 654 | 40.8 | 5.6 | True | finished |
+| 03 / conservative / 1 | 95375 | 84224 | 573 | 33.8 | 5.6 | True | finished |
+| 03 / conservative / 2 | unavailable | unavailable | unavailable | 120.0 | 5.5 | False | timeout |
+| 03 / default / 1 | 165273 | 133120 | 632 | 46.5 | 5.8 | True | finished |
+| 03 / default / 2 | unavailable | unavailable | unavailable | 120.0 | 5.5 | False | timeout |
+| 04 / conservative / 1 | unavailable | unavailable | unavailable | 120.0 | 5.5 | False | timeout |
+| 04 / default / 1 | unavailable | unavailable | unavailable | 120.0 | 5.9 | False | timeout |
+| 05 / conservative / 1 | 134095 | 114304 | 606 | 47.2 | 5.8 | True | finished |
+| 05 / default / 1 | 137779 | 124672 | 679 | 43.1 | 5.9 | True | finished |
+| 06 / conservative / 1 | 75966 | 50304 | 523 | 39.6 | 5.7 | True | finished |
+| 06 / default / 1 | 137126 | 121216 | 667 | 45.4 | 6.3 | True | finished |
+| 07 / conservative / 1 | 92998 | 81024 | 484 | 42.2 | 6.0 | False | finished |
+| 07 / default / 1 | 91476 | 79616 | 547 | 34.7 | 6.6 | False | finished |
+| 08 / conservative / 1 | 116838 | 94464 | 636 | 49.3 | 5.9 | True | finished |
+| 08 / default / 1 | 90785 | 73216 | 586 | 34.3 | 5.7 | True | finished |
 
-The implementation was checked against [Spring Boot logging](https://docs.spring.io/spring-boot/reference/features/logging.html), [Logback pattern layouts](https://logback.qos.ch/manual/layouts.html), [Surefire test parameters](https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html), and [OpenAI non-interactive Codex documentation](https://learn.chatgpt.com/docs/non-interactive-mode). Local CLI help and actual runtime behavior determine the commands recorded here. Official OpenAI documentation was consulted using the [OpenAI Docs skill](/Users/hadiranjbar/.codex/skills/.system/openai-docs/SKILL.md). No external person was messaged.
+
+Actual usage is complete for **9 matched pairs**. Input totals: 1,101,533 default and 970,586 conservative; cached input: 946,816 and 780,032; output: 5,532 and 5,193. These are provider-reported whole-session values, not the reference-tokenized log endpoint. Cached input is included in input, not added to it. Instructions, source reads, repeated context, cache state, test runs and tool overhead can explain session differences; no attribution of all session differences to logging is made.
+
+Elapsed session time is the Python monotonic duration recorded by the harness, including reasoning/tool activity but not initial setup; independent verification duration is separate. For valid fixes their sum is an observable time to external verification, not the exact moment the agent discovered the repair. Unresolved/time-limited trials have no successful time-to-fix. The planned 120-second subprocess timeout is the same in each condition. Some timed-out session stderr calendar timestamps span substantially longer than the recorded monotonic duration; the cause is not established (host suspension is one possible explanation). Both original timestamps and measured durations are retained; do not treat these timings as reliable uninterrupted calendar wall times. No retry/resume is silently counted as an independent trial.
+
+![Verified outcomes](natural-reading/main/plots/outcomes.png)
+
+## 6. Secondary complete-file and fixed-extraction comparisons
+
+These counts describe available text and predetermined selections, **not** actual agent input unless a recorded read returned them. The same legacy marker/window/boundary/dedup rules are applied to instrument-free initial logs. Means below use generated logs from active sessions; repetitions and case availability differ with resource limits.
+
+| Case / condition | Complete file | 20-line window | Filtered 40 | Boundary | Dedup |
+| --- | --- | --- | --- | --- | --- |
+| 01 / default | 1,301.5 [1,297–1,306] | 294.0 [294–294] | 622.5 [621–624] | 204.0 [204–204] | 204.0 [204–204] |
+| 01 / conservative | 1,297.0 [1,294–1,300] | 294.0 [294–294] | 621.0 [620–622] | 204.0 [204–204] | 204.0 [204–204] |
+| 02 / default | 5,408.0 [5,406–5,410] | 691.0 [691–691] | 107.0 [107–107] | 3,973.0 [3,973–3,973] | 3,973.0 [3,973–3,973] |
+| 02 / conservative | 2,108.5 [2,108–2,109] | 372.0 [372–372] | 464.0 [464–464] | 745.0 [745–745] | 745.0 [745–745] |
+| 03 / default | 6,529.0 [6,527–6,531] | 745.0 [745–745] | 188.0 [188–188] | 4,848.0 [4,848–4,848] | 4,848.0 [4,848–4,848] |
+| 03 / conservative | 3,135.0 [3,135–3,135] | 723.0 [723–723] | 183.0 [183–183] | 1,620.0 [1,620–1,620] | 1,620.0 [1,620–1,620] |
+| 04 / default | 7,273.0 [7,273–7,273] | 790.0 [790–790] | 126.0 [126–126] | 5,392.0 [5,392–5,392] | 5,392.0 [5,392–5,392] |
+| 04 / conservative | 3,899.0 [3,899–3,899] | 768.0 [768–768] | 194.0 [194–194] | 2,164.0 [2,164–2,164] | 2,164.0 [2,164–2,164] |
+| 05 / default | 1,944.0 [1,944–1,944] | 390.0 [390–390] | 666.0 [666–666] | 445.0 [445–445] | 445.0 [445–445] |
+| 05 / conservative | 1,871.0 [1,871–1,871] | 390.0 [390–390] | 666.0 [666–666] | 445.0 [445–445] | 445.0 [445–445] |
+| 06 / default | 9,849.0 [9,849–9,849] | 670.0 [670–670] | 747.0 [747–747] | 8,392.0 [8,392–8,392] | 8,346.0 [8,346–8,346] |
+| 06 / conservative | 2,484.0 [2,484–2,484] | 648.0 [648–648] | 884.0 [884–884] | 1,105.0 [1,105–1,105] | 1,105.0 [1,105–1,105] |
+| 07 / default | 1,871.0 [1,871–1,871] | 420.0 [420–420] | 412.0 [412–412] | 420.0 [420–420] | 420.0 [420–420] |
+| 07 / conservative | 1,797.0 [1,797–1,797] | 420.0 [420–420] | 412.0 [412–412] | 420.0 [420–420] | 420.0 [420–420] |
+| 08 / default | 2,008.0 [2,008–2,008] | 411.0 [411–411] | 353.0 [353–353] | 559.0 [559–559] | 559.0 [559–559] |
+| 08 / conservative | 1,908.0 [1,908–1,908] | 389.0 [389–389] | 331.0 [331–331] | 537.0 [537–537] | 537.0 [537–537] |
+
+
+Secondary full-file savings are not substituted for the cumulative observed-reading comparison. Fixed windows may omit nested causes even when their token count is low; the prior diagnostic investigation remains relevant as a content warning, not new performance evidence. [Secondary CSV](natural-reading/main/secondary-results.csv).
+
+## 7. Limitations and interpretation
+
+The final ordinary-suite rerun was not executed: automatic approval review rejected the requested command because its reviewer hit the account usage limit. This is separate from the captured per-trial independent verification. The prior ordinary-suite successes belong to the baseline and are not represented as new checks.
+
+- No log-content search or context-expansion strategy was observed, so this study does not establish savings for selective grep/rg workflows. The model chooses its strategy freely but still operates on small injected fixtures with an identified editable implementation file. Generalization to large repositories or other agents is untested.
+- Only eight cases can run here; real container failure and readiness diagnostics remain untested with Docker stopped.
+- Three repetitions were planned; actual counts above, quota states and timeouts determine the evidence. A small sample with equal successes cannot establish equivalence or non-inferiority.
+- CLI output captures visible command bodies, not every hidden serialized model-input field. Exact Astra log-token attribution is unavailable; o200k_base is a reference tokenizer.
+- Mixed-output attribution is deliberately conservative. Ambiguous bodies widen bounds; full-read requests do not imply an entire file reached the model when tool truncation occurred.
+- Shell command classification has finite recognized forms and requires auditing. Filesystem discovery is not a content read; test output is not silently pooled with inspections.
+- Sandbox restrictions, concurrent execution, cache state, backend interruptions and wall budgets can affect success/time/usage independently of formatting. Source/test expectations and model settings are held constant, but all such external conditions cannot be randomized away.
+- The conservative treatment includes narrowly scoped duplicate ownership for case 06; its contribution is not separable from prefix/trace formatting in this two-condition study.
+- This revision improves instrumentation and disables the Kotlin compiler daemon in both arms. It is not a causal before/after comparison against the old full-read/P4 study.
+
+## 8. Conclusions limited to these observations
+
+In the 11 matched active pairs, the conservative configuration changed cumulative identifiable returned log-inspection text by a **49.3% reduction**, with ambiguity represented in the bounds rather than filled from files on disk. Agents were free to choose full reads, searches and context requests; the strategy counts show what they actually did. Verified valid fixes were **8/11 default versus 8/11 conservative**. Interpret those counts alongside the case/repetition table, not as evidence that debugging ability is unchanged. Cases or repetitions prevented by quota or Docker remain untested. Whole-session token differences are separate observations and cannot be assigned wholly to logging.
+
+## Appendix: commands, evidence and reproducibility
+
+```sh
+python3 investigation/scripts/natural_trials.py --batch NEW_BATCH --repeats 3 --workers 2 --seconds 120
+investigation/.venv/bin/python investigation/scripts/natural_analyze.py --batch NEW_BATCH
+investigation/.venv/bin/python investigation/scripts/test_natural_analyze.py
+```
+
+Use fresh batch names; the runner refuses overwrite. The report generator currently summarizes `main`, making the evidence selection explicit. Per-trial `setup.json` records exact probe and initial test commands, source/test/log hashes and failure identities; `outcome.json` records actual CLI command, verification command, elapsed times and provider usage. [Integrity checks](natural-reading/verification.json) confirm identical initial implementation/test hashes across all 22 active trials, instrument-free complete captures, 22 independent test reports, and 3,663 unchanged baseline artifacts. [Raw artifact hashes](natural-reading/main/raw-manifest.json) cover original new evidence. [Manual patch and diagnosis reviews](natural-reading/main/reviews.json) remain separate from raw outcomes.
+
+[Full protocol](natural-reading/PROTOCOL.md), [source manifest](natural-reading/manifest.json), [machine-readable trial results](natural-reading/main/trial-results.json), [tool results](natural-reading/main/tool-results.json), [all main trials](natural-reading/main/trials/), [excluded pilot](natural-reading/pilot/).
+
+Supporting configuration documentation remains the [Spring Boot logging reference](https://docs.spring.io/spring-boot/reference/features/logging.html), [Logback layouts](https://logback.qos.ch/manual/layouts.html), [Surefire parameters](https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html) and the locally verified Codex CLI. No new price claim is made.

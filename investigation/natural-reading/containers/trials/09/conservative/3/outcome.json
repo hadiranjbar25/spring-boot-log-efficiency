@@ -1,0 +1,10 @@
+{
+  "case": "09",
+  "condition": "conservative",
+  "run": 3,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "budget_seconds": 120,
+  "status": "not_scheduled_quota",
+  "debugging_began": false
+}

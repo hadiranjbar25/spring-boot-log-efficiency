@@ -1,0 +1,3 @@
+I’ll inspect the failure and implementation, make the smallest targeted fix, and verify it with `./test.sh`.
+
+The startup bean tries to parse `"eighty"` as an integer, so Spring fails before the assertion runs. The test expects port 8080. I’ll correct that input to `"8080"`, preserving the parsing and bean creation.

@@ -1,0 +1,62 @@
+{
+  "case": "03",
+  "condition": "default",
+  "run": 1,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "budget_seconds": 120,
+  "status": "finished",
+  "debugging_began": true,
+  "session_exit": 0,
+  "elapsed_seconds": 46.4507385,
+  "verification_exit": 0,
+  "verification_seconds": 5.848042875000004,
+  "immutable_changes": [],
+  "patch_present": true,
+  "profile_verified": true,
+  "identity_verified": true,
+  "usage": [
+    {
+      "input_tokens": 165273,
+      "cached_input_tokens": 133120,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 632,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "tool_calls": 7,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--json",
+    "-s",
+    "workspace-write",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-C",
+    "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-256h6r02",
+    "This test fails. Diagnose the cause, make the smallest correct implementation change, and verify the fix. Complete test output is available in failure.log."
+  ],
+  "verification_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.case=03",
+    "-Dtest=FailureCasesTest",
+    "test"
+  ],
+  "workspace": "/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-256h6r02",
+  "root_cause_correct": null,
+  "fix_valid": null
+}

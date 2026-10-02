@@ -1,0 +1,8 @@
+/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-ttb0kp8s
+AGENTS.md
+test.sh
+failure.log
+src/test/kotlin/com/ai/token/usage/ApplicationTests.kt
+investigation/src/test/java/com/ai/token/experiment/Defects.java
+investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java
+investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java

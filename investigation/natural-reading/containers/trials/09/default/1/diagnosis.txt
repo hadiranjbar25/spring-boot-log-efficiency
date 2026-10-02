@@ -1,0 +1,9 @@
+I’ll inspect the failure and implementation, make the smallest correct change, and run `./test.sh` to verify it.
+`save()` assigns the same email to both users, so the second insert violates `uq_email`. I’ll include the user ID in each email. Docker access is blocked in this environment, so I’ll also verify the same save behavior with the existing H2 test cases.
+Fixed one line in [Defects.java](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-ttb0kp8s/investigation/src/test/java/com/ai/token/experiment/Defects.java:41): emails now include the user ID. Previously, both inserts used `same@example.test`, violating `uq_email`.
+
+Verification:
+- Existing H2 cases `05` and `06` passed via `./test.sh`, confirming two distinct emails are saved.
+- PostgreSQL case `09` remains unverified: `./test.sh` was blocked by Docker socket access (`Operation not permitted`).
+
+Only the implementation file was edited.

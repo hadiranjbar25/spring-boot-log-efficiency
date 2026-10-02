@@ -1,94 +1,70 @@
-# Reproduce the logging investigation
+# Agent-selected log reading investigation
 
-Read [REPORT.md](REPORT.md) for results and limitations. Run commands below from the repository root. Intentional failures live only in `investigation/src/test/java`; ordinary tests exclude the `investigation` JUnit tag even if stale compiled fixtures exist.
+Read [REPORT.md](REPORT.md) for the revised natural-reading study. The original forced-first-full-read investigation is preserved in [REPORT.full-read.md](REPORT.full-read.md); its raw artifacts and results are unchanged. New evidence is exclusively under `natural-reading/`.
 
-## Prerequisites
+## Reproduce the new trials
 
-- Java 25, Maven 3.9.16, Python 3.9+, network access for first dependency/tokenizer download.
-- Docker daemon and available `postgres:17.6-alpine` / `alpine:3.22.1` images for cases 09–10. Neither is replaced with a simulation.
-- Authenticated Codex CLI accepting `gpt-6-astra` for blind trials. This run used CLI 0.154.0-alpha.6.2.
-- Allow loopback HTTP binding for case 07. On this machine the command sandbox required approved execution outside its socket restriction. Kotlin daemon files also required access outside the project.
+Prerequisites: Java 25, Maven 3.9.16, Python 3.9+, the investigation Maven dependencies, an authenticated Codex CLI accepting `gpt-6-astra`, and the local tokenizer environment. Initial dependency installation is described in [README.full-read.md](README.full-read.md). Network access may be needed for setup; Maven trial commands use the existing offline dependency cache.
 
 ```sh
-export JAVA_HOME=$(/usr/libexec/java_home -v 25)   # macOS; set your JDK path elsewhere
+export JAVA_HOME=$(/usr/libexec/java_home -v 25)
 export INVESTIGATION_JAVA_HOME="$JAVA_HOME"
 export PATH="$JAVA_HOME/bin:$PATH"
-python3 -m venv investigation/.venv
-investigation/.venv/bin/pip install -r investigation/requirements-lock.txt
 export TIKTOKEN_CACHE_DIR="$PWD/investigation/.tokenizer-cache"
-investigation/.venv/bin/python -c 'import tiktoken; tiktoken.get_encoding("o200k_base")'
-env -u DEBUG mvn -B -ntp -Dmaven.repo.local="$PWD/investigation/.m2" -Pinvestigation -DskipTests test
+python3 investigation/scripts/natural_trials.py --batch NEW_BATCH --repeats 3 --workers 2 --seconds 120
+investigation/.venv/bin/python investigation/scripts/natural_analyze.py --batch NEW_BATCH
+investigation/.venv/bin/python investigation/scripts/test_natural_analyze.py
 ```
 
-The Python runner normalizes `DEBUG`, `SPRING_*`, `LOGGING_*`, and Java/Maven injected options across conditions. Build dependencies are cached locally; runner commands use Maven offline mode and fail honestly when a dependency is missing. `setup.py` records the original implementation step and must **not** be rerun; it is not an idempotent bootstrap script. The checked-in POM already contains the integration.
+Use a new batch name; trials cannot overwrite earlier artifacts. The report generator `natural_report.py` composes the reviewed `containers` follow-up with the preserved earlier `main` report when container results exist. It does not rewrite historical tables or plots. Review diagnoses, patches and classification before generating conclusions; evaluators put assessments in `reviews.json`, separate from immutable session outcomes. Unknown `fix_valid` is not a completed review. Do not infer correctness solely from a zero test exit.
 
-## Practical developer command
+Both conditions use full Surefire reports. The conservative condition enables the Spring `agent` profile and the fixture-specific duplicate-ownership flag. `agent-reports` is never enabled in these trials. The only task prompt is:
 
-Recommended configuration preserves the full test-runner report:
+> This test fails. Diagnose the cause, make the smallest correct implementation change, and verify the fix. Complete test output is available in failure.log.
+
+Identical AGENTS.md constraints preserve tests/expectations and identify the allowed implementation file, but prescribe no reading strategy. Full reads, searches and context reads are free choices. The model is `gpt-6-astra`, low reasoning effort, 120 seconds per fresh session. Condition launch order alternates by case/repetition. Stop-on-quota scheduling preserves distinct not-begun and interrupted outcomes.
+
+## Data and primary endpoint
+
+- `natural-reading/main/trials/`: separate profile checks, complete initial stdout/stderr, failure.log, prompt, CLI session, actual tool output, patch, diagnosis and independent verification reports.
+- `natural-reading/main/trial-results.csv/json`: cumulative returned-log bounds, strategy counters, separate output classes, success and usage.
+- `natural-reading/main/tool-results.csv/json`: every command, classification, returned-body path and recovered log-segment offsets.
+- `natural-reading/main/secondary-results.csv/json`: complete-file counts and predetermined windows/boundaries. These are secondary, not assumed model input.
+- `natural-reading/main/reviews.json`: evaluator assessments without rewriting raw outcomes.
+- `natural-reading/main/schedule.json`: all planned cases, conditions, repetitions, settings and exact task.
+- `natural-reading/pilot/`: excluded harness validation; never pooled with main trials.
+- `natural-reading/PROTOCOL.md`: exact classification and isolation rules.
+- `baselines/full-read/preserved-sha256.json`: integrity manifest for the prior evidence.
+- `natural-reading/verification.json`: baseline integrity, instrumentation, configuration and independent-report checks; the final ordinary-suite rerun was blocked by automatic approval-review quota.
+- `natural-reading/main/classification-audit.json`: completed command-category review; `raw-manifest.json`: immutable new artifact hashes.
+
+The primary endpoint sums actual returned log-inspection text, including repeated reads. Test execution, source reading, mixed output and other output are reported separately. Exact log segments can be recovered from mixed bodies; uncertain allocation is reported as bounds. Reference counts use real `o200k_base` tokenization, not a byte ratio. Actual session input/cached input/output usage is a separate measurement.
+
+Profile activation is checked before each session by a separate Java test, including the actual Logback encoder. The regex appears only in that separate evidence, not in failure.log. Final verification occurs in another pristine workspace using original tests and only the proposed implementation.
+
+## Docker follow-up
+
+Docker was enabled after the original natural-reading cohort. Real cases 09–10 are recorded separately in `natural-reading/containers/`; setup-only preflights and evaluator repair controls are separate batches. The earlier Docker blocker remains historical evidence. Run fresh container trials with `--cases 09,10 --repeats 3`; use `--setup-only` to validate failure identity without launching agents. The same model, budget, full Surefire and neutral task apply. Container stream files are available for voluntary inspection in each workspace and retained outside it. The unchanged agent sandbox may block Docker access even when independent verification succeeds. See the current report for actual trial dispositions and outcomes.
+
+The pre-container report is preserved in [REPORT.natural-pre-containers.md](REPORT.natural-pre-containers.md). `container_verify.py` checks historical hashes and current evidence; `container_report.py` composes the report after classification and manual patch review.
+
+## Containers and developer usage
+
+Docker is currently unavailable; the exact new probe is in `natural-reading/environment/docker.stderr`. With a working daemon, use the real fixtures:
 
 ```sh
-env -u DEBUG mvn -Dmaven.repo.local="$PWD/investigation/.m2" -Dspring.profiles.active=agent test
-```
-
-Set `JAVA_HOME` first. No Spring profile is globally activated. For application launches, use `--spring.profiles.active=agent` or `SPRING_PROFILES_ACTIVE=agent`. P1 and P2 are in `application-agent.yml`. P3 is case-06-specific sole-owner logging and is not a general exception suppression policy. P4 is separately available with `-Pagent-reports`, but is **not recommended as the default** because it removes useful application frames.
-
-One explicitly failing experimental case with the complete conservative configuration:
-
-```sh
-env -u DEBUG mvn -Dmaven.repo.local="$PWD/investigation/.m2" -Pinvestigation \
-  -Dspring.profiles.active=agent -Dexperiment.deduplicate=true \
-  -Dexperiment.case=06 -Dtest=FailureCasesTest test
-```
-
-Expected exit: 1. To reproduce the aggressive candidate used in the blind trials, replace `-Pinvestigation` with `-Pinvestigation,agent-reports`.
-
-## Measurements and extraction
-
-Use a new batch name: raw run directories are write-once. Do not run multiple matrix runners against the same `target/` concurrently. Independent trials use separate temporary projects.
-
-```sh
-python3 investigation/scripts/run.py --batch reproduce --workers 1
-python3 investigation/scripts/run.py --batch reproduce-safe --configs safe --workers 1
-investigation/.venv/bin/python investigation/scripts/analyze.py --batch reproduce
-investigation/.venv/bin/python investigation/scripts/analyze.py --batch reproduce-safe
-```
-
-Default matrix: 114 runs (eight cases, applicable conditions, three repetitions). Extra `safe` condition: 24 runs. Every run records exact command, exit, intended identity, profile evidence and hashes. Sources reset through a fresh JVM; H2 is in-memory and closed; HTTP server uses an ephemeral local port and is stopped; executor is closed. 100-second per-run timeout. No output byte/line cap is applied to raw captures.
-
-Extraction rules live in `analyze.py`: same failure marker regex for both configurations, fixed 20 raw lines including the marker, fixed 40 raw lines then frame removal, boundary-aware failure region, and exact complete-exception-block deduplication. All five outputs derive from the same stdout-then-stderr concatenation. The concatenation does not imply temporal ordering between streams. The report documents information losses and parser limits.
-
-```sh
-# Real containers only: first start your Docker daemon.
 docker info
-python3 investigation/scripts/run.py --cases 09,10 --batch containers-ready --workers 1
-investigation/.venv/bin/python investigation/scripts/analyze.py --batch containers-ready
+python3 investigation/scripts/natural_trials.py --batch WITH_CONTAINERS \
+  --cases 01,02,03,04,05,06,07,08,09,10 --repeats 3 --workers 2 --seconds 120
 ```
 
-Testcontainers closes containers in try-with-resources. Readiness is capped at eight seconds; the container process exits after 45 seconds. The runner has an outer 100-second guard and a five-second termination grace. Testcontainers' cleanup service is left enabled. Separate container STDOUT and STDERR logs are retained by the log consumer; the host console stays separate. On a forcibly terminated JVM, rely on Testcontainers cleanup and inspect remaining labeled containers before removing only those created for this experiment.
+No simulated container logs are used. The same existing readiness bounds and Testcontainers cleanup apply.
 
-## Independent debugging trials
+For ordinary local debugging, opt in without runner trimming:
 
 ```sh
-python3 investigation/scripts/trials.py --batch reproduce --repeats 3 --workers 2 --seconds 120
-# analyze_trials.py currently defaults to the recorded v1 batch:
-investigation/.venv/bin/python -c 'import sys; sys.path.insert(0,"investigation/scripts"); from analyze_trials import main; main("reproduce")'
+env -u DEBUG mvn -Dmaven.repo.local="$PWD/investigation/.m2" \
+  -Dspring.profiles.active=agent test
 ```
 
-Each trial creates a fresh external temporary project, compiles the same failing source, supplies a complete `failure.log`, and invokes a new ephemeral Codex session with fixed model, low reasoning effort, tools and time budget. It copies no report, cases.json, earlier patches, reference repairs, or outcome metadata. The prompt prohibits outside reads and permits editing only `Defects.java`. This is protocol isolation, not a security boundary against a malicious agent. Cached Maven dependencies are shared. The model can request original stdout/stderr and rerun tests; all completed command outputs are saved and counted. No informed parent session stands in for a blind trial.
-
-Immutable files are checked and restored before an external verification run. Review every patch and diagnosis before populating `root_cause_correct`/`fix_valid`: a green test is not automatically a valid fix. Session wall time excludes setup and adds external verification separately. Agents may finish early. A timeout can still leave a valid patch; report both outcomes. No resumes or retry sessions are counted as independent trials.
-
-The recorded run exhausted account usage after 12 patches; subsequent slots did not execute. Four supplemental sessions ran after reset, for 16 active trials total (one per case and condition). The current runner stops scheduling after a quota error. The preserved `v1` trial treatment includes P4. The final conservative recommendation omits P4; do not present these trials as a direct test of that revised bundle. To evaluate it, copy `trials.py`, remove `,agent-reports` from its treatment command, use a fresh batch name and repeat the complete protocol.
-
-## Artifacts
-
-- `raw/`: untouched per-run stdout, stderr, metadata, Surefire XML/text reports.
-- `extracted/`: derived readings; `results.csv/json`: consolidated final extraction metrics; `results-*.csv/json`: batch-specific extraction metrics; `artifacts-*.csv/json`: producer-specific raw metrics and hashes.
-- `trials/`: complete JSONL sessions, returned command text, diagnosis, patch, verification, and usage where available.
-- `environment/`: baseline, compilation, runtime probes, progress, version and source manifests.
-- `raw-artifact-inventory.csv/json`: all raw files including excluded pilots; `verification.json`: final integrity checks.
-- `variants/`: preserved earlier profile versions, including ineffective settings.
-- `positive-controls*`: external known-repair checks; never trial input.
-- `plots/`: standalone figures; `REPORT.md`: full interpretation.
-
-`o200k_base` counts are actual tokenizer counts, not byte-ratio estimates. This installed tiktoken cannot map `gpt-6-astra`; do not label these as exact Astra model-input token counts. Codex's session usage is separately recorded as actual model-reported usage.
+Set Java 25 first. Add `-Dkotlin.compiler.daemon=false` inside the restricted local sandbox if necessary. The profile is not globally enabled, and intentional fixtures remain excluded from the ordinary suite.

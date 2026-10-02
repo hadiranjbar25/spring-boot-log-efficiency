@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, make the smallest fix, and verify it with `./test.sh`.
+The container prints `worker ready`, but `readyPattern()` waits for `service ready`, causing the timeout. I’ll correct that one word. The test run here is blocked earlier because Docker is unavailable; I’ll also check the corrected pattern directly.
+Fixed `Defects.java`: `readyPattern()` now matches `worker ready`, the container’s actual readiness message. Previously it waited for `service ready`, causing the timeout.
+
+Verification: compilation succeeded, and direct checks confirmed the pattern accepts readiness and rejects a startup message. `./test.sh` remains blocked because this environment cannot access Docker, so full integration verification is incomplete.

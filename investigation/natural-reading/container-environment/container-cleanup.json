@@ -1,0 +1,21 @@
+{
+  "preexisting_ids": [
+    "0d8071e24767",
+    "24aec5ad09b7",
+    "5cc5f891be8b",
+    "835c06c54cd2",
+    "d25fc7a08473",
+    "fcf6b50a4c67"
+  ],
+  "after_ids": [
+    "0d8071e24767",
+    "24aec5ad09b7",
+    "5cc5f891be8b",
+    "835c06c54cd2",
+    "d25fc7a08473",
+    "fcf6b50a4c67"
+  ],
+  "new_remaining_ids": [],
+  "preexisting_no_longer_present": [],
+  "action": "Observed only; no user containers removed."
+}

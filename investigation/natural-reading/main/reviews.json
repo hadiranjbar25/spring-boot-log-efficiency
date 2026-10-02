@@ -1,0 +1,112 @@
+{
+  "01/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "01/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "02/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "02/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "03/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "03/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "04/conservative/1": {
+    "fix_valid": false,
+    "root_cause_correct": true,
+    "review": "No patch before 120-second timeout; external verification still fails. Correct startup-port diagnosis recorded."
+  },
+  "04/default/1": {
+    "fix_valid": false,
+    "root_cause_correct": null,
+    "review": "No patch before 120-second timeout; external verification still fails. No root-cause diagnosis recorded; unknown rather than assumed incorrect."
+  },
+  "05/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "05/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "06/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "06/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "07/conservative/1": {
+    "fix_valid": false,
+    "root_cause_correct": true,
+    "review": "Correct initial route diagnosis, but route-only patch remains incomplete: independent verification reaches UnknownContentTypeException. Agent verification was blocked by loopback socket permissions."
+  },
+  "07/default/1": {
+    "fix_valid": false,
+    "root_cause_correct": true,
+    "review": "Correct initial route diagnosis, but route-only patch remains incomplete: independent verification reaches UnknownContentTypeException. Agent verification was blocked by loopback socket permissions."
+  },
+  "08/conservative/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "08/default/1": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed targeted implementation patch and recorded diagnosis; original functionality and expectations preserved."
+  },
+  "01/conservative/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed one-line arithmetic/port repair and diagnosis, independently verified with original tests."
+  },
+  "01/default/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed one-line arithmetic/port repair and diagnosis, independently verified with original tests."
+  },
+  "02/conservative/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed one-line arithmetic/port repair and diagnosis, independently verified with original tests."
+  },
+  "02/default/2": {
+    "fix_valid": true,
+    "root_cause_correct": true,
+    "review": "Reviewed one-line arithmetic/port repair and diagnosis, independently verified with original tests."
+  },
+  "03/conservative/2": {
+    "fix_valid": false,
+    "root_cause_correct": null,
+    "review": "Timeout after activity; no patch and no cause diagnosis recorded; external original test still fails."
+  },
+  "03/default/2": {
+    "fix_valid": false,
+    "root_cause_correct": null,
+    "review": "Timeout after activity; no patch and no cause diagnosis recorded; external original test still fails."
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "baseline_files_checked": 3663,
+  "baseline_changed": [],
+  "planned_outcomes": 48,
+  "active_trials": 22,
+  "unique_initial_source_hashes": [
+    "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  ],
+  "unique_initial_test_hashes": [
+    "3c456784848d63312e1844d7c0f03dc43af4e709cb8b4886189cc947b604d5f3"
+  ],
+  "problems": [],
+  "verification_reports": [
+    {
+      "case": "03",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "03",
+      "condition": "default",
+      "run": 2,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0
+    },
+    {
+      "case": "03",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "03",
+      "condition": "conservative",
+      "run": 2,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0
+    },
+    {
+      "case": "04",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 1
+    },
+    {
+      "case": "04",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 1
+    },
+    {
+      "case": "05",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "05",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "02",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "02",
+      "condition": "default",
+      "run": 2,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "02",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "02",
+      "condition": "conservative",
+      "run": 2,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "07",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 1
+    },
+    {
+      "case": "07",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 1
+    },
+    {
+      "case": "08",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "08",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "01",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "01",
+      "condition": "default",
+      "run": 2,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "01",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "01",
+      "condition": "conservative",
+      "run": 2,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "06",
+      "condition": "default",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "case": "06",
+      "condition": "conservative",
+      "run": 1,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "ordinary_suite_rerun": {
+    "status": "not_executed",
+    "reason": "Automatic approval review rejected the command because the approval reviewer hit the account usage limit. Per-trial verification is separate."
+  },
+  "remaining_recorded_trial_workspaces": []
+}

@@ -1,0 +1,1 @@
+Corrected pattern matches readiness output and rejects starting output.

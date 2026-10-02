@@ -1,0 +1,39 @@
+{
+  "probe_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.case=06",
+    "-Dtest=ProfileVerificationTest",
+    "-Dexperiment.profileArtifact=/Users/hadiranjbar/Downloads/java/token.usage/investigation/natural-reading/main/trials/06/default/1/profile-verification.txt",
+    "test"
+  ],
+  "profile_verified": true,
+  "initial_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.case=06",
+    "-Dtest=FailureCasesTest",
+    "test"
+  ],
+  "initial_exit": 1,
+  "identity_verified": true,
+  "identity": "both distinct users must be saved",
+  "setup_seconds": 6.075295832999984,
+  "source_sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9",
+  "test_sha256": "3c456784848d63312e1844d7c0f03dc43af4e709cb8b4886189cc947b604d5f3",
+  "failure_sha256": "2c378c16014a360f7a104941de70dbbbd54c705898ce54866b9145ba80ce0db0"
+}

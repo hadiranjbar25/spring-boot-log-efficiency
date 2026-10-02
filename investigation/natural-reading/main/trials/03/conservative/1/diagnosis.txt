@@ -1,0 +1,7 @@
+I’ll inspect the failure and implementation, make the smallest correct change, and verify it with `./test.sh`.
+`ordersUrl()` sends `count=two`, but the controller requires an integer, so Spring rejects the request with HTTP 400 before invoking it. I’ll change the URL to send `count=2`, preserving the controller’s integer validation.
+Fixed `ordersUrl()` in [Defects.java](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-hkp50dbr/investigation/src/test/java/com/ai/token/experiment/Defects.java:29) to send `count=2` instead of `count=two`.
+
+Spring could not convert `"two"` to the controller’s integer parameter, causing HTTP 400.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, confirming HTTP 200 and response `count=2`. Only the implementation file was edited.

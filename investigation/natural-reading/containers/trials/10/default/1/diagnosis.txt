@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, make the smallest targeted fix, and verify it with `./test.sh`.
+The readiness pattern expects `service ready`, but the container emits `worker ready`. I’ll correct that one string. The test run is currently blocked by an unavailable Docker environment, so I’ll also check the corrected pattern directly.
+Changed only `Defects.java`: `readyPattern()` now matches `worker ready`, the container’s actual readiness message. Previously it expected `service ready`, causing the timeout.
+
+Verification: the pattern check passed, and `./test.sh` compiled the change. Full test verification remains blocked because Testcontainers cannot access a valid Docker environment.

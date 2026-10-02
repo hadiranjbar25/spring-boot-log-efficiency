@@ -1,0 +1,2 @@
+WARNING: Plugin "/Users/hadiranjbar/.docker/cli-plugins/docker-sbom" is not valid: failed to fetch metadata: fork/exec /Users/hadiranjbar/.docker/cli-plugins/docker-sbom: no such file or directory
+Cannot connect to the Docker daemon at unix:///Users/hadiranjbar/.docker/run/docker.sock. Is the docker daemon running?

@@ -1,0 +1,36 @@
+17.6-alpine: Pulling from library/postgres
+863529d0da69: Pulling fs layer
+8a019f30ea14: Pulling fs layer
+00b0e19d2268: Pulling fs layer
+6b59a28fa201: Pulling fs layer
+216c47815005: Pulling fs layer
+c89215c5eedd: Pulling fs layer
+bbb8a248653b: Pulling fs layer
+405d8144726e: Pulling fs layer
+38e7eb8bb034: Pulling fs layer
+d1977f5fc01c: Pulling fs layer
+863529d0da69: Download complete
+405d8144726e: Download complete
+bbb8a248653b: Download complete
+c89215c5eedd: Download complete
+216c47815005: Download complete
+d1977f5fc01c: Download complete
+00b0e19d2268: Download complete
+38e7eb8bb034: Download complete
+6b59a28fa201: Download complete
+bbb8a248653b: Pull complete
+38e7eb8bb034: Pull complete
+6b59a28fa201: Pull complete
+216c47815005: Pull complete
+cda1840be011: Download complete
+92f258fa98a9: Download complete
+8a019f30ea14: Download complete
+405d8144726e: Pull complete
+c89215c5eedd: Pull complete
+d1977f5fc01c: Pull complete
+00b0e19d2268: Pull complete
+8a019f30ea14: Pull complete
+863529d0da69: Pull complete
+Digest: sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94
+Status: Downloaded newer image for postgres:17.6-alpine
+docker.io/library/postgres:17.6-alpine

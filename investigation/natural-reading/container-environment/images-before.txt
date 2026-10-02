@@ -1,0 +1,9 @@
+ragekhab-backend:latest
+ragekhab-frontend:latest
+postgres:16-alpine
+qdrant/qdrant:latest
+alpine:3.20
+gcr.io/k8s-minikube/kicbase:v0.0.50
+gcr.io/k8s-minikube/kicbase:<none>
+postgres:16
+gradle:9.2.1-jdk25

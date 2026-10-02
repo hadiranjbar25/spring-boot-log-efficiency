@@ -1,0 +1,6 @@
+/private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-hkp50dbr
+test.sh
+AGENTS.md
+investigation/src/test/java/com/ai/token/experiment/Defects.java
+pom.xml
+failure.log

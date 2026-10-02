@@ -1,0 +1,109 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.ai:token.usage >-------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ token.usage ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ token.usage ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- kotlin:2.3.21:compile (compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.jetbrains.kotlin.com.intellij.util.containers.Unsafe (file:/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar)
+WARNING: Please consider reporting this to the maintainers of class org.jetbrains.kotlin.com.intellij.util.containers.Unsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-source (experiment-java) @ token.usage ---
+[INFO] Test Source directory: /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-5ke5ttm_/investigation/src/test/java added.
+[INFO] 
+[INFO] --- build-helper:3.6.1:add-test-resource (experiment-resources) @ token.usage ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ token.usage ---
+[INFO] skip non existing resourceDirectory /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-5ke5ttm_/src/test/resources
+[INFO] Copying 2 resources from investigation/src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ token.usage ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- kotlin:2.3.21:test-compile (test-compile) @ token.usage ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ token.usage ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ai.token.experiment.FailureCasesTest
+CASE_BEGIN 05
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+08:01:48.348 INFO [main] o.a.m.surefire.booter.ForkedBooter: Starting ForkedBooter v3.5.6 using Java 25 with PID 53088 (started by hadiranjbar in /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-5ke5ttm_)
+08:01:48.350 INFO [main] o.a.m.surefire.booter.ForkedBooter: The following 1 profile is active: "agent"
+08:01:48.422 INFO [main] o.a.m.surefire.booter.ForkedBooter: Started ForkedBooter in 0.26 seconds (process running for 0.698)
+CASE_END 05
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.476 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.442 s <<< ERROR!
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: 
+Unique index or primary key violation: "PUBLIC.UQ_EMAIL INDEX PUBLIC.UQ_EMAIL_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'same@example.test' )"; SQL statement:
+INSERT INTO users VALUES (?, ?) [23505-240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:535)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:223)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:520)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:77)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:306)
+	at org.h2.command.Command.executeUpdate(Command.java:250)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at com.ai.token.experiment.Defects.save(Defects.java:41)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:56)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FailureCasesTest.scenario:56 » JdbcSQLIntegrityConstraintViolation Unique index or primary key violation: "PUBLIC.UQ_EMAIL INDEX PUBLIC.UQ_EMAIL_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'same@example.test' )"; SQL statement:
+INSERT INTO users VALUES (?, ?) [23505-240]
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.708 s
+[INFO] Finished at: 2026-10-01T08:01:48+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project token.usage: 
+[ERROR] 
+[ERROR] See /private/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-5ke5ttm_/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

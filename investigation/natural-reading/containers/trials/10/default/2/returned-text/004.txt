@@ -1,0 +1,2 @@
+/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar
+/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar

@@ -1,0 +1,7 @@
+I’ll inspect the failure and implementation, run `./test.sh`, and make the smallest fix in `Defects.java`.
+`connect()` passes `"eighty"` to `Integer.parseInt`, causing the exception that gets wrapped as “cannot initialize client.” I’ll correct the port string to `"8080"`, preserving parsing and error handling.
+Fixed `Defects.java`: `connect()` supplied `"eighty"` to integer parsing, triggering a `NumberFormatException` wrapped in `IllegalStateException`.
+
+Changed only that port string to `"8080"`, preserving parsing and exception handling.
+
+Verified with `./test.sh`: **BUILD SUCCESS**, 1 test passed, 0 failures or errors.

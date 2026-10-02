@@ -1,0 +1,1 @@
+I’ll inspect the failure and implementation, make the smallest fix in `Defects.java`, and verify it with `./test.sh`.

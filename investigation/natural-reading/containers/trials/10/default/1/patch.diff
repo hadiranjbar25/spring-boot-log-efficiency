@@ -1,0 +1,9 @@
+--- a/Defects.java
++++ b/Defects.java
+@@ -63,5 +63,5 @@
+             }).get(5, TimeUnit.SECONDS);
+         }
+     }
+-    public String readyPattern() { return ".*service ready.*\\n"; }
++    public String readyPattern() { return ".*worker ready.*\\n"; }
+ }

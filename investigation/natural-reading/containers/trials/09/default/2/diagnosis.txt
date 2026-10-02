@@ -1,0 +1,13 @@
+I’ll inspect the failure and implementation, make the smallest correct fix, and verify it with `./test.sh`.
+
+`save()` gives both users the same email, so PostgreSQL rejects the second insert under the unique email constraint. I changed the email to include the user ID, preserving both inserts and the constraint. I’ll now run the failing test.
+
+The change compiles, but the PostgreSQL test is blocked because this environment denies access to Docker’s socket. I’ll run the existing H2 scenario, which exercises the same save method and checks for two distinct emails.
+
+Fixed the single faulty line in `Defects.java`: `save()` reused the same email for both users, violating `uq_email`. Emails now include the user ID.
+
+Verification:
+- `./test.sh`: compiled, but PostgreSQL verification was blocked by Docker socket permissions.
+- `./test.sh -Dexperiment.case=05`: passed, confirming both users are saved with distinct emails using H2.
+
+Only the implementation file was edited.

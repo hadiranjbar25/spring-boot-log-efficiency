@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.ai.token.experiment.FailureCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.534 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.501 s <<< ERROR!
+org.springframework.web.client.UnknownContentTypeException: Could not extract response: no suitable HttpMessageConverter found for response type [class java.lang.Integer] and content type [application/octet-stream]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:263)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:931)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:833)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:617)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:833)
+	at com.ai.token.experiment.Defects.call(Defects.java:54)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:69)
+

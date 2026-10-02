@@ -1,0 +1,122 @@
+[
+  {
+    "case": "02",
+    "condition": "conservative",
+    "run": 1,
+    "method": "complete",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/complete.txt",
+    "bytes": 7526,
+    "lines": 128,
+    "tokens": 2104,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "conservative",
+    "run": 1,
+    "method": "window20",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/window20.txt",
+    "bytes": 1411,
+    "lines": 20,
+    "tokens": 372,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "conservative",
+    "run": 1,
+    "method": "filtered40",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/filtered40.txt",
+    "bytes": 1693,
+    "lines": 29,
+    "tokens": 464,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "conservative",
+    "run": 1,
+    "method": "boundary",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/boundary.txt",
+    "bytes": 2795,
+    "lines": 45,
+    "tokens": 745,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "conservative",
+    "run": 1,
+    "method": "dedup",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/conservative/1/secondary-extractions/dedup.txt",
+    "bytes": 2795,
+    "lines": 45,
+    "tokens": 745,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "default",
+    "run": 1,
+    "method": "complete",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/complete.txt",
+    "bytes": 19013,
+    "lines": 203,
+    "tokens": 5410,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "default",
+    "run": 1,
+    "method": "window20",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/window20.txt",
+    "bytes": 2543,
+    "lines": 20,
+    "tokens": 691,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "default",
+    "run": 1,
+    "method": "filtered40",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/filtered40.txt",
+    "bytes": 381,
+    "lines": 5,
+    "tokens": 107,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "default",
+    "run": 1,
+    "method": "boundary",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/boundary.txt",
+    "bytes": 14079,
+    "lines": 120,
+    "tokens": 3973,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  },
+  {
+    "case": "02",
+    "condition": "default",
+    "run": 1,
+    "method": "dedup",
+    "matches": 3,
+    "path": "investigation/natural-reading/pilot/trials/02/default/1/secondary-extractions/dedup.txt",
+    "bytes": 14079,
+    "lines": 120,
+    "tokens": 3973,
+    "tokenizer": "tiktoken 0.14.0 o200k_base"
+  }
+]

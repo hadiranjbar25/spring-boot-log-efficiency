@@ -1,0 +1,9 @@
+I’ll inspect the failure and implementation, make the smallest correct change, and verify it with `./test.sh`.
+`save()` assigns the same email to both users, so the second insert violates `uq_email`. I’ll include the user ID in each email. Docker access is blocked in this environment; I’ll also run the existing H2 cases that check the same save behavior.
+Fixed `Defects.java:41`: `save()` reused the same email for both users, violating `uq_email`. The one-line change includes each user’s ID in the email.
+
+Verification:
+- Existing H2 cases 05 and 06 pass via `./test.sh`.
+- PostgreSQL case 09 remains unverified: `./test.sh` is blocked by Docker socket access (`Operation not permitted`).
+
+Only the implementation file was changed.

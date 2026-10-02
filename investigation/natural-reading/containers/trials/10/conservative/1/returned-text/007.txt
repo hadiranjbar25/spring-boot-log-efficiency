@@ -1,0 +1,18 @@
+|  Welcome to JShell -- Version 25
+|  For an introduction type: /help intro
+
+jshell> SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+pattern ==> ".*worker ready.*\\n"
+
+jshell> PASS: compiled readiness pattern accepts ready and rejects starting
+
+jshell> Exception in thread "Thread-2" java.lang.IllegalStateException: java.util.prefs.BackingStoreException: Synchronization failed for node '/tool/JShell/'
+	at jdk.jshell/jdk.internal.jshell.tool.JShellToolBuilder$PreferencesStorage.flush(JShellToolBuilder.java:325)
+	at jdk.jshell/jdk.internal.jshell.tool.JShellTool$ReplayableHistory.storeHistory(JShellTool.java:711)
+	at jdk.jshell/jdk.internal.jshell.tool.JShellTool$2.run(JShellTool.java:1013)
+Caused by: java.util.prefs.BackingStoreException: Synchronization failed for node '/tool/JShell/'
+	at java.prefs/java.util.prefs.MacOSXPreferences.flush(MacOSXPreferences.java:231)
+	at jdk.jshell/jdk.internal.jshell.tool.JShellToolBuilder$PreferencesStorage.flush(JShellToolBuilder.java:323)
+	... 2 more

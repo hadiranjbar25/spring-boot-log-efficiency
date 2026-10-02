@@ -1,0 +1,11 @@
+I’ll inspect the failure and implementation, make a minimal fix in `Defects.java`, and verify it with `./test.sh`.
+
+`save()` assigns the same email to both users, so the second insert violates `uq_email`. I’ll derive each email from its user ID. Docker access is blocked in this environment, so I’ll also verify the fix using the existing H2 tests for the same save path.
+
+Fixed one line in `Defects.java:41`: `save()` now derives each user’s email from its ID. Previously, both inserts used `same@example.test`, violating the unique email constraint.
+
+Verification:
+- Existing H2 cases 05 and 06 passed via `./test.sh`, confirming two distinct emails are saved.
+- PostgreSQL case 09 was attempted but remains unverified because the sandbox blocks Docker socket access.
+
+Only `Defects.java` was changed.

@@ -82,7 +82,7 @@ for cfg,label in [('default','Before'),('safe','After (recommended)')]:
 for case in ['05','08']:
  a(f'Case {case}: [default full console](extracted/v2/{case}/default/1/complete.txt), [aggressive full console](extracted/v2/{case}/agent/1/complete.txt), [conservative full console](extracted/conservative-v2/{case}/safe/1/complete.txt). These show the runner-frame loss and full-thread-name preservation respectively.\n')
 a('## Appendix C. Primary documentation\n\nThe implementation was checked against [Spring Boot logging](https://docs.spring.io/spring-boot/reference/features/logging.html), [Logback pattern layouts](https://logback.qos.ch/manual/layouts.html), [Surefire test parameters](https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html), and [OpenAI non-interactive Codex documentation](https://learn.chatgpt.com/docs/non-interactive-mode). Local CLI help and actual runtime behavior determine the commands recorded here. Official OpenAI documentation was consulted using the [OpenAI Docs skill](/Users/hadiranjbar/.codex/skills/.system/openai-docs/SKILL.md). No external person was messaged.\n')
-(D/'REPORT.md').write_text('\n'.join(out))
+(D/'REPORT.full-read.md').write_text('\n'.join(out))
 # Figures: static, exportable, clearly scoped to the measured reference encoding.
 os.environ.setdefault('MPLCONFIGDIR',str(D/'.mpl'))
 import matplotlib;matplotlib.use('Agg')
@@ -99,4 +99,4 @@ for offset,cfg,label in [(-.15,'default','Default'),(.15,'agent','Aggressive age
  vals=[int(next(r for r in active if r['case']==c and r['config']==cfg)['fix_valid']) for c in list(cases)[:8]]
  ax.scatter(x+offset,vals,label=label,s=85)
 ax.set_xticks(x,list(cases)[:8]);ax.set_yticks([0,1],['Incomplete repair','Externally verified valid fix']);ax.set_ylim(-.25,1.25);ax.set_xlabel('Case (one active independent trial per condition)');ax.set_title('7/8 valid fixes in each condition; not evidence of equivalence');ax.legend();fig.tight_layout();fig.savefig(D/'plots/debugging-outcomes.png',dpi=180);fig.savefig(D/'plots/debugging-outcomes.svg');plt.close(fig)
-print('REPORT.md and figures generated')
+print('Legacy REPORT.full-read.md and legacy figures generated; natural report is untouched')

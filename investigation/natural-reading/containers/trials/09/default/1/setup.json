@@ -1,0 +1,39 @@
+{
+  "probe_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.case=09",
+    "-Dtest=ProfileVerificationTest",
+    "-Dexperiment.profileArtifact=/Users/hadiranjbar/Downloads/java/token.usage/investigation/natural-reading/containers/trials/09/default/1/profile-verification.txt",
+    "test"
+  ],
+  "profile_verified": true,
+  "initial_command": [
+    "mvn",
+    "-o",
+    "-B",
+    "-ntp",
+    "-Dmaven.repo.local=/Users/hadiranjbar/Downloads/java/token.usage/investigation/.m2",
+    "-Pinvestigation",
+    "-Dkotlin.compiler.daemon=false",
+    "-DtrimStackTrace=false",
+    "-Dspring.output.ansi.enabled=never",
+    "-Dexperiment.case=09",
+    "-Dtest=FailureCasesTest",
+    "test"
+  ],
+  "initial_exit": 1,
+  "identity_verified": true,
+  "identity": "duplicate key value violates unique constraint",
+  "setup_seconds": 9.444382417,
+  "source_sha256": "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9",
+  "test_sha256": "3c456784848d63312e1844d7c0f03dc43af4e709cb8b4886189cc947b604d5f3",
+  "failure_sha256": "7276277d760bdf8fdfc9a8a735fb2af8bc29e6b54d633a18cbff19e65093796e"
+}

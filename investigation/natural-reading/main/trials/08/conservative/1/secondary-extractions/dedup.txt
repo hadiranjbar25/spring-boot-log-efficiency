@@ -1,0 +1,30 @@
+08:04:08.950 ERROR [invoice-worker-7] com.ai.token.experiment.Defects: invoice-42 calculation failed
+
+java.lang.NumberFormatException: For input string: "ten"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Integer.parseInt(Integer.java:565) ~[na:na]
+	at java.base/java.lang.Integer.parseInt(Integer.java:662) ~[na:na]
+	at com.ai.token.experiment.Defects.lambda$async$1(Defects.java:60) ~[test-classes/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+CASE_END 08
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.418 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.382 s <<< ERROR!
+java.util.concurrent.ExecutionException: java.lang.NumberFormatException: For input string: "ten"
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:124)
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:207)
+	at com.ai.token.experiment.Defects.async(Defects.java:63)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:72)
+Caused by: java.lang.NumberFormatException: For input string: "ten"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at com.ai.token.experiment.Defects.lambda$async$1(Defects.java:60)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+

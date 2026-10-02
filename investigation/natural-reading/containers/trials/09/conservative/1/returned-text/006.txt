@@ -1,0 +1,6 @@
+/tmp/natural-read-case06.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.560 s -- in com.ai.token.experiment.FailureCasesTest
+/tmp/natural-read-case06.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+/tmp/natural-read-case06.log:[INFO] BUILD SUCCESS
+/tmp/natural-read-case05.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.537 s -- in com.ai.token.experiment.FailureCasesTest
+/tmp/natural-read-case05.log:[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+/tmp/natural-read-case05.log:[INFO] BUILD SUCCESS

@@ -1,0 +1,434 @@
+{
+  "full_read": {
+    "checked": 3663,
+    "changed_or_missing": []
+  },
+  "pre_container": {
+    "checked": 829,
+    "changed_or_missing": []
+  },
+  "active_trials": 9,
+  "source_hashes": [
+    "092a2c91a7f75f26ea97fe64d85070fb3ee29c48ecb4417a860098d2e215f2e9"
+  ],
+  "test_hashes": [
+    "3c456784848d63312e1844d7c0f03dc43af4e709cb8b4886189cc947b604d5f3"
+  ],
+  "independent_reports": [
+    {
+      "case": "09",
+      "condition": "conservative",
+      "run": 1,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "09",
+      "condition": "conservative",
+      "run": 2,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "09",
+      "condition": "default",
+      "run": 1,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "09",
+      "condition": "default",
+      "run": 2,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "09",
+      "condition": "default",
+      "run": 3,
+      "tests": "1",
+      "errors": "1",
+      "failures": "0"
+    },
+    {
+      "case": "10",
+      "condition": "conservative",
+      "run": 1,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "10",
+      "condition": "conservative",
+      "run": 2,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "10",
+      "condition": "default",
+      "run": 1,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    },
+    {
+      "case": "10",
+      "condition": "default",
+      "run": 2,
+      "tests": "1",
+      "errors": "0",
+      "failures": "0"
+    }
+  ],
+  "container_stream_counts_secondary": [
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/1/initial-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 1170,
+      "lines": 13,
+      "tokens": 429,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/1/initial-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3508,
+      "lines": 61,
+      "tokens": 1139,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/1/initial-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/1/verification-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 902,
+      "lines": 10,
+      "tokens": 333,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/1/verification-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3240,
+      "lines": 58,
+      "tokens": 1043,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/1/verification-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/2/initial-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 1170,
+      "lines": 13,
+      "tokens": 429,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/2/initial-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3508,
+      "lines": 61,
+      "tokens": 1139,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/2/initial-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/2/verification-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 902,
+      "lines": 10,
+      "tokens": 333,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/2/verification-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3240,
+      "lines": 58,
+      "tokens": 1043,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/conservative/2/verification-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/1/initial-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 1170,
+      "lines": 13,
+      "tokens": 429,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/1/initial-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3508,
+      "lines": 61,
+      "tokens": 1140,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/1/initial-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 711,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/1/verification-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 902,
+      "lines": 10,
+      "tokens": 333,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/1/verification-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3240,
+      "lines": 58,
+      "tokens": 1043,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/1/verification-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/2/initial-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 1170,
+      "lines": 13,
+      "tokens": 429,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/2/initial-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3508,
+      "lines": 61,
+      "tokens": 1139,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/2/initial-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/2/verification-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 902,
+      "lines": 10,
+      "tokens": 333,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/2/verification-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3240,
+      "lines": 58,
+      "tokens": 1043,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/2/verification-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/3/initial-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 1170,
+      "lines": 13,
+      "tokens": 429,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/3/initial-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3508,
+      "lines": 61,
+      "tokens": 1139,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/3/initial-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/3/verification-container-logs/database.container.STDERR.log",
+      "alternate_combined_copy": false,
+      "bytes": 1170,
+      "lines": 13,
+      "tokens": 429,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/3/verification-container-logs/database.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 3508,
+      "lines": 61,
+      "tokens": 1139,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/09/default/3/verification-container-logs/database.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 2338,
+      "lines": 48,
+      "tokens": 710,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/conservative/1/initial-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/conservative/1/verification-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/conservative/1/verification-container-logs/readiness.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/conservative/2/initial-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/conservative/2/verification-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/conservative/2/verification-container-logs/readiness.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/default/1/initial-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/default/1/verification-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/default/1/verification-container-logs/readiness.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/default/2/initial-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/default/2/verification-container-logs/readiness.container.STDOUT.log",
+      "alternate_combined_copy": false,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    },
+    {
+      "path": "investigation/natural-reading/containers/trials/10/default/2/verification-container-logs/readiness.container.log",
+      "alternate_combined_copy": true,
+      "bytes": 13,
+      "lines": 1,
+      "tokens": 3,
+      "tokenizer": "tiktoken 0.14.0 o200k_base"
+    }
+  ],
+  "positive_controls_passed": 4,
+  "all_active_profiles_and_failure_identities_verified": true,
+  "complete_initial_captures": true,
+  "immutable_files_unchanged": true,
+  "temporary_trial_workspaces_removed": true
+}

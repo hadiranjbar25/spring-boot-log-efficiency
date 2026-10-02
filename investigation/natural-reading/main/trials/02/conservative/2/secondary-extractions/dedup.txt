@@ -1,0 +1,45 @@
+08:06:23.825 ERROR [main] com.ai.token.experiment.Defects: client setup failed
+
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.Defects.connect(Defects.java:20) ~[test-classes/:na]
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:39) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	Suppressed: java.io.IOException: cleanup socket failed
+		at com.ai.token.experiment.Defects.connect(Defects.java:21) ~[test-classes/:na]
+		... 82 common frames omitted
+Caused by: java.io.IOException: invalid upstream port
+	at com.ai.token.experiment.Defects.connect(Defects.java:19) ~[test-classes/:na]
+	... 82 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Integer.parseInt(Integer.java:565) ~[na:na]
+	at java.base/java.lang.Integer.parseInt(Integer.java:662) ~[na:na]
+	at com.ai.token.experiment.Defects.parsePort(Defects.java:15) ~[test-classes/:na]
+	at com.ai.token.experiment.Defects.connect(Defects.java:17) ~[test-classes/:na]
+	... 82 common frames omitted
+
+CASE_END 02
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.380 s <<< FAILURE! -- in com.ai.token.experiment.FailureCasesTest
+[ERROR] com.ai.token.experiment.FailureCasesTest.scenario -- Time elapsed: 0.347 s <<< ERROR!
+java.lang.IllegalStateException: cannot initialize client
+	at com.ai.token.experiment.Defects.connect(Defects.java:20)
+	at com.ai.token.experiment.FailureCasesTest.scenario(FailureCasesTest.java:39)
+	Suppressed: java.io.IOException: cleanup socket failed
+		at com.ai.token.experiment.Defects.connect(Defects.java:21)
+		... 1 more
+Caused by: java.io.IOException: invalid upstream port
+	at com.ai.token.experiment.Defects.connect(Defects.java:19)
+	... 1 more
+Caused by: java.lang.NumberFormatException: For input string: "eighty"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at com.ai.token.experiment.Defects.parsePort(Defects.java:15)
+	at com.ai.token.experiment.Defects.connect(Defects.java:17)
+	... 1 more
+

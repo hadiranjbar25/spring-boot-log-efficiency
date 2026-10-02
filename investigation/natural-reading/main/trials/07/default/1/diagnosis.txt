@@ -1,0 +1,5 @@
+I’ll inspect the failure and implementation, make the smallest correction, and verify it with `./test.sh`.
+`Defects.call()` requests `/wrong`, but the server exposes the price at `/price`. The resulting 404 prevents response parsing. I’ll correct the endpoint path.
+Fixed `Defects.call()` by changing `/wrong` to `/price`. The incorrect endpoint caused the 404 in `failure.log`. Only `Defects.java` was edited.
+
+Ran `./test.sh`: compilation succeeded, but the sandbox blocked the test server from binding (`SocketException: Operation not permitted`). Full test verification remains blocked by that environment restriction.

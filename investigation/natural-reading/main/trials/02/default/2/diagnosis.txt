@@ -1,0 +1,9 @@
+I’ll inspect the failure and implementation, make the smallest fix, and verify it with `./test.sh`.
+
+The failure reproduces: `connect()` passes `"eighty"` to `Integer.parseInt`, causing the exception that gets wrapped as “cannot initialize client.” I’ll correct that port value to `"8080"` and preserve the parsing and error handling.
+
+Fixed the port literal in [Defects.java:17](/var/folders/n6/1nrbxjp5209dyzpfgv0hf4p80000gn/T/natural-read-xez0c713/investigation/src/test/java/com/ai/token/experiment/Defects.java:17): `"eighty"` → `"8080"`.
+
+The nonnumeric value caused `NumberFormatException`, wrapped as `IllegalStateException`. Parsing and error handling remain intact.
+
+Verified with `./test.sh`: failure reproduced before the change; afterward, **1 test passed, 0 failures/errors, BUILD SUCCESS**.

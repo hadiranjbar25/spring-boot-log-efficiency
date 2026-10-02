@@ -1,0 +1,69 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "budget_seconds": 120,
+  "workers": 2,
+  "prompt": "This test fails. Diagnose the cause, make the smallest correct implementation change, and verify the fix. Complete test output is available in failure.log.",
+  "jobs": [
+    {
+      "case": "09",
+      "condition": "default",
+      "run": 1
+    },
+    {
+      "case": "09",
+      "condition": "conservative",
+      "run": 1
+    },
+    {
+      "case": "10",
+      "condition": "conservative",
+      "run": 1
+    },
+    {
+      "case": "10",
+      "condition": "default",
+      "run": 1
+    },
+    {
+      "case": "09",
+      "condition": "conservative",
+      "run": 2
+    },
+    {
+      "case": "09",
+      "condition": "default",
+      "run": 2
+    },
+    {
+      "case": "10",
+      "condition": "default",
+      "run": 2
+    },
+    {
+      "case": "10",
+      "condition": "conservative",
+      "run": 2
+    },
+    {
+      "case": "09",
+      "condition": "default",
+      "run": 3
+    },
+    {
+      "case": "09",
+      "condition": "conservative",
+      "run": 3
+    },
+    {
+      "case": "10",
+      "condition": "conservative",
+      "run": 3
+    },
+    {
+      "case": "10",
+      "condition": "default",
+      "run": 3
+    }
+  ]
+}

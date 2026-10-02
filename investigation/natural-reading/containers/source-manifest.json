@@ -1,0 +1,15 @@
+{
+  "pom.xml": "71fa791651c3119f3f16db60067d0972f720cd69030bec999896351a9464ef62",
+  "src/main/resources/application-agent.yml": "38069c796d7bd99fa3edea163bfa60ecef87dc3fe37df518306685d99156eca6",
+  "investigation/src/test/java/com/ai/token/experiment/Defects.java": "50d50a28896f0e2c56fe8a7409d7e5e79b44f1f2c9be6b0aa65a007d1b6e82d4",
+  "investigation/src/test/java/com/ai/token/experiment/FailureCasesTest.java": "3c456784848d63312e1844d7c0f03dc43af4e709cb8b4886189cc947b604d5f3",
+  "investigation/src/test/java/com/ai/token/experiment/ProfileVerificationTest.java": "4ae84ebfed63a31788d376447e4552a5abd0060d199a3cfcb3929da68ec342aa",
+  "investigation/scripts/natural_analyze.py": "8ae94e4fa6246987ca33a1dc1ba8cc51f1cf215b396e8fdb6ce47a737cfa3102",
+  "investigation/scripts/natural_report.py": "df3683c0fafa2ae1931085b28726df39566d5a1e0fb834d3a14cc1fa31c4a1ac",
+  "investigation/scripts/natural_trials.py": "8fa0f6339e93d283cdfec403c92bd46af85b871446b4ab18864c3bf4297199c5",
+  "investigation/scripts/natural_verify.py": "ae4c87414f4c4a42a03e4ba1044c4b4fd49dd4698e4411337c911f6a389c5416",
+  "investigation/scripts/container_controls.py": "16bd377e06a1d30a3c8bcb218f8c4be76d451fc14b074295b149205b2253ccef",
+  "investigation/scripts/container_report.py": "aeb54ab14a379397b58f77d5eb625873d694301d3d60381b93bdf6feba6d3419",
+  "investigation/scripts/container_verify.py": "23502b49d69ed9ce7ec0d707b4a405a101d59be0acdf94e9b49c9f639a185272",
+  "investigation/scripts/test_natural_analyze.py": "2edca4fb62afa87b4223c25034633ad8c7e357b0a3805f221b5b16bb10adfa2f"
+}
